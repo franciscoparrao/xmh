@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Old experiment results (v1)
+experiments/results_full/
+experiments/results_test/
+experiments/results_hpo/
+experiments/figures/
+experiments/*.log
+
+# Virtual environments
+venv/
+.venv/
+env/

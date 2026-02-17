@@ -1,0 +1,17 @@
+# XMH Framework Requirements
+
+# Core dependencies
+numpy>=1.20.0
+
+# Visualization (optional)
+matplotlib>=3.5.0
+
+# Testing
+pytest>=7.0.0
+
+# For advanced analysis (optional)
+# scipy>=1.9.0
+# pandas>=1.5.0
+
+# For parallel computation (optional)
+# joblib>=1.2.0
