@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "XMH: Explainable Metaheuristics via Exact Operator-Level Shapley Value Attribution"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Parra Orellana"
+    given-names: "Francisco"
+    email: francisco.parra.o@usach.cl
+    affiliation: "Department of Computer Engineering, Universidad de Santiago de Chile (USACH)"
+repository-code: "https://github.com/franciscoparrao/xmh"
+abstract: >-
+  XMH is a Python framework that computes exact Shapley values
+  for operator-level attribution in metaheuristic algorithms. The
+  framework exploits the observation that metaheuristics use few
+  operators (n ∈ {2,3,4}), making exhaustive evaluation of all 2^n
+  ≤ 16 coalitions computationally tractable. Instrumented
+  implementations are provided for DE, GA, PSO, CMA-ES, SHADE,
+  and JADE, together with QuickSHAP, KernelSHAP (canonical
+  drop-one-column reformulation) and tracking-based attribution
+  baselines.
+keywords:
+  - explainable artificial intelligence
+  - Shapley values
+  - cooperative game theory
+  - metaheuristics
+  - evolutionary computation
+  - algorithm interpretability
+  - operator attribution
+license: MIT
+version: 1.0.0
+date-released: "2026-05-23"

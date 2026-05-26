@@ -565,6 +565,80 @@ class TestExactOperatorSHAP:
                 assert np.isfinite(v), f"Non-finite value in coalition {key}"
 
 
+class TestKernelSHAPCanonical:
+    """Cross-check the canonical Kernel SHAP solver against an independent
+    reference implementation (the ``shap`` library by Lundberg & Lee).
+
+    With $n = 3$ and all $2^n = 8$ coalitions evaluated, both implementations
+    must recover the exact Shapley solution to numerical precision. This test
+    guards against regressions of the drop-one-column constraint reformulation
+    introduced after the SWEVO peer review.
+    """
+
+    def test_kernelshap_matches_shap_library(self):
+        try:
+            import shap  # noqa: F401
+        except ImportError:
+            import pytest
+            pytest.skip("shap library not installed")
+
+        import shap as shap_lib
+        from itertools import combinations
+        from math import comb
+        from xmh.explanation.operator_shap import KernelSHAP
+
+        n = 3
+        ops = ["A", "B", "C"]
+
+        # Arbitrary deterministic value function over the 2^n coalitions
+        rng = np.random.default_rng(0)
+        v_table = rng.uniform(-10, 10, size=2 ** n)
+
+        def v_func(z_batch):
+            z_batch = np.atleast_2d(z_batch).astype(int)
+            indices = (z_batch * (2 ** np.arange(n - 1, -1, -1))).sum(axis=1)
+            return v_table[indices]
+
+        foreground = np.ones((1, n))
+        background = np.zeros((1, n))
+        explainer = shap_lib.KernelExplainer(v_func, background, silent=True)
+        shap_values_official = explainer.shap_values(foreground, nsamples=2 ** n)
+        shap_values_official = np.asarray(shap_values_official).flatten()
+
+        # Build the equivalent coalition table for XMH's solver
+        coalitions, values, weights = [], [], []
+        for size in range(n + 1):
+            for S in combinations(range(n), size):
+                z = [0] * n
+                for i in S:
+                    z[i] = 1
+                coalitions.append(z)
+                S_idx = sum(z[i] * (2 ** (n - 1 - i)) for i in range(n))
+                values.append(-v_table[S_idx])  # XMH uses fitness (low = better)
+                if size == 0 or size == n:
+                    weights.append(0.0)
+                else:
+                    weights.append((n - 1) / (comb(n, size) * size * (n - size)))
+
+        coalitions = np.array(coalitions)
+        values_arr = np.array(values, dtype=float)
+        weights_arr = np.array(weights, dtype=float)
+        baseline = -v_table[0]
+        full_fit = -v_table[-1]
+
+        ksh = KernelSHAP(n_runs_per_coalition=1, regularization=1e-12)
+        xmh_dict = ksh._solve_kernel_shap(
+            coalitions, values_arr, weights_arr, baseline, full_fit, ops,
+        )
+        xmh_values = np.array([xmh_dict[op] for op in ops])
+
+        max_diff = np.max(np.abs(xmh_values - shap_values_official))
+        assert max_diff < 1e-8, (
+            f"XMH canonical KernelSHAP disagrees with shap.KernelExplainer: "
+            f"max diff = {max_diff:.3e}"
+        )
+
+
 class TestTrackingAttribution:
     """Tests for TrackingAttribution."""
 

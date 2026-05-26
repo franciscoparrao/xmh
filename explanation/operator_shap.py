@@ -638,27 +638,18 @@ class KernelSHAP(OperatorSHAP):
         return np.array(coalitions), np.array(values), np.array(weights)
 
     def _kernel_shap_weight(self, z: tuple, M: int) -> float:
-        """
-        Compute Kernel SHAP weight for a coalition.
+        """Compute Kernel SHAP weight w(|S|) = (M-1) / [C(M,|S|) * |S| * (M-|S|)].
 
-        Weight = (M-1) / (C(M,|z|) * |z| * (M-|z|))
-
-        where M is number of operators and |z| is coalition size.
+        The empty (|S|=0) and full (|S|=M) coalitions are treated as constraints
+        (efficiency: Σφ_i = v(N) - v(∅)) rather than weighted regression rows; they
+        receive weight 0 here and are filtered out by ``_solve_kernel_shap``.
         """
         z_size = sum(z)
-
-        # Edge cases: empty or full coalition get high weight
         if z_size == 0 or z_size == M:
-            return 1e6  # Very high weight for boundary cases
-
-        # Binomial coefficient C(M, z_size)
+            return 0.0
         from math import comb
         binom = comb(M, z_size)
-
-        # Kernel SHAP weight
-        weight = (M - 1) / (binom * z_size * (M - z_size))
-
-        return weight
+        return (M - 1) / (binom * z_size * (M - z_size))
 
     def _solve_kernel_shap(
         self,
@@ -669,49 +660,71 @@ class KernelSHAP(OperatorSHAP):
         full_value: float,
         operators: List[str]
     ) -> Dict[str, float]:
+        """Canonical Kernel SHAP (Lundberg & Lee, 2017) via the drop-one-column
+        reduction to an unconstrained weighted least squares.
+
+        For minimization the value function in improvement space is
+        ``v(S) = baseline - fitness(S)``, so ``v(∅) = 0`` and the
+        efficiency constraint becomes ``Σ φ_i = v(N) = baseline - full_value``.
+
+        The standard derivation enforces efficiency by substituting one operator
+        out of the regression. Letting ``T = baseline - full_value`` and
+        substituting ``φ_{n-1} = T - Σ_{i<n-1} φ_i``, each row simplifies to::
+
+            v(S) - T · 1[n-1 ∈ S] = Σ_{i<n-1} φ_i (1[i ∈ S] - 1[n-1 ∈ S])
+
+        which is an unconstrained WLS in ``n-1`` unknowns. After solving,
+        ``φ_{n-1}`` is recovered from the constraint, giving an exact-efficiency
+        Shapley estimate without any post-hoc multiplicative rescaling.
+
+        Empty and full coalitions contribute identically-zero rows under this
+        reformulation and are filtered out.
         """
-        Solve weighted linear regression to get SHAP values.
+        n = len(operators)
+        if n == 0:
+            return {}
+        if n == 1:
+            return {operators[0]: float(baseline - full_value)}
 
-        We solve: min_φ Σ w_i (f(z_i) - (φ_0 + Σ φ_j z_ij))^2 + λ||φ||^2
-
-        Subject to efficiency: Σ φ_j = f(x) - f(∅)
-        """
-        n_ops = len(operators)
-
-        # Normalize weights
-        weights = weights / np.sum(weights)
-
-        # Convert fitness to "value" (improvement over baseline)
-        # For minimization: value = baseline - fitness
-        y = baseline - values
-
-        # Weighted least squares: (X^T W X + λI)^{-1} X^T W y
-        X = coalitions
-        W = np.diag(weights)
-
-        # Add regularization
-        reg = self.regularization * np.eye(n_ops)
-
-        try:
-            # Solve normal equations
-            XtWX = X.T @ W @ X + reg
-            XtWy = X.T @ W @ y
-            phi = np.linalg.solve(XtWX, XtWy)
-        except np.linalg.LinAlgError:
-            # Fallback to pseudo-inverse
-            phi = np.linalg.lstsq(X, y, rcond=None)[0]
-
-        # Enforce efficiency constraint: sum(phi) = baseline - full_value
+        # Improvement-space targets: v(S) = baseline - fitness(S)
+        v = baseline - values
         total_improvement = baseline - full_value
-        current_sum = np.sum(phi)
 
-        if current_sum != 0:
-            phi = phi * (total_improvement / current_sum)
+        # Drop the last operator and reformulate
+        last_col = coalitions[:, -1]
+        X_red = coalitions[:, :-1].astype(float) - last_col[:, None]
+        y_adj = v - total_improvement * last_col
 
-        # Create dictionary
-        shap_values = {operators[i]: float(phi[i]) for i in range(n_ops)}
+        # Filter out coalitions that do not constrain the reduced system
+        coal_sizes = coalitions.sum(axis=1)
+        valid = (coal_sizes > 0) & (coal_sizes < n)
+        if valid.sum() < n - 1:
+            valid = np.ones_like(coal_sizes, dtype=bool)
 
-        return shap_values
+        Xv = X_red[valid]
+        yv = y_adj[valid]
+        wv = weights[valid].astype(float)
+        if wv.sum() <= 0:
+            wv = np.ones_like(wv)
+        wv = wv / wv.sum()
+
+        # Weighted normal equations with regularization
+        W_diag = wv
+        XtWX = (Xv.T * W_diag) @ Xv + self.regularization * np.eye(n - 1)
+        XtWy = (Xv.T * W_diag) @ yv
+        try:
+            phi_red = np.linalg.solve(XtWX, XtWy)
+        except np.linalg.LinAlgError:
+            phi_red = np.linalg.lstsq(
+                Xv * np.sqrt(W_diag)[:, None],
+                yv * np.sqrt(W_diag),
+                rcond=None,
+            )[0]
+
+        phi_last = total_improvement - phi_red.sum()
+        phi = np.concatenate([phi_red, [phi_last]])
+
+        return {operators[i]: float(phi[i]) for i in range(n)}
 
 
 class QuickSHAP(OperatorSHAP):

@@ -1,0 +1,26 @@
+{
+  "title": "XMH: Explainable Metaheuristics via Exact Operator-Level Shapley Value Attribution",
+  "description": "Python framework for exact Shapley value attribution at the operator level in metaheuristic algorithms. Includes instrumented implementations of DE, GA, PSO, CMA-ES, SHADE, and JADE, and four attribution methods (Exact Shapley, QuickSHAP, canonical KernelSHAP, tracking).",
+  "creators": [
+    {
+      "name": "Parra Orellana, Francisco",
+      "affiliation": "Department of Computer Engineering, Universidad de Santiago de Chile (USACH)",
+      "orcid": ""
+    }
+  ],
+  "keywords": [
+    "explainable artificial intelligence",
+    "Shapley values",
+    "cooperative game theory",
+    "metaheuristics",
+    "evolutionary computation",
+    "algorithm interpretability",
+    "operator attribution"
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng",
+  "communities": [],
+  "related_identifiers": []
+}

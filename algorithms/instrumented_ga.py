@@ -24,7 +24,8 @@ class InstrumentedGA(InstrumentedAlgorithm):
     SELECTION_METHODS = ["tournament", "roulette", "rank", "random"]
 
     # Available crossover types
-    CROSSOVER_TYPES = ["sbx", "blx_alpha", "uniform", "simulated_binary"]
+    CROSSOVER_TYPES = ["sbx", "blx_alpha", "uniform", "simulated_binary",
+                       "arithmetic", "two_point", "single_point"]
 
     # Available mutation types
     MUTATION_TYPES = ["polynomial", "gaussian", "uniform"]
@@ -171,6 +172,9 @@ class InstrumentedGA(InstrumentedAlgorithm):
             "blx_alpha": self._crossover_blx_alpha,
             "uniform": self._crossover_uniform,
             "simulated_binary": self._crossover_sbx,  # Alias
+            "arithmetic": self._crossover_arithmetic,
+            "two_point": self._crossover_two_point,
+            "single_point": self._crossover_single_point,
         }
         return types[crossover_type]
 
@@ -514,6 +518,53 @@ class InstrumentedGA(InstrumentedAlgorithm):
         mask = rng.random(len(parent1)) < 0.5
         child1 = np.where(mask, parent1, parent2)
         child2 = np.where(mask, parent2, parent1)
+        return child1, child2
+
+    def _crossover_arithmetic(
+        self,
+        parent1: np.ndarray,
+        parent2: np.ndarray,
+        rng: np.random.Generator,
+        alpha: float = 0.5,
+        **kwargs
+    ) -> Tuple[np.ndarray, np.ndarray]:
+        """Whole arithmetic recombination: convex combination of the parents."""
+        child1 = alpha * parent1 + (1.0 - alpha) * parent2
+        child2 = (1.0 - alpha) * parent1 + alpha * parent2
+        return child1, child2
+
+    def _crossover_two_point(
+        self,
+        parent1: np.ndarray,
+        parent2: np.ndarray,
+        rng: np.random.Generator,
+        **kwargs
+    ) -> Tuple[np.ndarray, np.ndarray]:
+        """Two-point crossover on real-valued vectors treated as indexed positions."""
+        n = len(parent1)
+        if n < 2:
+            return parent1.copy(), parent2.copy()
+        p1, p2 = sorted(rng.choice(n + 1, size=2, replace=False))
+        child1 = parent1.copy()
+        child2 = parent2.copy()
+        child1[p1:p2] = parent2[p1:p2]
+        child2[p1:p2] = parent1[p1:p2]
+        return child1, child2
+
+    def _crossover_single_point(
+        self,
+        parent1: np.ndarray,
+        parent2: np.ndarray,
+        rng: np.random.Generator,
+        **kwargs
+    ) -> Tuple[np.ndarray, np.ndarray]:
+        """Single-point crossover on real-valued vectors treated as indexed positions."""
+        n = len(parent1)
+        if n < 2:
+            return parent1.copy(), parent2.copy()
+        point = rng.integers(1, n)
+        child1 = np.concatenate([parent1[:point], parent2[point:]])
+        child2 = np.concatenate([parent2[:point], parent1[point:]])
         return child1, child2
 
     # ==================== MUTATION OPERATORS ====================
