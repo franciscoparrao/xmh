@@ -3,8 +3,8 @@
   "description": "Python framework for exact Shapley value attribution at the operator level in metaheuristic algorithms. Includes instrumented implementations of DE, GA, PSO, CMA-ES, SHADE, and JADE, and four attribution methods (Exact Shapley, QuickSHAP, canonical KernelSHAP, tracking).",
   "creators": [
     {
-      "name": "Parra Orellana, Francisco",
-      "affiliation": "Department of Computer Engineering, Universidad de Santiago de Chile (USACH)",
+      "name": "Parra Ortiz, Francisco",
+      "affiliation": "Department of Informatics Engineering, Universidad de Santiago de Chile (USACH)",
       "orcid": ""
     }
   ],

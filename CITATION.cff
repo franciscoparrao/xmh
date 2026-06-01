@@ -3,10 +3,10 @@ title: "XMH: Explainable Metaheuristics via Exact Operator-Level Shapley Value A
 message: "If you use this software, please cite it as below."
 type: software
 authors:
-  - family-names: "Parra Orellana"
+  - family-names: "Parra Ortiz"
     given-names: "Francisco"
     email: francisco.parra.o@usach.cl
-    affiliation: "Department of Computer Engineering, Universidad de Santiago de Chile (USACH)"
+    affiliation: "Department of Informatics Engineering, Universidad de Santiago de Chile (USACH)"
 repository-code: "https://github.com/franciscoparrao/xmh"
 abstract: >-
   XMH is a Python framework that computes exact Shapley values
