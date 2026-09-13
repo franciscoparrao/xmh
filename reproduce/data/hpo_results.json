@@ -1,0 +1,4202 @@
+[
+  {
+    "algorithm": "DE",
+    "dataset": "breast_cancer",
+    "run_id": 0,
+    "best_accuracy": 0.9771464058376029,
+    "best_params": {
+      "n_estimators": 470,
+      "max_depth": 8,
+      "learning_rate": 0.27801251864394977,
+      "subsample": 0.5023723283802554,
+      "colsample_bytree": 0.5003281577368751,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 10.0,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.008779692594317712,
+      "crossover_binomial": 0.008779692594317712
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 310,
+        "success_rate": 0.20666666666666667
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 310,
+        "success_rate": 0.20666666666666667
+      }
+    },
+    "execution_time": 3615.5435428619385
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "breast_cancer",
+    "run_id": 1,
+    "best_accuracy": 0.9771464058376029,
+    "best_params": {
+      "n_estimators": 202,
+      "max_depth": 5,
+      "learning_rate": 0.22744476466876562,
+      "subsample": 0.5,
+      "colsample_bytree": 0.6767206411957045,
+      "reg_alpha": 5.7465025419185867e-05,
+      "reg_lambda": 0.16196076614966265,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.007033069399161651,
+      "crossover_binomial": 0.007033069399161651
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 192,
+        "success_rate": 0.128
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 192,
+        "success_rate": 0.128
+      }
+    },
+    "execution_time": 2387.7535927295685
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "breast_cancer",
+    "run_id": 2,
+    "best_accuracy": 0.9771464058376029,
+    "best_params": {
+      "n_estimators": 487,
+      "max_depth": 8,
+      "learning_rate": 0.09728590540742839,
+      "subsample": 0.5,
+      "colsample_bytree": 0.575880118455649,
+      "reg_alpha": 0.0463898786037804,
+      "reg_lambda": 0.9210322930249926,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.006148113646949227,
+      "crossover_binomial": 0.006148113646949227
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 246,
+        "success_rate": 0.164
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 246,
+        "success_rate": 0.164
+      }
+    },
+    "execution_time": 3170.3367173671722
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "breast_cancer",
+    "run_id": 3,
+    "best_accuracy": 0.9771464058376029,
+    "best_params": {
+      "n_estimators": 491,
+      "max_depth": 8,
+      "learning_rate": 0.08377423954110474,
+      "subsample": 0.5,
+      "colsample_bytree": 0.5853888900024954,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 0.10007884067711209,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0035087719298245723,
+      "crossover_binomial": 0.0035087719298245723
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 247,
+        "success_rate": 0.16466666666666666
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 247,
+        "success_rate": 0.16466666666666666
+      }
+    },
+    "execution_time": 3383.608663082123
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "breast_cancer",
+    "run_id": 4,
+    "best_accuracy": 0.9753920198726906,
+    "best_params": {
+      "n_estimators": 323,
+      "max_depth": 12,
+      "learning_rate": 0.2519708621608128,
+      "subsample": 0.5,
+      "colsample_bytree": 0.7220600043689693,
+      "reg_alpha": 0.01595895598763276,
+      "reg_lambda": 0.014588331598804297,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.004393727682036996,
+      "crossover_binomial": 0.004393727682036996
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 189,
+        "success_rate": 0.126
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 189,
+        "success_rate": 0.126
+      }
+    },
+    "execution_time": 3141.4977498054504
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "breast_cancer",
+    "run_id": 5,
+    "best_accuracy": 0.9753920198726906,
+    "best_params": {
+      "n_estimators": 447,
+      "max_depth": 7,
+      "learning_rate": 0.0893270583405039,
+      "subsample": 0.5258407527625829,
+      "colsample_bytree": 0.6448086335525873,
+      "reg_alpha": 0.0005691337880928454,
+      "reg_lambda": 0.0016398491084118735,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.004385964912280771,
+      "crossover_binomial": 0.004385964912280771
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 211,
+        "success_rate": 0.14066666666666666
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 211,
+        "success_rate": 0.14066666666666666
+      }
+    },
+    "execution_time": 2442.5613074302673
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "breast_cancer",
+    "run_id": 6,
+    "best_accuracy": 0.9789007918025152,
+    "best_params": {
+      "n_estimators": 376,
+      "max_depth": 5,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.5557570463892196,
+      "colsample_bytree": 0.6955087669128266,
+      "reg_alpha": 0.05558388457373772,
+      "reg_lambda": 6.256371810251153,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.007902499611861513,
+      "crossover_binomial": 0.007902499611861513
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 281,
+        "success_rate": 0.18733333333333332
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 281,
+        "success_rate": 0.18733333333333332
+      }
+    },
+    "execution_time": 2588.644745826721
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "breast_cancer",
+    "run_id": 7,
+    "best_accuracy": 0.9771464058376029,
+    "best_params": {
+      "n_estimators": 293,
+      "max_depth": 5,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.5,
+      "colsample_bytree": 0.5793765879716587,
+      "reg_alpha": 0.007299980259226611,
+      "reg_lambda": 2.468866887852454,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0035087719298245723,
+      "crossover_binomial": 0.0035087719298245723
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 222,
+        "success_rate": 0.148
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 222,
+        "success_rate": 0.148
+      }
+    },
+    "execution_time": 2214.3608565330505
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "breast_cancer",
+    "run_id": 8,
+    "best_accuracy": 0.9789007918025151,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 8,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.537546096948284,
+      "colsample_bytree": 0.6585414325941352,
+      "reg_alpha": 2.1337098873925394e-05,
+      "reg_lambda": 10.0,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.007017543859649089,
+      "crossover_binomial": 0.007017543859649089
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 219,
+        "success_rate": 0.146
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 219,
+        "success_rate": 0.146
+      }
+    },
+    "execution_time": 2569.6868505477905
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "breast_cancer",
+    "run_id": 9,
+    "best_accuracy": 0.9789007918025151,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.29792345110782936,
+      "subsample": 0.5370405557423233,
+      "colsample_bytree": 0.6532124242885792,
+      "reg_alpha": 0.0037670575556757006,
+      "reg_lambda": 10.0,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.007033069399161651,
+      "crossover_binomial": 0.007033069399161651
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 264,
+        "success_rate": 0.176
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 264,
+        "success_rate": 0.176
+      }
+    },
+    "execution_time": 2714.9382922649384
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "breast_cancer",
+    "run_id": 0,
+    "best_accuracy": 0.9771464058376029,
+    "best_params": {
+      "n_estimators": 461,
+      "max_depth": 7,
+      "learning_rate": 0.2398562034462916,
+      "subsample": 0.5242335156104961,
+      "colsample_bytree": 0.734845826642418,
+      "reg_alpha": 0.36329613589552817,
+      "reg_lambda": 1.9622819486432725,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "selection_tournament": 0.005853128396211807,
+      "crossover_sbx": 0.005853128396211807,
+      "mutation_polynomial": 0.005853128396211807
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 230,
+        "success_rate": 0.30666666666666664
+      },
+      "crossover_sbx": {
+        "total_used": 677,
+        "total_success": 230,
+        "success_rate": 0.3397341211225997
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 230,
+        "success_rate": 0.30666666666666664
+      }
+    },
+    "execution_time": 2655.8623762130737
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "breast_cancer",
+    "run_id": 1,
+    "best_accuracy": 0.9753764943331781,
+    "best_params": {
+      "n_estimators": 255,
+      "max_depth": 11,
+      "learning_rate": 0.15384610573448787,
+      "subsample": 0.9552067232745085,
+      "colsample_bytree": 0.6392513026061354,
+      "reg_alpha": 0.001163443406658695,
+      "reg_lambda": 0.0030291470684850794,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "selection_tournament": 0.004098742431299485,
+      "crossover_sbx": 0.004098742431299485,
+      "mutation_polynomial": 0.004098742431299485
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 186,
+        "success_rate": 0.248
+      },
+      "crossover_sbx": {
+        "total_used": 681,
+        "total_success": 186,
+        "success_rate": 0.27312775330396477
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 186,
+        "success_rate": 0.248
+      }
+    },
+    "execution_time": 1991.8930668830872
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "breast_cancer",
+    "run_id": 2,
+    "best_accuracy": 0.9771464058376029,
+    "best_params": {
+      "n_estimators": 302,
+      "max_depth": 4,
+      "learning_rate": 0.28458898990929804,
+      "subsample": 0.6138824540391961,
+      "colsample_bytree": 0.9943906435628673,
+      "reg_alpha": 0.07547917668445393,
+      "reg_lambda": 0.0035490417771215925,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "selection_tournament": 0.0040987424312994855,
+      "crossover_sbx": 0.004098742431299485,
+      "mutation_polynomial": 0.0040987424312994855
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 204,
+        "success_rate": 0.272
+      },
+      "crossover_sbx": {
+        "total_used": 664,
+        "total_success": 204,
+        "success_rate": 0.3072289156626506
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 204,
+        "success_rate": 0.272
+      }
+    },
+    "execution_time": 2184.4204230308533
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "breast_cancer",
+    "run_id": 3,
+    "best_accuracy": 0.9771464058376029,
+    "best_params": {
+      "n_estimators": 447,
+      "max_depth": 10,
+      "learning_rate": 0.08518328476572938,
+      "subsample": 0.5234558218909151,
+      "colsample_bytree": 0.5274701982648444,
+      "reg_alpha": 1.3186938093450148e-05,
+      "reg_lambda": 0.2672389113245143,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "selection_tournament": 0.0023391812865497146,
+      "crossover_sbx": 0.0023391812865497146,
+      "mutation_polynomial": 0.0023391812865497146
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 147,
+        "success_rate": 0.196
+      },
+      "crossover_sbx": {
+        "total_used": 674,
+        "total_success": 147,
+        "success_rate": 0.21810089020771514
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 147,
+        "success_rate": 0.196
+      }
+    },
+    "execution_time": 2573.657691001892
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "breast_cancer",
+    "run_id": 4,
+    "best_accuracy": 0.98067070330694,
+    "best_params": {
+      "n_estimators": 187,
+      "max_depth": 5,
+      "learning_rate": 0.15247140437539927,
+      "subsample": 0.5354776999411801,
+      "colsample_bytree": 0.6677836695744364,
+      "reg_alpha": 6.736655169398397e-05,
+      "reg_lambda": 0.0009890739194373898,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "selection_tournament": 0.0046887129327744335,
+      "crossover_sbx": 0.0046887129327744335,
+      "mutation_polynomial": 0.0046887129327744335
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 280,
+        "success_rate": 0.37333333333333335
+      },
+      "crossover_sbx": {
+        "total_used": 677,
+        "total_success": 280,
+        "success_rate": 0.413589364844904
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 280,
+        "success_rate": 0.37333333333333335
+      }
+    },
+    "execution_time": 1772.8010649681091
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "breast_cancer",
+    "run_id": 5,
+    "best_accuracy": 0.9736376339077782,
+    "best_params": {
+      "n_estimators": 248,
+      "max_depth": 4,
+      "learning_rate": 0.060036275229740366,
+      "subsample": 0.5798541890318437,
+      "colsample_bytree": 0.5593157553853846,
+      "reg_alpha": 3.607491922349103e-05,
+      "reg_lambda": 0.00013673204740320357,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "selection_tournament": 0.0023391812865497146,
+      "crossover_sbx": 0.0023391812865497146,
+      "mutation_polynomial": 0.0023391812865497146
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 158,
+        "success_rate": 0.21066666666666667
+      },
+      "crossover_sbx": {
+        "total_used": 669,
+        "total_success": 158,
+        "success_rate": 0.23617339312406577
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 158,
+        "success_rate": 0.21066666666666667
+      }
+    },
+    "execution_time": 2861.8997066020966
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "breast_cancer",
+    "run_id": 6,
+    "best_accuracy": 0.9806551777674274,
+    "best_params": {
+      "n_estimators": 351,
+      "max_depth": 8,
+      "learning_rate": 0.12231103897874558,
+      "subsample": 0.5042262095074938,
+      "colsample_bytree": 0.6184045684438992,
+      "reg_alpha": 0.000580948387738246,
+      "reg_lambda": 2.1395289110085938,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "selection_tournament": 0.0058531283962117335,
+      "crossover_sbx": 0.0058531283962117335,
+      "mutation_polynomial": 0.0058531283962117335
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 182,
+        "success_rate": 0.24266666666666667
+      },
+      "crossover_sbx": {
+        "total_used": 684,
+        "total_success": 182,
+        "success_rate": 0.26608187134502925
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 182,
+        "success_rate": 0.24266666666666667
+      }
+    },
+    "execution_time": 2581.127692222595
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "breast_cancer",
+    "run_id": 7,
+    "best_accuracy": 0.9753920198726906,
+    "best_params": {
+      "n_estimators": 236,
+      "max_depth": 9,
+      "learning_rate": 0.09118365368001546,
+      "subsample": 0.5357457936135837,
+      "colsample_bytree": 0.60995649501131,
+      "reg_alpha": 9.313473970713264e-05,
+      "reg_lambda": 0.8291727993501161,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "selection_tournament": 0.0017543859649122862,
+      "mutation_polynomial": 0.0017543859649122862,
+      "crossover_sbx": 0.0017543859649122862
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 198,
+        "success_rate": 0.264
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 198,
+        "success_rate": 0.264
+      },
+      "crossover_sbx": {
+        "total_used": 655,
+        "total_success": 198,
+        "success_rate": 0.30229007633587784
+      }
+    },
+    "execution_time": 1874.978218793869
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "breast_cancer",
+    "run_id": 8,
+    "best_accuracy": 0.9771464058376029,
+    "best_params": {
+      "n_estimators": 308,
+      "max_depth": 7,
+      "learning_rate": 0.057388280582338115,
+      "subsample": 0.5418656917867533,
+      "colsample_bytree": 0.6384106847732511,
+      "reg_alpha": 0.000345865992187799,
+      "reg_lambda": 4.069251513724378e-05,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "selection_tournament": 0.004093567251462001,
+      "crossover_sbx": 0.004093567251462001,
+      "mutation_polynomial": 0.004093567251462001
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 227,
+        "success_rate": 0.30266666666666664
+      },
+      "crossover_sbx": {
+        "total_used": 671,
+        "total_success": 227,
+        "success_rate": 0.338301043219076
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 227,
+        "success_rate": 0.30266666666666664
+      }
+    },
+    "execution_time": 2735.3880276679993
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "breast_cancer",
+    "run_id": 9,
+    "best_accuracy": 0.9806551777674274,
+    "best_params": {
+      "n_estimators": 251,
+      "max_depth": 7,
+      "learning_rate": 0.2365174001428452,
+      "subsample": 0.5546703419525442,
+      "colsample_bytree": 0.8685892180980179,
+      "reg_alpha": 0.007461313139230284,
+      "reg_lambda": 5.869182833838622e-05,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "selection_tournament": 0.005273508254411863,
+      "crossover_sbx": 0.005273508254411863,
+      "mutation_polynomial": 0.005273508254411863
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 215,
+        "success_rate": 0.2866666666666667
+      },
+      "crossover_sbx": {
+        "total_used": 669,
+        "total_success": 215,
+        "success_rate": 0.3213751868460389
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 215,
+        "success_rate": 0.2866666666666667
+      }
+    },
+    "execution_time": 1570.327443599701
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "breast_cancer",
+    "run_id": 0,
+    "best_accuracy": 0.9771464058376029,
+    "best_params": {
+      "n_estimators": 319,
+      "max_depth": 5,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.5,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 0.015857932992704216,
+      "reg_lambda": 10.0,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.015804999223723137
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 187,
+        "success_rate": 0.12466666666666666
+      }
+    },
+    "execution_time": 2204.7223954200745
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "breast_cancer",
+    "run_id": 1,
+    "best_accuracy": 0.9736376339077782,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 9,
+      "learning_rate": 0.013676838118763647,
+      "subsample": 0.8763527065624406,
+      "colsample_bytree": 1.0,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 0.002526928126770721,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.003539823008849474
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 126,
+        "success_rate": 0.084
+      }
+    },
+    "execution_time": 12172.232885837555
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "breast_cancer",
+    "run_id": 2,
+    "best_accuracy": 0.9788697407234901,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 4,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.542361941599216,
+      "colsample_bytree": 0.9212306736585538,
+      "reg_alpha": 0.6144843495978886,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0052631578947368585
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 163,
+        "success_rate": 0.10866666666666666
+      }
+    },
+    "execution_time": 2931.4617421627045
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "breast_cancer",
+    "run_id": 3,
+    "best_accuracy": 0.9753920198726906,
+    "best_params": {
+      "n_estimators": 480,
+      "max_depth": 11,
+      "learning_rate": 0.07778650849856461,
+      "subsample": 0.5,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 2.8947505221733202e-05,
+      "reg_lambda": 0.01,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0017543859649121751
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 138,
+        "success_rate": 0.092
+      }
+    },
+    "execution_time": 3295.4942784309387
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "breast_cancer",
+    "run_id": 4,
+    "best_accuracy": 0.9753920198726906,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "learning_rate": 0.07160137151040528,
+      "subsample": 0.5,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 0.04995132685886479,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0052786834342494204
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 154,
+        "success_rate": 0.10266666666666667
+      }
+    },
+    "execution_time": 2940.0814623832703
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "breast_cancer",
+    "run_id": 5,
+    "best_accuracy": 0.9754075454122031,
+    "best_params": {
+      "n_estimators": 50,
+      "max_depth": 3,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.5,
+      "colsample_bytree": 0.8166106962839731,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 0.0008367079646647597,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.007033069399161707
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 128,
+        "success_rate": 0.08533333333333333
+      }
+    },
+    "execution_time": 1342.5511829853058
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "breast_cancer",
+    "run_id": 6,
+    "best_accuracy": 0.9753920198726906,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "learning_rate": 0.06812899034862131,
+      "subsample": 0.5030544629747824,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 1.0742679341618771e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.008787455364073882
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 152,
+        "success_rate": 0.10133333333333333
+      }
+    },
+    "execution_time": 3075.9720237255096
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "breast_cancer",
+    "run_id": 7,
+    "best_accuracy": 0.9771464058376029,
+    "best_params": {
+      "n_estimators": 467,
+      "max_depth": 5,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.5,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 0.025553032888934287,
+      "reg_lambda": 10.0,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0052631578947368585
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 166,
+        "success_rate": 0.11066666666666666
+      }
+    },
+    "execution_time": 2742.660680770874
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "breast_cancer",
+    "run_id": 8,
+    "best_accuracy": 0.9771774569166279,
+    "best_params": {
+      "n_estimators": 192,
+      "max_depth": 7,
+      "learning_rate": 0.28925054112483223,
+      "subsample": 0.515630087452426,
+      "colsample_bytree": 0.8667912777777356,
+      "reg_alpha": 2.635328728868605e-05,
+      "reg_lambda": 1.1320631655654111e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.00877192982456132
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 161,
+        "success_rate": 0.10733333333333334
+      }
+    },
+    "execution_time": 1762.1749889850616
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "breast_cancer",
+    "run_id": 9,
+    "best_accuracy": 0.9771464058376029,
+    "best_params": {
+      "n_estimators": 469,
+      "max_depth": 4,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.5,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 0.02540723049045502,
+      "reg_lambda": 10.0,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.010557366868498841
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 174,
+        "success_rate": 0.116
+      }
+    },
+    "execution_time": 2252.531951189041
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "wine",
+    "run_id": 0,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 313,
+      "max_depth": 9,
+      "learning_rate": 0.01332706456085793,
+      "subsample": 0.7079037010853049,
+      "colsample_bytree": 0.5208070869309462,
+      "reg_alpha": 0.009203328322561708,
+      "reg_lambda": 0.0009531632161650423,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0,
+      "crossover_binomial": 0.0
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 982,
+        "success_rate": 0.6546666666666666
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 982,
+        "success_rate": 0.6546666666666666
+      }
+    },
+    "execution_time": 2533.6173944473267
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "wine",
+    "run_id": 1,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 482,
+      "max_depth": 8,
+      "learning_rate": 0.23882726054095463,
+      "subsample": 0.6054411396229537,
+      "colsample_bytree": 0.9001645192391139,
+      "reg_alpha": 7.549866489023324e-05,
+      "reg_lambda": 0.05312808734115534,
+      "min_child_weight": 8
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0,
+      "crossover_binomial": 0.0
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 1098,
+        "success_rate": 0.732
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 1098,
+        "success_rate": 0.732
+      }
+    },
+    "execution_time": 2464.765431880951
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "wine",
+    "run_id": 2,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 138,
+      "max_depth": 9,
+      "learning_rate": 0.05544696663662878,
+      "subsample": 0.5306455099198485,
+      "colsample_bytree": 0.9762308042406113,
+      "reg_alpha": 0.09128128226445646,
+      "reg_lambda": 0.7450866124368776,
+      "min_child_weight": 4
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0,
+      "crossover_binomial": 0.0
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 996,
+        "success_rate": 0.664
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 996,
+        "success_rate": 0.664
+      }
+    },
+    "execution_time": 2237.509864807129
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "wine",
+    "run_id": 3,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 415,
+      "max_depth": 11,
+      "learning_rate": 0.08518328476572938,
+      "subsample": 0.5234558218909151,
+      "colsample_bytree": 0.5274436584938239,
+      "reg_alpha": 5.2393746389078315e-05,
+      "reg_lambda": 0.1636276888961339,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0,
+      "crossover_binomial": 0.0
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 1037,
+        "success_rate": 0.6913333333333334
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 1037,
+        "success_rate": 0.6913333333333334
+      }
+    },
+    "execution_time": 2963.4235661029816
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "wine",
+    "run_id": 4,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 192,
+      "max_depth": 7,
+      "learning_rate": 0.021426141320721532,
+      "subsample": 0.9538912273563349,
+      "colsample_bytree": 0.5232678495438579,
+      "reg_alpha": 0.0017501948434161356,
+      "reg_lambda": 0.00046258299921961976,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0,
+      "crossover_binomial": 0.0
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 948,
+        "success_rate": 0.632
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 948,
+        "success_rate": 0.632
+      }
+    },
+    "execution_time": 2815.6107306480408
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "wine",
+    "run_id": 5,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 190,
+      "max_depth": 9,
+      "learning_rate": 0.21509058269044753,
+      "subsample": 0.5968094864569657,
+      "colsample_bytree": 0.8050983821924471,
+      "reg_alpha": 2.338846396781541e-05,
+      "reg_lambda": 0.0202493129876247,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0,
+      "crossover_binomial": 0.0
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 1131,
+        "success_rate": 0.754
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 1131,
+        "success_rate": 0.754
+      }
+    },
+    "execution_time": 2658.75137925148
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "wine",
+    "run_id": 6,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 221,
+      "max_depth": 9,
+      "learning_rate": 0.20310474238539825,
+      "subsample": 0.5766449620325174,
+      "colsample_bytree": 0.6254419407821525,
+      "reg_alpha": 0.0012407305865437745,
+      "reg_lambda": 5.1369169846022515,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0,
+      "crossover_binomial": 0.0
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 943,
+        "success_rate": 0.6286666666666667
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 943,
+        "success_rate": 0.6286666666666667
+      }
+    },
+    "execution_time": 2248.8042011260986
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "wine",
+    "run_id": 7,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 276,
+      "max_depth": 9,
+      "learning_rate": 0.04419310801967879,
+      "subsample": 0.6633470797746586,
+      "colsample_bytree": 0.7273810805412271,
+      "reg_alpha": 0.0010159265536551752,
+      "reg_lambda": 0.00020187187468676627,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0,
+      "crossover_binomial": 0.0
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 1008,
+        "success_rate": 0.672
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 1008,
+        "success_rate": 0.672
+      }
+    },
+    "execution_time": 2507.9549276828766
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "wine",
+    "run_id": 8,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 156,
+      "max_depth": 5,
+      "learning_rate": 0.0459888107193137,
+      "subsample": 0.6658363258724131,
+      "colsample_bytree": 0.8858730620078694,
+      "reg_alpha": 0.006895356900347145,
+      "reg_lambda": 0.4813917039661662,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0,
+      "crossover_binomial": 0.0
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 1090,
+        "success_rate": 0.7266666666666667
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 1090,
+        "success_rate": 0.7266666666666667
+      }
+    },
+    "execution_time": 2590.233345270157
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "wine",
+    "run_id": 9,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 329,
+      "max_depth": 12,
+      "learning_rate": 0.21374322526620532,
+      "subsample": 0.5468946587227544,
+      "colsample_bytree": 0.6208191415237096,
+      "reg_alpha": 0.018278034558803925,
+      "reg_lambda": 0.007319426628042411,
+      "min_child_weight": 5
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0,
+      "crossover_binomial": 0.0
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 1070,
+        "success_rate": 0.7133333333333334
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 1070,
+        "success_rate": 0.7133333333333334
+      }
+    },
+    "execution_time": 2498.0136229991913
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "wine",
+    "run_id": 0,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 313,
+      "max_depth": 9,
+      "learning_rate": 0.01332706456085793,
+      "subsample": 0.7079037010853049,
+      "colsample_bytree": 0.5208070869309462,
+      "reg_alpha": 0.009203328322561708,
+      "reg_lambda": 0.0009531632161650423,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "selection_tournament": 0.0,
+      "crossover_sbx": 0.0,
+      "mutation_polynomial": 0.0
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 22,
+        "success_rate": 0.029333333333333333
+      },
+      "crossover_sbx": {
+        "total_used": 668,
+        "total_success": 22,
+        "success_rate": 0.03293413173652695
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 22,
+        "success_rate": 0.029333333333333333
+      }
+    },
+    "execution_time": 2373.7019941806793
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "wine",
+    "run_id": 1,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 482,
+      "max_depth": 8,
+      "learning_rate": 0.23882726054095463,
+      "subsample": 0.6054411396229537,
+      "colsample_bytree": 0.9001645192391139,
+      "reg_alpha": 7.549866489023324e-05,
+      "reg_lambda": 0.05312808734115534,
+      "min_child_weight": 8
+    },
+    "shap_values": {
+      "selection_tournament": 0.0,
+      "crossover_sbx": 0.0,
+      "mutation_polynomial": 0.0
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 31,
+        "success_rate": 0.04133333333333333
+      },
+      "crossover_sbx": {
+        "total_used": 679,
+        "total_success": 31,
+        "success_rate": 0.045655375552282766
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 31,
+        "success_rate": 0.04133333333333333
+      }
+    },
+    "execution_time": 1748.3539371490479
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "wine",
+    "run_id": 2,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 138,
+      "max_depth": 9,
+      "learning_rate": 0.05544696663662878,
+      "subsample": 0.5306455099198485,
+      "colsample_bytree": 0.9762308042406113,
+      "reg_alpha": 0.09128128226445646,
+      "reg_lambda": 0.7450866124368776,
+      "min_child_weight": 4
+    },
+    "shap_values": {
+      "selection_tournament": 0.0,
+      "crossover_sbx": 0.0,
+      "mutation_polynomial": 0.0
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 33,
+        "success_rate": 0.044
+      },
+      "crossover_sbx": {
+        "total_used": 687,
+        "total_success": 33,
+        "success_rate": 0.048034934497816595
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 33,
+        "success_rate": 0.044
+      }
+    },
+    "execution_time": 2852.309705734253
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "wine",
+    "run_id": 3,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 415,
+      "max_depth": 11,
+      "learning_rate": 0.08518328476572938,
+      "subsample": 0.5234558218909151,
+      "colsample_bytree": 0.5274436584938239,
+      "reg_alpha": 5.2393746389078315e-05,
+      "reg_lambda": 0.1636276888961339,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "selection_tournament": 0.0,
+      "crossover_sbx": 0.0,
+      "mutation_polynomial": 0.0
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 23,
+        "success_rate": 0.030666666666666665
+      },
+      "crossover_sbx": {
+        "total_used": 687,
+        "total_success": 23,
+        "success_rate": 0.033478893740902474
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 23,
+        "success_rate": 0.030666666666666665
+      }
+    },
+    "execution_time": 1643.1633505821228
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "wine",
+    "run_id": 4,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 192,
+      "max_depth": 7,
+      "learning_rate": 0.021426141320721532,
+      "subsample": 0.9538912273563349,
+      "colsample_bytree": 0.5232678495438579,
+      "reg_alpha": 0.0017501948434161356,
+      "reg_lambda": 0.00046258299921961976,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "selection_tournament": 0.0,
+      "crossover_sbx": 0.0,
+      "mutation_polynomial": 0.0
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 23,
+        "success_rate": 0.030666666666666665
+      },
+      "crossover_sbx": {
+        "total_used": 674,
+        "total_success": 23,
+        "success_rate": 0.03412462908011869
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 23,
+        "success_rate": 0.030666666666666665
+      }
+    },
+    "execution_time": 2293.2164919376373
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "wine",
+    "run_id": 5,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 190,
+      "max_depth": 9,
+      "learning_rate": 0.21509058269044753,
+      "subsample": 0.5968094864569657,
+      "colsample_bytree": 0.8050983821924471,
+      "reg_alpha": 2.338846396781541e-05,
+      "reg_lambda": 0.0202493129876247,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "selection_tournament": 0.0,
+      "crossover_sbx": 0.0,
+      "mutation_polynomial": 0.0
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 21,
+        "success_rate": 0.028
+      },
+      "crossover_sbx": {
+        "total_used": 690,
+        "total_success": 21,
+        "success_rate": 0.030434782608695653
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 21,
+        "success_rate": 0.028
+      }
+    },
+    "execution_time": 1402.5464870929718
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "wine",
+    "run_id": 6,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 221,
+      "max_depth": 9,
+      "learning_rate": 0.20310474238539825,
+      "subsample": 0.5766449620325174,
+      "colsample_bytree": 0.6254419407821525,
+      "reg_alpha": 0.0012407305865437745,
+      "reg_lambda": 5.1369169846022515,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "selection_tournament": 0.0,
+      "crossover_sbx": 0.0,
+      "mutation_polynomial": 0.0
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 28,
+        "success_rate": 0.037333333333333336
+      },
+      "crossover_sbx": {
+        "total_used": 686,
+        "total_success": 28,
+        "success_rate": 0.04081632653061224
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 28,
+        "success_rate": 0.037333333333333336
+      }
+    },
+    "execution_time": 1745.7377495765686
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "wine",
+    "run_id": 7,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 276,
+      "max_depth": 9,
+      "learning_rate": 0.04419310801967879,
+      "subsample": 0.6633470797746586,
+      "colsample_bytree": 0.7273810805412271,
+      "reg_alpha": 0.0010159265536551752,
+      "reg_lambda": 0.00020187187468676627,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "selection_tournament": 0.0,
+      "mutation_polynomial": 0.0,
+      "crossover_sbx": 0.0
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 25,
+        "success_rate": 0.03333333333333333
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 25,
+        "success_rate": 0.03333333333333333
+      },
+      "crossover_sbx": {
+        "total_used": 664,
+        "total_success": 25,
+        "success_rate": 0.03765060240963856
+      }
+    },
+    "execution_time": 2820.5864675045013
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "wine",
+    "run_id": 8,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 156,
+      "max_depth": 5,
+      "learning_rate": 0.0459888107193137,
+      "subsample": 0.6658363258724131,
+      "colsample_bytree": 0.8858730620078694,
+      "reg_alpha": 0.006895356900347145,
+      "reg_lambda": 0.4813917039661662,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "selection_tournament": 0.0,
+      "crossover_sbx": 0.0,
+      "mutation_polynomial": 0.0
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 30,
+        "success_rate": 0.04
+      },
+      "crossover_sbx": {
+        "total_used": 675,
+        "total_success": 30,
+        "success_rate": 0.044444444444444446
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 30,
+        "success_rate": 0.04
+      }
+    },
+    "execution_time": 2180.6109631061554
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "wine",
+    "run_id": 9,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 329,
+      "max_depth": 12,
+      "learning_rate": 0.21374322526620532,
+      "subsample": 0.5468946587227544,
+      "colsample_bytree": 0.6208191415237096,
+      "reg_alpha": 0.018278034558803925,
+      "reg_lambda": 0.007319426628042411,
+      "min_child_weight": 5
+    },
+    "shap_values": {
+      "selection_tournament": 0.0,
+      "crossover_sbx": 0.0,
+      "mutation_polynomial": 0.0
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 14,
+        "success_rate": 0.018666666666666668
+      },
+      "crossover_sbx": {
+        "total_used": 671,
+        "total_success": 14,
+        "success_rate": 0.020864381520119227
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 14,
+        "success_rate": 0.018666666666666668
+      }
+    },
+    "execution_time": 2093.488937139511
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "wine",
+    "run_id": 0,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 313,
+      "max_depth": 9,
+      "learning_rate": 0.01332706456085793,
+      "subsample": 0.7079037010853049,
+      "colsample_bytree": 0.5208070869309462,
+      "reg_alpha": 0.009203328322561708,
+      "reg_lambda": 0.0009531632161650423,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 50,
+        "success_rate": 0.03333333333333333
+      }
+    },
+    "execution_time": 2760.3722105026245
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "wine",
+    "run_id": 1,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 482,
+      "max_depth": 8,
+      "learning_rate": 0.23882726054095463,
+      "subsample": 0.6054411396229537,
+      "colsample_bytree": 0.9001645192391139,
+      "reg_alpha": 7.549866489023324e-05,
+      "reg_lambda": 0.05312808734115534,
+      "min_child_weight": 8
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 77,
+        "success_rate": 0.051333333333333335
+      }
+    },
+    "execution_time": 2267.122421979904
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "wine",
+    "run_id": 2,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 138,
+      "max_depth": 9,
+      "learning_rate": 0.05544696663662878,
+      "subsample": 0.5306455099198485,
+      "colsample_bytree": 0.9762308042406113,
+      "reg_alpha": 0.09128128226445646,
+      "reg_lambda": 0.7450866124368776,
+      "min_child_weight": 4
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 60,
+        "success_rate": 0.04
+      }
+    },
+    "execution_time": 1362.1699755191803
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "wine",
+    "run_id": 3,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 415,
+      "max_depth": 11,
+      "learning_rate": 0.08518328476572938,
+      "subsample": 0.5234558218909151,
+      "colsample_bytree": 0.5274436584938239,
+      "reg_alpha": 5.2393746389078315e-05,
+      "reg_lambda": 0.1636276888961339,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 40,
+        "success_rate": 0.02666666666666667
+      }
+    },
+    "execution_time": 2460.3226523399353
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "wine",
+    "run_id": 4,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 192,
+      "max_depth": 7,
+      "learning_rate": 0.021426141320721532,
+      "subsample": 0.9538912273563349,
+      "colsample_bytree": 0.5232678495438579,
+      "reg_alpha": 0.0017501948434161356,
+      "reg_lambda": 0.00046258299921961976,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 43,
+        "success_rate": 0.028666666666666667
+      }
+    },
+    "execution_time": 2162.9636101722717
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "wine",
+    "run_id": 5,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 190,
+      "max_depth": 9,
+      "learning_rate": 0.21509058269044753,
+      "subsample": 0.5968094864569657,
+      "colsample_bytree": 0.8050983821924471,
+      "reg_alpha": 2.338846396781541e-05,
+      "reg_lambda": 0.0202493129876247,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 45,
+        "success_rate": 0.03
+      }
+    },
+    "execution_time": 1347.079304933548
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "wine",
+    "run_id": 6,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 221,
+      "max_depth": 9,
+      "learning_rate": 0.20310474238539825,
+      "subsample": 0.5766449620325174,
+      "colsample_bytree": 0.6254419407821525,
+      "reg_alpha": 0.0012407305865437745,
+      "reg_lambda": 5.1369169846022515,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 51,
+        "success_rate": 0.034
+      }
+    },
+    "execution_time": 1821.4111347198486
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "wine",
+    "run_id": 7,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 276,
+      "max_depth": 9,
+      "learning_rate": 0.04419310801967879,
+      "subsample": 0.6633470797746586,
+      "colsample_bytree": 0.7273810805412271,
+      "reg_alpha": 0.0010159265536551752,
+      "reg_lambda": 0.00020187187468676627,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 46,
+        "success_rate": 0.030666666666666665
+      }
+    },
+    "execution_time": 2559.9659214019775
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "wine",
+    "run_id": 8,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 156,
+      "max_depth": 5,
+      "learning_rate": 0.0459888107193137,
+      "subsample": 0.6658363258724131,
+      "colsample_bytree": 0.8858730620078694,
+      "reg_alpha": 0.006895356900347145,
+      "reg_lambda": 0.4813917039661662,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 44,
+        "success_rate": 0.029333333333333333
+      }
+    },
+    "execution_time": 1824.7900161743164
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "wine",
+    "run_id": 9,
+    "best_accuracy": 0.9887301587301588,
+    "best_params": {
+      "n_estimators": 329,
+      "max_depth": 12,
+      "learning_rate": 0.21374322526620532,
+      "subsample": 0.5468946587227544,
+      "colsample_bytree": 0.6208191415237096,
+      "reg_alpha": 0.018278034558803925,
+      "reg_lambda": 0.007319426628042411,
+      "min_child_weight": 5
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 42,
+        "success_rate": 0.028
+      }
+    },
+    "execution_time": 1795.41570687294
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "diabetes",
+    "run_id": 0,
+    "best_accuracy": 0.783795942619472,
+    "best_params": {
+      "n_estimators": 50,
+      "max_depth": 9,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.5,
+      "colsample_bytree": 0.7931459121365632,
+      "reg_alpha": 7.903002167310707,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 3
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0058611323317205866,
+      "crossover_binomial": 0.0058611323317205866
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 201,
+        "success_rate": 0.134
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 201,
+        "success_rate": 0.134
+      }
+    },
+    "execution_time": 1571.127758026123
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "diabetes",
+    "run_id": 1,
+    "best_accuracy": 0.7837874543756896,
+    "best_params": {
+      "n_estimators": 310,
+      "max_depth": 10,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.5,
+      "colsample_bytree": 0.9204304408633911,
+      "reg_alpha": 10.0,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 4
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.005216025804261115,
+      "crossover_binomial": 0.005216025804261115
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 170,
+        "success_rate": 0.11333333333333333
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 170,
+        "success_rate": 0.11333333333333333
+      }
+    },
+    "execution_time": 1874.6382522583008
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "diabetes",
+    "run_id": 2,
+    "best_accuracy": 0.7837619896443426,
+    "best_params": {
+      "n_estimators": 173,
+      "max_depth": 5,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 1.0,
+      "colsample_bytree": 0.8252144482178175,
+      "reg_alpha": 10.0,
+      "reg_lambda": 6.165797255565347,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.00715983363042183,
+      "crossover_binomial": 0.00715983363042183
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 182,
+        "success_rate": 0.12133333333333333
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 182,
+        "success_rate": 0.12133333333333333
+      }
+    },
+    "execution_time": 1435.0188958644867
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "diabetes",
+    "run_id": 3,
+    "best_accuracy": 0.7850776674306086,
+    "best_params": {
+      "n_estimators": 243,
+      "max_depth": 10,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.5404697870763374,
+      "colsample_bytree": 0.7281318077915128,
+      "reg_alpha": 10.0,
+      "reg_lambda": 2.785354911974575e-05,
+      "min_child_weight": 4
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.006510482981071153,
+      "crossover_binomial": 0.006510482981071153
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 184,
+        "success_rate": 0.12266666666666666
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 184,
+        "success_rate": 0.12266666666666666
+      }
+    },
+    "execution_time": 1371.3660023212433
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "diabetes",
+    "run_id": 4,
+    "best_accuracy": 0.7889992360580595,
+    "best_params": {
+      "n_estimators": 242,
+      "max_depth": 12,
+      "learning_rate": 0.01,
+      "subsample": 1.0,
+      "colsample_bytree": 1.0,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 10.0,
+      "min_child_weight": 4
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.00782616076733722,
+      "crossover_binomial": 0.00782616076733722
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 249,
+        "success_rate": 0.166
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 249,
+        "success_rate": 0.166
+      }
+    },
+    "execution_time": 1696.5636839866638
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "diabetes",
+    "run_id": 5,
+    "best_accuracy": 0.786401833460657,
+    "best_params": {
+      "n_estimators": 125,
+      "max_depth": 12,
+      "learning_rate": 0.01610087882934247,
+      "subsample": 1.0,
+      "colsample_bytree": 1.0,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 10.0,
+      "min_child_weight": 4
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.010423563364739818,
+      "crossover_binomial": 0.010423563364739818
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 171,
+        "success_rate": 0.114
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 171,
+        "success_rate": 0.114
+      }
+    },
+    "execution_time": 1213.2503368854523
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "diabetes",
+    "run_id": 6,
+    "best_accuracy": 0.7837535014005602,
+    "best_params": {
+      "n_estimators": 50,
+      "max_depth": 11,
+      "learning_rate": 0.2759764834461499,
+      "subsample": 0.5416229550496313,
+      "colsample_bytree": 0.7156349269903632,
+      "reg_alpha": 10.0,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 4
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0045581869111280815,
+      "crossover_binomial": 0.0045581869111280815
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 180,
+        "success_rate": 0.12
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 180,
+        "success_rate": 0.12
+      }
+    },
+    "execution_time": 439.6350636482239
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "diabetes",
+    "run_id": 7,
+    "best_accuracy": 0.7838383838383838,
+    "best_params": {
+      "n_estimators": 266,
+      "max_depth": 9,
+      "learning_rate": 0.01,
+      "subsample": 1.0,
+      "colsample_bytree": 0.8783201974870097,
+      "reg_alpha": 1.2339633591146921,
+      "reg_lambda": 0.0013175815914365059,
+      "min_child_weight": 6
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.002635599694423174,
+      "crossover_binomial": 0.002635599694423174
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 234,
+        "success_rate": 0.156
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 234,
+        "success_rate": 0.156
+      }
+    },
+    "execution_time": 638.2482011318207
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "diabetes",
+    "run_id": 8,
+    "best_accuracy": 0.7876920465155759,
+    "best_params": {
+      "n_estimators": 50,
+      "max_depth": 3,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.6147065268933971,
+      "colsample_bytree": 0.8482784821532086,
+      "reg_alpha": 10.0,
+      "reg_lambda": 1.473281820829211,
+      "min_child_weight": 4
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.007176810117986543,
+      "crossover_binomial": 0.007176810117986543
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 164,
+        "success_rate": 0.10933333333333334
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 164,
+        "success_rate": 0.10933333333333334
+      }
+    },
+    "execution_time": 605.5990779399872
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "diabetes",
+    "run_id": 9,
+    "best_accuracy": 0.7850946439181733,
+    "best_params": {
+      "n_estimators": 315,
+      "max_depth": 9,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.5,
+      "colsample_bytree": 0.9462510930207298,
+      "reg_alpha": 10.0,
+      "reg_lambda": 0.002256676850864701,
+      "min_child_weight": 4
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0078091842797725075,
+      "crossover_binomial": 0.0078091842797725075
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 195,
+        "success_rate": 0.13
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 195,
+        "success_rate": 0.13
+      }
+    },
+    "execution_time": 402.6583938598633
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "diabetes",
+    "run_id": 0,
+    "best_accuracy": 0.7798828622358034,
+    "best_params": {
+      "n_estimators": 254,
+      "max_depth": 4,
+      "learning_rate": 0.014869766633054293,
+      "subsample": 0.9905976694096046,
+      "colsample_bytree": 0.8855843272133085,
+      "reg_alpha": 1.3773466490315503e-05,
+      "reg_lambda": 0.0003357580468429738,
+      "min_child_weight": 8
+    },
+    "shap_values": {
+      "selection_tournament": 0.002603061426590836,
+      "crossover_sbx": 0.0026030614265908354,
+      "mutation_polynomial": 0.002603061426590836
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 176,
+        "success_rate": 0.23466666666666666
+      },
+      "crossover_sbx": {
+        "total_used": 675,
+        "total_success": 176,
+        "success_rate": 0.2607407407407407
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 176,
+        "success_rate": 0.23466666666666666
+      }
+    },
+    "execution_time": 490.6447596549988
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "diabetes",
+    "run_id": 1,
+    "best_accuracy": 0.7772684831508362,
+    "best_params": {
+      "n_estimators": 323,
+      "max_depth": 3,
+      "learning_rate": 0.010179908321366022,
+      "subsample": 0.9615673730718552,
+      "colsample_bytree": 0.802958025058436,
+      "reg_alpha": 9.94405056474702,
+      "reg_lambda": 0.2506806020353781,
+      "min_child_weight": 3
+    },
+    "shap_values": {
+      "selection_tournament": 0.001304360127889592,
+      "crossover_sbx": 0.0013043601278895922,
+      "mutation_polynomial": 0.001304360127889592
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 199,
+        "success_rate": 0.2653333333333333
+      },
+      "crossover_sbx": {
+        "total_used": 672,
+        "total_success": 199,
+        "success_rate": 0.2961309523809524
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 199,
+        "success_rate": 0.2653333333333333
+      }
+    },
+    "execution_time": 520.3170962333679
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "diabetes",
+    "run_id": 2,
+    "best_accuracy": 0.7838214073508191,
+    "best_params": {
+      "n_estimators": 113,
+      "max_depth": 5,
+      "learning_rate": 0.0416089691120601,
+      "subsample": 0.9894940464570285,
+      "colsample_bytree": 0.6922332082753574,
+      "reg_alpha": 1.1725482098102193,
+      "reg_lambda": 3.4269045815065385e-05,
+      "min_child_weight": 9
+    },
+    "shap_values": {
+      "selection_tournament": 0.0047930283224400325,
+      "crossover_sbx": 0.0047930283224400325,
+      "mutation_polynomial": 0.0047930283224400325
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 167,
+        "success_rate": 0.22266666666666668
+      },
+      "crossover_sbx": {
+        "total_used": 666,
+        "total_success": 167,
+        "success_rate": 0.25075075075075076
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 167,
+        "success_rate": 0.22266666666666668
+      }
+    },
+    "execution_time": 339.59624433517456
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "diabetes",
+    "run_id": 3,
+    "best_accuracy": 0.7850606909430439,
+    "best_params": {
+      "n_estimators": 83,
+      "max_depth": 7,
+      "learning_rate": 0.08249378474585758,
+      "subsample": 0.7389584419347114,
+      "colsample_bytree": 0.600059270099135,
+      "reg_alpha": 4.616259671872372,
+      "reg_lambda": 0.001380328010615821,
+      "min_child_weight": 3
+    },
+    "shap_values": {
+      "selection_tournament": 0.004334663158192531,
+      "crossover_sbx": 0.004334663158192531,
+      "mutation_polynomial": 0.004334663158192531
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 231,
+        "success_rate": 0.308
+      },
+      "crossover_sbx": {
+        "total_used": 673,
+        "total_success": 231,
+        "success_rate": 0.34323922734026746
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 231,
+        "success_rate": 0.308
+      }
+    },
+    "execution_time": 333.9101231098175
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "diabetes",
+    "run_id": 4,
+    "best_accuracy": 0.7903064256005432,
+    "best_params": {
+      "n_estimators": 296,
+      "max_depth": 7,
+      "learning_rate": 0.03152754278941373,
+      "subsample": 0.9892910140518076,
+      "colsample_bytree": 0.9408244576417032,
+      "reg_alpha": 4.9496188921172015,
+      "reg_lambda": 0.010262207206351954,
+      "min_child_weight": 6
+    },
+    "shap_values": {
+      "selection_tournament": 0.005653170359052698,
+      "crossover_sbx": 0.005653170359052698,
+      "mutation_polynomial": 0.005653170359052698
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 219,
+        "success_rate": 0.292
+      },
+      "crossover_sbx": {
+        "total_used": 681,
+        "total_success": 219,
+        "success_rate": 0.32158590308370044
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 219,
+        "success_rate": 0.292
+      }
+    },
+    "execution_time": 613.5920405387878
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "diabetes",
+    "run_id": 5,
+    "best_accuracy": 0.7799168152109328,
+    "best_params": {
+      "n_estimators": 216,
+      "max_depth": 12,
+      "learning_rate": 0.012913983688523003,
+      "subsample": 0.8653197818094469,
+      "colsample_bytree": 0.7936457467313827,
+      "reg_alpha": 0.00016171442211972712,
+      "reg_lambda": 0.0011070432791524662,
+      "min_child_weight": 8
+    },
+    "shap_values": {
+      "selection_tournament": 0.004787369493251832,
+      "crossover_sbx": 0.004787369493251832,
+      "mutation_polynomial": 0.004787369493251832
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 203,
+        "success_rate": 0.27066666666666667
+      },
+      "crossover_sbx": {
+        "total_used": 682,
+        "total_success": 203,
+        "success_rate": 0.29765395894428154
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 203,
+        "success_rate": 0.27066666666666667
+      }
+    },
+    "execution_time": 532.9482336044312
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "diabetes",
+    "run_id": 6,
+    "best_accuracy": 0.7889907478142772,
+    "best_params": {
+      "n_estimators": 137,
+      "max_depth": 6,
+      "learning_rate": 0.06256146059182219,
+      "subsample": 0.7280497167964856,
+      "colsample_bytree": 0.806057526356897,
+      "reg_alpha": 5.928706390907674,
+      "reg_lambda": 2.4003597150920726,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "selection_tournament": 0.0047845400786577326,
+      "crossover_sbx": 0.004784540078657732,
+      "mutation_polynomial": 0.0047845400786577326
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 235,
+        "success_rate": 0.31333333333333335
+      },
+      "crossover_sbx": {
+        "total_used": 665,
+        "total_success": 235,
+        "success_rate": 0.3533834586466165
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 235,
+        "success_rate": 0.31333333333333335
+      }
+    },
+    "execution_time": 414.87814378738403
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "diabetes",
+    "run_id": 7,
+    "best_accuracy": 0.7928698752228164,
+    "best_params": {
+      "n_estimators": 61,
+      "max_depth": 7,
+      "learning_rate": 0.06488549051503122,
+      "subsample": 0.5193458361353205,
+      "colsample_bytree": 0.5609195370200065,
+      "reg_alpha": 0.047142508880708006,
+      "reg_lambda": 0.2156631703219076,
+      "min_child_weight": 4
+    },
+    "shap_values": {
+      "selection_tournament": 0.0047675635910929826,
+      "mutation_polynomial": 0.0047675635910929826,
+      "crossover_sbx": 0.0047675635910929826
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 256,
+        "success_rate": 0.3413333333333333
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 256,
+        "success_rate": 0.3413333333333333
+      },
+      "crossover_sbx": {
+        "total_used": 675,
+        "total_success": 256,
+        "success_rate": 0.37925925925925924
+      }
+    },
+    "execution_time": 331.55394864082336
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "diabetes",
+    "run_id": 8,
+    "best_accuracy": 0.7837789661319073,
+    "best_params": {
+      "n_estimators": 333,
+      "max_depth": 8,
+      "learning_rate": 0.020078871487983683,
+      "subsample": 0.9746353941263527,
+      "colsample_bytree": 0.9650987703147736,
+      "reg_alpha": 3.4893521160669283,
+      "reg_lambda": 7.4668528189887,
+      "min_child_weight": 6
+    },
+    "shap_values": {
+      "selection_tournament": 0.0034801799507681768,
+      "crossover_sbx": 0.0034801799507681768,
+      "mutation_polynomial": 0.0034801799507681768
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 215,
+        "success_rate": 0.2866666666666667
+      },
+      "crossover_sbx": {
+        "total_used": 671,
+        "total_success": 215,
+        "success_rate": 0.3204172876304024
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 215,
+        "success_rate": 0.2866666666666667
+      }
+    },
+    "execution_time": 701.8731553554535
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "diabetes",
+    "run_id": 9,
+    "best_accuracy": 0.7785756726933197,
+    "best_params": {
+      "n_estimators": 224,
+      "max_depth": 6,
+      "learning_rate": 0.02711029144382566,
+      "subsample": 0.6922066949224159,
+      "colsample_bytree": 0.9850669512895613,
+      "reg_alpha": 3.183676385453475e-05,
+      "reg_lambda": 0.014154642398120504,
+      "min_child_weight": 9
+    },
+    "shap_values": {
+      "selection_tournament": 0.00303313244489715,
+      "crossover_sbx": 0.0030331324448971504,
+      "mutation_polynomial": 0.00303313244489715
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 183,
+        "success_rate": 0.244
+      },
+      "crossover_sbx": {
+        "total_used": 659,
+        "total_success": 183,
+        "success_rate": 0.27769347496206376
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 183,
+        "success_rate": 0.244
+      }
+    },
+    "execution_time": 462.44702553749084
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "diabetes",
+    "run_id": 0,
+    "best_accuracy": 0.7798743739920211,
+    "best_params": {
+      "n_estimators": 259,
+      "max_depth": 3,
+      "learning_rate": 0.010677571299328942,
+      "subsample": 0.9447030054728549,
+      "colsample_bytree": 1.0,
+      "reg_alpha": 0.00232681973726687,
+      "reg_lambda": 5.847292806017412e-05,
+      "min_child_weight": 10
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.005203293438587497
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 152,
+        "success_rate": 0.10133333333333333
+      }
+    },
+    "execution_time": 457.8893868923187
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "diabetes",
+    "run_id": 1,
+    "best_accuracy": 0.7785926491808844,
+    "best_params": {
+      "n_estimators": 50,
+      "max_depth": 5,
+      "learning_rate": 0.05477225575051662,
+      "subsample": 1.0,
+      "colsample_bytree": 0.9947488759429722,
+      "reg_alpha": 1.6188911444790208e-05,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 8
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0025974025974027093
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 152,
+        "success_rate": 0.10133333333333333
+      }
+    },
+    "execution_time": 343.61203598976135
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "diabetes",
+    "run_id": 2,
+    "best_accuracy": 0.7837704778881249,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.9760093587011522,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 10.0,
+      "reg_lambda": 10.0,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.011739241151005775
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 187,
+        "success_rate": 0.12466666666666666
+      }
+    },
+    "execution_time": 415.0508801937103
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "diabetes",
+    "run_id": 3,
+    "best_accuracy": 0.7863933452168747,
+    "best_params": {
+      "n_estimators": 50,
+      "max_depth": 6,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.9877994589209811,
+      "colsample_bytree": 0.7169074505479541,
+      "reg_alpha": 10.0,
+      "reg_lambda": 10.0,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.01043205160852212
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 201,
+        "success_rate": 0.134
+      }
+    },
+    "execution_time": 319.20891880989075
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "diabetes",
+    "run_id": 4,
+    "best_accuracy": 0.7850776674306086,
+    "best_params": {
+      "n_estimators": 178,
+      "max_depth": 3,
+      "learning_rate": 0.2978448181719972,
+      "subsample": 0.5,
+      "colsample_bytree": 0.7210477028264128,
+      "reg_alpha": 10.0,
+      "reg_lambda": 10.0,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.011730752907223474
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 199,
+        "success_rate": 0.13266666666666665
+      }
+    },
+    "execution_time": 415.8586211204529
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "diabetes",
+    "run_id": 5,
+    "best_accuracy": 0.7916051268992446,
+    "best_params": {
+      "n_estimators": 240,
+      "max_depth": 11,
+      "learning_rate": 0.01,
+      "subsample": 1.0,
+      "colsample_bytree": 1.0,
+      "reg_alpha": 0.0006741521227747416,
+      "reg_lambda": 10.0,
+      "min_child_weight": 4
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.020847126729479637
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 168,
+        "success_rate": 0.112
+      }
+    },
+    "execution_time": 838.0134317874908
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "diabetes",
+    "run_id": 6,
+    "best_accuracy": 0.7837704778881249,
+    "best_params": {
+      "n_estimators": 117,
+      "max_depth": 4,
+      "learning_rate": 0.18085346281753828,
+      "subsample": 0.708358761535058,
+      "colsample_bytree": 0.8740831271996755,
+      "reg_alpha": 10.0,
+      "reg_lambda": 10.0,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.003930056871233378
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 138,
+        "success_rate": 0.092
+      }
+    },
+    "execution_time": 406.1256456375122
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "diabetes",
+    "run_id": 7,
+    "best_accuracy": 0.7889992360580595,
+    "best_params": {
+      "n_estimators": 50,
+      "max_depth": 8,
+      "learning_rate": 0.0707973621157741,
+      "subsample": 0.5,
+      "colsample_bytree": 0.5290537857746681,
+      "reg_alpha": 0.028228328787689366,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 5
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.00127323656735423
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 128,
+        "success_rate": 0.08533333333333333
+      }
+    },
+    "execution_time": 297.9409189224243
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "diabetes",
+    "run_id": 8,
+    "best_accuracy": 0.7863848569730922,
+    "best_params": {
+      "n_estimators": 261,
+      "max_depth": 6,
+      "learning_rate": 0.01,
+      "subsample": 1.0,
+      "colsample_bytree": 1.0,
+      "reg_alpha": 2.5866395002369917,
+      "reg_lambda": 1.3337176122594554,
+      "min_child_weight": 8
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.006569900687547592
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 156,
+        "success_rate": 0.104
+      }
+    },
+    "execution_time": 578.6131658554077
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "diabetes",
+    "run_id": 9,
+    "best_accuracy": 0.7786011374246667,
+    "best_params": {
+      "n_estimators": 66,
+      "max_depth": 6,
+      "learning_rate": 0.04319696021363339,
+      "subsample": 0.5084893440989078,
+      "colsample_bytree": 0.9716709827771468,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 0.00541506346315279,
+      "min_child_weight": 10
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0025804261098378856
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 127,
+        "success_rate": 0.08466666666666667
+      }
+    },
+    "execution_time": 385.60436630249023
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "vehicle",
+    "run_id": 0,
+    "best_accuracy": 0.7967003132613992,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "learning_rate": 0.13343963666724587,
+      "subsample": 0.503584759065306,
+      "colsample_bytree": 0.6490857593968467,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 1.096617679913992e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.013010790114862558,
+      "crossover_binomial": 0.013010790114862558
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 209,
+        "success_rate": 0.13933333333333334
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 209,
+        "success_rate": 0.13933333333333334
+      }
+    },
+    "execution_time": 1907.8763296604156
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "vehicle",
+    "run_id": 1,
+    "best_accuracy": 0.796679429168117,
+    "best_params": {
+      "n_estimators": 308,
+      "max_depth": 3,
+      "learning_rate": 0.12155940409062096,
+      "subsample": 0.6450197339340219,
+      "colsample_bytree": 1.0,
+      "reg_alpha": 0.002227431959638506,
+      "reg_lambda": 2.8922377745749328e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.014176818656456647,
+      "crossover_binomial": 0.014176818656456647
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 217,
+        "success_rate": 0.14466666666666667
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 217,
+        "success_rate": 0.14466666666666667
+      }
+    },
+    "execution_time": 1415.1269142627716
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "vehicle",
+    "run_id": 2,
+    "best_accuracy": 0.7978907065784894,
+    "best_params": {
+      "n_estimators": 498,
+      "max_depth": 3,
+      "learning_rate": 0.17593838504511808,
+      "subsample": 0.6044149739507956,
+      "colsample_bytree": 0.5588998891433146,
+      "reg_alpha": 0.00020107318644064536,
+      "reg_lambda": 6.651708524169238e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.013000348068221368,
+      "crossover_binomial": 0.013000348068221368
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 222,
+        "success_rate": 0.148
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 222,
+        "success_rate": 0.148
+      }
+    },
+    "execution_time": 1476.6484899520874
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "vehicle",
+    "run_id": 3,
+    "best_accuracy": 0.795509919944309,
+    "best_params": {
+      "n_estimators": 452,
+      "max_depth": 8,
+      "learning_rate": 0.06138130045677891,
+      "subsample": 0.5048145893423536,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 1.8550578872146395e-05,
+      "reg_lambda": 0.05885092289816142,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.007692307692307665,
+      "crossover_binomial": 0.007692307692307665
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 178,
+        "success_rate": 0.11866666666666667
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 178,
+        "success_rate": 0.11866666666666667
+      }
+    },
+    "execution_time": 1558.81289768219
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "vehicle",
+    "run_id": 4,
+    "best_accuracy": 0.7954959972154543,
+    "best_params": {
+      "n_estimators": 488,
+      "max_depth": 3,
+      "learning_rate": 0.20061047924758538,
+      "subsample": 0.5229426951070154,
+      "colsample_bytree": 0.5478370276337041,
+      "reg_alpha": 0.0023283324570118587,
+      "reg_lambda": 1.073159982294766e-05,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.01063000348068216,
+      "crossover_binomial": 0.01063000348068216
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 204,
+        "success_rate": 0.136
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 204,
+        "success_rate": 0.136
+      }
+    },
+    "execution_time": 1373.064435005188
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "vehicle",
+    "run_id": 5,
+    "best_accuracy": 0.7931500174034111,
+    "best_params": {
+      "n_estimators": 303,
+      "max_depth": 3,
+      "learning_rate": 0.2345574051234056,
+      "subsample": 0.8378271566357876,
+      "colsample_bytree": 0.5928215477916596,
+      "reg_alpha": 0.0030201907945615583,
+      "reg_lambda": 0.0008806644919651189,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.0076923076923077205,
+      "crossover_binomial": 0.0076923076923077205
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 184,
+        "success_rate": 0.12266666666666666
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 184,
+        "success_rate": 0.12266666666666666
+      }
+    },
+    "execution_time": 1190.383422613144
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "vehicle",
+    "run_id": 6,
+    "best_accuracy": 0.8014061956143405,
+    "best_params": {
+      "n_estimators": 466,
+      "max_depth": 3,
+      "learning_rate": 0.20612393877364907,
+      "subsample": 0.5,
+      "colsample_bytree": 0.5131955428189185,
+      "reg_alpha": 7.408940544330278e-05,
+      "reg_lambda": 2.434995809032667e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.01653324051514099,
+      "crossover_binomial": 0.01653324051514099
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 222,
+        "success_rate": 0.148
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 222,
+        "success_rate": 0.148
+      }
+    },
+    "execution_time": 1375.6784772872925
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "vehicle",
+    "run_id": 7,
+    "best_accuracy": 0.7931152105812739,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "learning_rate": 0.06708906777272347,
+      "subsample": 0.5672694725501707,
+      "colsample_bytree": 0.7577582287278881,
+      "reg_alpha": 0.14963054503380468,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.008858336233901809,
+      "crossover_binomial": 0.008858336233901809
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 196,
+        "success_rate": 0.13066666666666665
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 196,
+        "success_rate": 0.13066666666666665
+      }
+    },
+    "execution_time": 1316.147766828537
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "vehicle",
+    "run_id": 8,
+    "best_accuracy": 0.7931360946745561,
+    "best_params": {
+      "n_estimators": 499,
+      "max_depth": 3,
+      "learning_rate": 0.13549322621399276,
+      "subsample": 0.6236197709827885,
+      "colsample_bytree": 0.9422592440172904,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 0.00043371651603106755,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.005304559693699917,
+      "crossover_binomial": 0.005304559693699917
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 185,
+        "success_rate": 0.12333333333333334
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 185,
+        "success_rate": 0.12333333333333334
+      }
+    },
+    "execution_time": 1477.0780794620514
+  },
+  {
+    "algorithm": "DE",
+    "dataset": "vehicle",
+    "run_id": 9,
+    "best_accuracy": 0.7943195266272189,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "learning_rate": 0.10616606555257105,
+      "subsample": 0.6010815902024734,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 0.0004564880293843487,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "mutation_rand/1": 0.007681865645666586,
+      "crossover_binomial": 0.007681865645666586
+    },
+    "operator_stats": {
+      "mutation_rand/1": {
+        "total_used": 1500,
+        "total_success": 190,
+        "success_rate": 0.12666666666666668
+      },
+      "crossover_binomial": {
+        "total_used": 1500,
+        "total_success": 190,
+        "success_rate": 0.12666666666666668
+      }
+    },
+    "execution_time": 1486.4110116958618
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "vehicle",
+    "run_id": 0,
+    "best_accuracy": 0.7955377654020188,
+    "best_params": {
+      "n_estimators": 457,
+      "max_depth": 4,
+      "learning_rate": 0.13710231066666093,
+      "subsample": 0.5246313657045216,
+      "colsample_bytree": 0.6633339326776748,
+      "reg_alpha": 0.00368303185999036,
+      "reg_lambda": 0.0004342349694603784,
+      "min_child_weight": 5
+    },
+    "shap_values": {
+      "selection_tournament": 0.008286344123448234,
+      "crossover_sbx": 0.008286344123448234,
+      "mutation_polynomial": 0.008286344123448234
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 271,
+        "success_rate": 0.36133333333333334
+      },
+      "crossover_sbx": {
+        "total_used": 673,
+        "total_success": 271,
+        "success_rate": 0.4026745913818722
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 271,
+        "success_rate": 0.36133333333333334
+      }
+    },
+    "execution_time": 2388.013906478882
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "vehicle",
+    "run_id": 1,
+    "best_accuracy": 0.7931360946745564,
+    "best_params": {
+      "n_estimators": 236,
+      "max_depth": 5,
+      "learning_rate": 0.13611655600202907,
+      "subsample": 0.5113842613343033,
+      "colsample_bytree": 0.6764463520263344,
+      "reg_alpha": 4.9945572647878596e-05,
+      "reg_lambda": 0.0004558952869175962,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "selection_tournament": 0.008270100939784234,
+      "crossover_sbx": 0.008270100939784234,
+      "mutation_polynomial": 0.008270100939784234
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 254,
+        "success_rate": 0.33866666666666667
+      },
+      "crossover_sbx": {
+        "total_used": 666,
+        "total_success": 254,
+        "success_rate": 0.3813813813813814
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 254,
+        "success_rate": 0.33866666666666667
+      }
+    },
+    "execution_time": 1114.8539235591888
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "vehicle",
+    "run_id": 2,
+    "best_accuracy": 0.796679429168117,
+    "best_params": {
+      "n_estimators": 274,
+      "max_depth": 3,
+      "learning_rate": 0.13080207652082426,
+      "subsample": 0.7056440913592286,
+      "colsample_bytree": 0.5009050862907067,
+      "reg_alpha": 0.00034185474725065284,
+      "reg_lambda": 1.7644205313067538e-05,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "selection_tournament": 0.008263139575356774,
+      "crossover_sbx": 0.008263139575356774,
+      "mutation_polynomial": 0.008263139575356774
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 228,
+        "success_rate": 0.304
+      },
+      "crossover_sbx": {
+        "total_used": 672,
+        "total_success": 228,
+        "success_rate": 0.3392857142857143
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 228,
+        "success_rate": 0.304
+      }
+    },
+    "execution_time": 1077.0849025249481
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "vehicle",
+    "run_id": 3,
+    "best_accuracy": 0.7978837452140619,
+    "best_params": {
+      "n_estimators": 319,
+      "max_depth": 3,
+      "learning_rate": 0.16252601636552166,
+      "subsample": 0.5137900328355721,
+      "colsample_bytree": 0.5480363800042733,
+      "reg_alpha": 0.05456436386781204,
+      "reg_lambda": 0.0002929802444987251,
+      "min_child_weight": 3
+    },
+    "shap_values": {
+      "selection_tournament": 0.0059194802181227555,
+      "crossover_sbx": 0.005919480218122756,
+      "mutation_polynomial": 0.0059194802181227555
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 226,
+        "success_rate": 0.30133333333333334
+      },
+      "crossover_sbx": {
+        "total_used": 681,
+        "total_success": 226,
+        "success_rate": 0.33186490455212925
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 226,
+        "success_rate": 0.30133333333333334
+      }
+    },
+    "execution_time": 1113.9625935554504
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "vehicle",
+    "run_id": 4,
+    "best_accuracy": 0.8025965889314305,
+    "best_params": {
+      "n_estimators": 366,
+      "max_depth": 3,
+      "learning_rate": 0.19921556701486495,
+      "subsample": 0.5300320314608084,
+      "colsample_bytree": 0.8395198253279956,
+      "reg_alpha": 0.008760670660962682,
+      "reg_lambda": 0.5085397235166651,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "selection_tournament": 0.009453532892446843,
+      "crossover_sbx": 0.009453532892446843,
+      "mutation_polynomial": 0.009453532892446843
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 262,
+        "success_rate": 0.34933333333333333
+      },
+      "crossover_sbx": {
+        "total_used": 675,
+        "total_success": 262,
+        "success_rate": 0.38814814814814813
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 262,
+        "success_rate": 0.34933333333333333
+      }
+    },
+    "execution_time": 1125.1832399368286
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "vehicle",
+    "run_id": 5,
+    "best_accuracy": 0.7990393317090149,
+    "best_params": {
+      "n_estimators": 364,
+      "max_depth": 5,
+      "learning_rate": 0.2123133644940826,
+      "subsample": 0.6510914093814533,
+      "colsample_bytree": 0.7261035382652378,
+      "reg_alpha": 0.005620541162507031,
+      "reg_lambda": 0.00014803510542127674,
+      "min_child_weight": 4
+    },
+    "shap_values": {
+      "selection_tournament": 0.007091309896739746,
+      "crossover_sbx": 0.007091309896739746,
+      "mutation_polynomial": 0.007091309896739746
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 229,
+        "success_rate": 0.30533333333333335
+      },
+      "crossover_sbx": {
+        "total_used": 686,
+        "total_success": 229,
+        "success_rate": 0.3338192419825073
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 229,
+        "success_rate": 0.30533333333333335
+      }
+    },
+    "execution_time": 1197.5982401371002
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "vehicle",
+    "run_id": 6,
+    "best_accuracy": 0.7978419770274974,
+    "best_params": {
+      "n_estimators": 325,
+      "max_depth": 4,
+      "learning_rate": 0.12126037717943945,
+      "subsample": 0.5852508501815391,
+      "colsample_bytree": 0.5497822896763409,
+      "reg_alpha": 0.008737899649263362,
+      "reg_lambda": 0.0014874208504769536,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "selection_tournament": 0.009834087481146298,
+      "crossover_sbx": 0.009834087481146298,
+      "mutation_polynomial": 0.009834087481146298
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 283,
+        "success_rate": 0.37733333333333335
+      },
+      "crossover_sbx": {
+        "total_used": 671,
+        "total_success": 283,
+        "success_rate": 0.4217585692995529
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 283,
+        "success_rate": 0.37733333333333335
+      }
+    },
+    "execution_time": 1298.0091564655304
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "vehicle",
+    "run_id": 7,
+    "best_accuracy": 0.7955377654020188,
+    "best_params": {
+      "n_estimators": 289,
+      "max_depth": 4,
+      "learning_rate": 0.20792264327840032,
+      "subsample": 0.6400428785561032,
+      "colsample_bytree": 0.7359111008948754,
+      "reg_alpha": 0.0006979682131524731,
+      "reg_lambda": 0.00015824654123437675,
+      "min_child_weight": 6
+    },
+    "shap_values": {
+      "selection_tournament": 0.006713075762849519,
+      "mutation_polynomial": 0.006713075762849519,
+      "crossover_sbx": 0.006713075762849519
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 244,
+        "success_rate": 0.3253333333333333
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 244,
+        "success_rate": 0.3253333333333333
+      },
+      "crossover_sbx": {
+        "total_used": 684,
+        "total_success": 244,
+        "success_rate": 0.3567251461988304
+      }
+    },
+    "execution_time": 976.1291420459747
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "vehicle",
+    "run_id": 8,
+    "best_accuracy": 0.7931569787678385,
+    "best_params": {
+      "n_estimators": 329,
+      "max_depth": 6,
+      "learning_rate": 0.1464435024957487,
+      "subsample": 0.51494099519984,
+      "colsample_bytree": 0.7103814799221585,
+      "reg_alpha": 0.0024821243456650058,
+      "reg_lambda": 0.00035743292045193123,
+      "min_child_weight": 5
+    },
+    "shap_values": {
+      "selection_tournament": 0.0035433344935607383,
+      "crossover_sbx": 0.0035433344935607383,
+      "mutation_polynomial": 0.0035433344935607383
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 273,
+        "success_rate": 0.364
+      },
+      "crossover_sbx": {
+        "total_used": 671,
+        "total_success": 273,
+        "success_rate": 0.4068554396423249
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 273,
+        "success_rate": 0.364
+      }
+    },
+    "execution_time": 1213.608986377716
+  },
+  {
+    "algorithm": "GA",
+    "dataset": "vehicle",
+    "run_id": 9,
+    "best_accuracy": 0.7955029585798816,
+    "best_params": {
+      "n_estimators": 498,
+      "max_depth": 4,
+      "learning_rate": 0.06183183226678918,
+      "subsample": 0.591508296154333,
+      "colsample_bytree": 0.5710069569592555,
+      "reg_alpha": 3.132691412763767e-05,
+      "reg_lambda": 0.0016428177593766123,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "selection_tournament": 0.005515721081331951,
+      "crossover_sbx": 0.005515721081331951,
+      "mutation_polynomial": 0.005515721081331951
+    },
+    "operator_stats": {
+      "selection_tournament": {
+        "total_used": 750,
+        "total_success": 250,
+        "success_rate": 0.3333333333333333
+      },
+      "crossover_sbx": {
+        "total_used": 661,
+        "total_success": 250,
+        "success_rate": 0.37821482602118
+      },
+      "mutation_polynomial": {
+        "total_used": 750,
+        "total_success": 250,
+        "success_rate": 0.3333333333333333
+      }
+    },
+    "execution_time": 1788.0066380500793
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "vehicle",
+    "run_id": 0,
+    "best_accuracy": 0.7954959972154543,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "learning_rate": 0.22662480894575854,
+      "subsample": 0.5283905806694004,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 1.526118964739966,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.018920988513748682
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 189,
+        "success_rate": 0.126
+      }
+    },
+    "execution_time": 1517.6880705356598
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "vehicle",
+    "run_id": 1,
+    "best_accuracy": 0.7978767838496346,
+    "best_params": {
+      "n_estimators": 331,
+      "max_depth": 3,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.8665508259075138,
+      "colsample_bytree": 0.5240192736973999,
+      "reg_alpha": 0.16914194367615878,
+      "reg_lambda": 0.11444747928137258,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.022464323007309273
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 198,
+        "success_rate": 0.132
+      }
+    },
+    "execution_time": 917.5173535346985
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "vehicle",
+    "run_id": 2,
+    "best_accuracy": 0.7978628611207796,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.726235618551297,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 0.015621557540067811,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.01773059519665865
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 220,
+        "success_rate": 0.14666666666666667
+      }
+    },
+    "execution_time": 1345.5439467430115
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "vehicle",
+    "run_id": 3,
+    "best_accuracy": 0.7931500174034112,
+    "best_params": {
+      "n_estimators": 455,
+      "max_depth": 12,
+      "learning_rate": 0.17690238503320146,
+      "subsample": 0.5,
+      "colsample_bytree": 0.5018609599675925,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.007093630351548863
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 152,
+        "success_rate": 0.10133333333333333
+      }
+    },
+    "execution_time": 30049.149017095566
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "vehicle",
+    "run_id": 4,
+    "best_accuracy": 0.7943195266272189,
+    "best_params": {
+      "n_estimators": 483,
+      "max_depth": 4,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.5,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 0.009733648374712852,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.0153567699269056
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 162,
+        "success_rate": 0.108
+      }
+    },
+    "execution_time": 1340.7213175296783
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "vehicle",
+    "run_id": 5,
+    "best_accuracy": 0.7966863905325443,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "learning_rate": 0.08960335915844977,
+      "subsample": 0.59416831820108,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 0.0025715853562957303,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 2
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.009453532892446992
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 161,
+        "success_rate": 0.10733333333333334
+      }
+    },
+    "execution_time": 1278.4141805171967
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "vehicle",
+    "run_id": 6,
+    "best_accuracy": 0.7967003132613992,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.5228373269860532,
+      "colsample_bytree": 0.7539602622159869,
+      "reg_alpha": 1e-05,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.025993734772015387
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 192,
+        "success_rate": 0.128
+      }
+    },
+    "execution_time": 4308.9209678173065
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "vehicle",
+    "run_id": 7,
+    "best_accuracy": 0.7955238426731639,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.5,
+      "colsample_bytree": 0.9031529244268609,
+      "reg_alpha": 0.0006195691303151119,
+      "reg_lambda": 1e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.008290985033066467
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 145,
+        "success_rate": 0.09666666666666666
+      }
+    },
+    "execution_time": 4739.478295087814
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "vehicle",
+    "run_id": 8,
+    "best_accuracy": 0.7943264879916463,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.6701834584337101,
+      "colsample_bytree": 0.7074456382339739,
+      "reg_alpha": 0.0004936769239447856,
+      "reg_lambda": 10.0,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.004705882352941226
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 195,
+        "success_rate": 0.13
+      }
+    },
+    "execution_time": 5653.498948097229
+  },
+  {
+    "algorithm": "PSO",
+    "dataset": "vehicle",
+    "run_id": 9,
+    "best_accuracy": 0.7942986425339367,
+    "best_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "learning_rate": 0.29999999999999993,
+      "subsample": 0.6605953863177548,
+      "colsample_bytree": 0.5,
+      "reg_alpha": 0.01,
+      "reg_lambda": 1.917478241393189e-05,
+      "min_child_weight": 1
+    },
+    "shap_values": {
+      "topology_gbest": 0.0,
+      "velocity_constriction": 0.007100591715976434
+    },
+    "operator_stats": {
+      "topology_gbest": {
+        "total_used": 1500,
+        "total_success": 0,
+        "success_rate": 0.0
+      },
+      "velocity_constriction": {
+        "total_used": 1500,
+        "total_success": 172,
+        "success_rate": 0.11466666666666667
+      }
+    },
+    "execution_time": 5215.128754854202
+  }
+]

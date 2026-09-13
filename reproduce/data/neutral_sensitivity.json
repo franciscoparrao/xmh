@@ -1,0 +1,207 @@
+{
+ "meta": {
+  "n_runs": 30,
+  "base_seed": 42,
+  "pop": 50,
+  "gen": 100,
+  "functions": [
+   "sphere",
+   "rastrigin"
+  ],
+  "dimensions": [
+   10,
+   30
+  ],
+  "operators": [
+   "selection_tournament",
+   "crossover_sbx",
+   "mutation_polynomial"
+  ],
+  "total_runs": 6720,
+  "elapsed_s": 3940.8
+ },
+ "results": {
+  "baseline": {
+   "sphere": {
+    "10": {
+     "selection_tournament": 3.726342418692217,
+     "crossover_sbx": 39.94704786016137,
+     "mutation_polynomial": 56.326609721146404
+    },
+    "30": {
+     "selection_tournament": 20.904188630886043,
+     "crossover_sbx": 35.870479281379495,
+     "mutation_polynomial": 43.22533208773446
+    }
+   },
+   "rastrigin": {
+    "10": {
+     "selection_tournament": 19.838351386471217,
+     "crossover_sbx": 36.86653592785919,
+     "mutation_polynomial": 43.295112685669594
+    },
+    "30": {
+     "selection_tournament": 29.553121138748086,
+     "crossover_sbx": 34.89874626672125,
+     "mutation_polynomial": 35.548132594530664
+    }
+   }
+  },
+  "S1_tournament_k1": {
+   "sphere": {
+    "10": {
+     "selection_tournament": 3.726342418692217,
+     "crossover_sbx": 39.94704786016137,
+     "mutation_polynomial": 56.326609721146404
+    },
+    "30": {
+     "selection_tournament": 20.904188630886043,
+     "crossover_sbx": 35.870479281379495,
+     "mutation_polynomial": 43.22533208773446
+    }
+   },
+   "rastrigin": {
+    "10": {
+     "selection_tournament": 19.838351386471217,
+     "crossover_sbx": 36.86653592785919,
+     "mutation_polynomial": 43.295112685669594
+    },
+    "30": {
+     "selection_tournament": 29.553121138748086,
+     "crossover_sbx": 34.89874626672125,
+     "mutation_polynomial": 35.548132594530664
+    }
+   }
+  },
+  "S2_permutation": {
+   "sphere": {
+    "10": {
+     "selection_tournament": -0.4704233100069757,
+     "crossover_sbx": 46.15236410347816,
+     "mutation_polynomial": 54.31805920652881
+    },
+    "30": {
+     "selection_tournament": 10.658790080070899,
+     "crossover_sbx": 45.48844609341284,
+     "mutation_polynomial": 43.85276382651627
+    }
+   },
+   "rastrigin": {
+    "10": {
+     "selection_tournament": 14.504692141059927,
+     "crossover_sbx": 42.27775348327936,
+     "mutation_polynomial": 43.21755437566071
+    },
+    "30": {
+     "selection_tournament": 24.591593514531034,
+     "crossover_sbx": 39.79067001726971,
+     "mutation_polynomial": 35.61773646819925
+    }
+   }
+  },
+  "C1_sbx_eta_1e6": {
+   "sphere": {
+    "10": {
+     "selection_tournament": 3.659674647694128,
+     "crossover_sbx": 39.878926554350706,
+     "mutation_polynomial": 56.46139879795518
+    },
+    "30": {
+     "selection_tournament": 20.781202441468427,
+     "crossover_sbx": 35.692870715230725,
+     "mutation_polynomial": 43.52592684330086
+    }
+   },
+   "rastrigin": {
+    "10": {
+     "selection_tournament": 19.244154478525775,
+     "crossover_sbx": 36.31257603855372,
+     "mutation_polynomial": 44.443269482920506
+    },
+    "30": {
+     "selection_tournament": 29.478247341105376,
+     "crossover_sbx": 34.97620253417935,
+     "mutation_polynomial": 35.54555012471528
+    }
+   }
+  },
+  "C2_parent_swap": {
+   "sphere": {
+    "10": {
+     "selection_tournament": 3.7471909716710434,
+     "crossover_sbx": 39.96670440135372,
+     "mutation_polynomial": 56.28610462697523
+    },
+    "30": {
+     "selection_tournament": 21.042192978333766,
+     "crossover_sbx": 35.98517135745703,
+     "mutation_polynomial": 42.972635664209214
+    }
+   },
+   "rastrigin": {
+    "10": {
+     "selection_tournament": 19.609304490345643,
+     "crossover_sbx": 36.824670755931464,
+     "mutation_polynomial": 43.56602475372288
+    },
+    "30": {
+     "selection_tournament": 29.64214011167802,
+     "crossover_sbx": 35.05354983845085,
+     "mutation_polynomial": 35.304310049871134
+    }
+   }
+  },
+  "M1_poly_eta_1e6": {
+   "sphere": {
+    "10": {
+     "selection_tournament": 4.005833981422282,
+     "crossover_sbx": 41.13825601593678,
+     "mutation_polynomial": 54.85591000264093
+    },
+    "30": {
+     "selection_tournament": 20.86185372715328,
+     "crossover_sbx": 36.27226006750159,
+     "mutation_polynomial": 42.86588620534512
+    }
+   },
+   "rastrigin": {
+    "10": {
+     "selection_tournament": 18.957544797328776,
+     "crossover_sbx": 38.01830712241767,
+     "mutation_polynomial": 43.02414808025355
+    },
+    "30": {
+     "selection_tournament": 28.366042680704645,
+     "crossover_sbx": 34.344224740296085,
+     "mutation_polynomial": 37.28973257899927
+    }
+   }
+  },
+  "M2_passthrough_rng": {
+   "sphere": {
+    "10": {
+     "selection_tournament": 3.810847607568561,
+     "crossover_sbx": 41.15230721518434,
+     "mutation_polynomial": 55.0368451772471
+    },
+    "30": {
+     "selection_tournament": 21.565157251132135,
+     "crossover_sbx": 35.856013038611515,
+     "mutation_polynomial": 42.57882971025636
+    }
+   },
+   "rastrigin": {
+    "10": {
+     "selection_tournament": 19.058598062408514,
+     "crossover_sbx": 38.9015549849392,
+     "mutation_polynomial": 42.039846952652276
+    },
+    "30": {
+     "selection_tournament": 28.66190010654522,
+     "crossover_sbx": 35.42792294249401,
+     "mutation_polynomial": 35.910176950960775
+    }
+   }
+  }
+ }
+}
