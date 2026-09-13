@@ -70,7 +70,7 @@ default SBX). This makes operator-type effects detectable but not dominant.
    - Report η² (proportion of total variance explained by cx_type).
    - **Headline number**: "η² = X%, p < Y" — quantifies *between-cx_type variance*.
 
-3. **XMH (ExactOperatorSHAP)** computed *per cx_type configuration*:
+3. **XMH (ExactCoalitionSHAP)** computed *per cx_type configuration*:
    - For each cx_type, run the 8 coalitions (2³) × 30 runs.
    - Compute Shapley φ_sel, φ_cx, φ_mut for that cx_type.
    - **Headline numbers**: 6 different Shapley triples; show that φ_cx
@@ -102,7 +102,7 @@ question. The reviewer's "operator = hyperparameter" claim conflates them.
      or a manual functional ANOVA via spline regression.
    - **Headline number**: "cx_rate explains Z% of fitness variance."
 
-2. **XMH (ExactOperatorSHAP)** computed *per cx_rate*:
+2. **XMH (ExactCoalitionSHAP)** computed *per cx_rate*:
    - 9 × 8 coalitions × 30 runs.
    - **Headline numbers**: 9 Shapley triples; expectation is that
      φ_cx grows monotonically with cx_rate (since the operator is applied
@@ -137,7 +137,7 @@ parallelization).
 - **`exp8_discriminant.py`** (new):
   - Two functions: `run_part_a()`, `run_part_b()`.
   - Each saves results to `results_discriminant/exp8_part_{a,b}.json`.
-  - Uses `ExactOperatorSHAP` from `xmh.explanation.operator_shap`.
+  - Uses `ExactCoalitionSHAP` from `xmh.explanation.operator_shap`.
   - Uses `scipy.stats.f_oneway` for one-way ANOVA in Part A.
   - Uses `scipy.stats.spearmanr` and a polynomial fit in Part B for
     sensitivity analysis (avoids the `fanova` package which is not installed).

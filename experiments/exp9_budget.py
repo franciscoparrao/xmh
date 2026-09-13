@@ -22,7 +22,7 @@ from scipy import stats
 
 from xmh.algorithms.instrumented_ga import InstrumentedGA
 from xmh.benchmarks.functions import get_benchmark
-from xmh.explanation.operator_shap import ExactOperatorSHAP
+from xmh.explanation.operator_shap import ExactCoalitionSHAP
 
 
 # --- Fixed setup ----------------------------------------------------------
@@ -62,7 +62,7 @@ def _shapley_for(func, pop, gen):
     bounds = (lower, upper)
     kwargs = _ga_kwargs(pop, gen, bounds)
 
-    exact = ExactOperatorSHAP(
+    exact = ExactCoalitionSHAP(
         n_runs_per_coalition=N_RUNS_PER_COALITION,
         base_seed=BASE_SEED, compute_interactions=False,
     )

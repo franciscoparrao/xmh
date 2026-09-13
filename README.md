@@ -48,9 +48,9 @@ print(trace.summary())
 ### Compute Exact Shapley Values
 
 ```python
-from xmh.explanation.operator_shap import ExactOperatorSHAP
+from xmh.explanation.operator_shap import ExactCoalitionSHAP
 
-exact = ExactOperatorSHAP(n_runs_per_coalition=30, base_seed=42)
+exact = ExactCoalitionSHAP(n_runs_per_coalition=30, base_seed=42)
 result = exact.compute(algorithm_factory, objective_func, operator_names)
 print(result['shapley_values'])       # {operator: value}
 print(result['confidence_intervals']) # {operator: (low, high)}
@@ -80,7 +80,7 @@ xmh/
 │   ├── instrumented_ga.py       # GA with SBX + polynomial mutation
 │   └── instrumented_pso.py      # PSO gbest with constriction
 ├── explanation/                 # Attribution methods
-│   ├── operator_shap.py         # ExactOperatorSHAP, QuickSHAP, KernelSHAP
+│   ├── operator_shap.py         # ExactCoalitionSHAP, QuickSHAP, KernelSHAP
 │   ├── tracking_attribution.py  # EvoMapX-style tracking
 │   ├── counterfactual.py        # Counterfactual analysis
 │   └── attribution.py           # Simple attribution methods

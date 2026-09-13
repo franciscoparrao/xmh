@@ -34,7 +34,7 @@ from xmh.algorithms.instrumented_de import InstrumentedDE
 from xmh.algorithms.instrumented_ga import InstrumentedGA
 from xmh.algorithms.instrumented_pso import InstrumentedPSO
 from xmh.benchmarks.functions import get_benchmark, list_benchmarks
-from xmh.explanation.operator_shap import ExactOperatorSHAP
+from xmh.explanation.operator_shap import ExactCoalitionSHAP
 
 
 # ── Configuration ───────────────────────────────────────────────────
@@ -120,7 +120,7 @@ def run_experiment(
                     **alg_extra,
                 }
 
-                exact_shap = ExactOperatorSHAP(
+                exact_shap = ExactCoalitionSHAP(
                     n_runs_per_coalition=n_runs,
                     base_seed=BASE_SEED,
                     compute_interactions=True,

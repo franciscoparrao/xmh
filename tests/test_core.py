@@ -23,7 +23,7 @@ from xmh.algorithms.instrumented_de import InstrumentedDE
 from xmh.algorithms.instrumented_ga import InstrumentedGA
 from xmh.algorithms.instrumented_pso import InstrumentedPSO
 from xmh.benchmarks.functions import sphere, rastrigin, get_benchmark
-from xmh.explanation.operator_shap import QuickSHAP, ExactOperatorSHAP
+from xmh.explanation.operator_shap import QuickSHAP, ExactCoalitionSHAP
 from xmh.explanation.tracking_attribution import TrackingAttribution
 
 
@@ -491,15 +491,15 @@ class TestQuickSHAP:
         assert len(explanation.shap_values) > 0
 
 
-class TestExactOperatorSHAP:
-    """Tests for ExactOperatorSHAP."""
+class TestExactCoalitionSHAP:
+    """Tests for ExactCoalitionSHAP."""
 
     def test_exact_shapley_on_simple_problem(self):
         """Test exact Shapley on a small DE instance."""
         dim = 5
         bounds = (np.full(dim, -5.0), np.full(dim, 5.0))
 
-        exact_shap = ExactOperatorSHAP(
+        exact_shap = ExactCoalitionSHAP(
             n_runs_per_coalition=3,
             base_seed=42,
             compute_interactions=True,
@@ -540,7 +540,7 @@ class TestExactOperatorSHAP:
         dim = 5
         bounds = (np.full(dim, -5.0), np.full(dim, 5.0))
 
-        exact_shap = ExactOperatorSHAP(
+        exact_shap = ExactCoalitionSHAP(
             n_runs_per_coalition=3,
             base_seed=42,
             compute_interactions=False,

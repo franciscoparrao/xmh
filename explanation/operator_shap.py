@@ -823,7 +823,7 @@ class QuickSHAP(OperatorSHAP):
         )
 
 
-class ExactOperatorSHAP:
+class ExactCoalitionSHAP:
     """
     Exact Shapley value computation for metaheuristic operators.
 
@@ -1129,3 +1129,25 @@ class ExactOperatorSHAP:
                 interactions[(operators[i], operators[j])] = interaction
 
         return interactions
+
+
+# ---------------------------------------------------------------------------
+# Backwards-compatible alias.
+#
+# The class was renamed in step with the manuscript's terminology: "exact"
+# refers to exhaustive enumeration of the 2^n coalitions, not to v(S), which is
+# estimated from R stochastic runs. Release v1.0.0 exported the old name, so it
+# stays available and keeps working; only the name is deprecated.
+# ---------------------------------------------------------------------------
+class ExactOperatorSHAP(ExactCoalitionSHAP):
+    """Deprecated alias for :class:`ExactCoalitionSHAP`."""
+
+    def __init__(self, *args, **kwargs):
+        import warnings
+        warnings.warn(
+            "ExactOperatorSHAP is deprecated; use ExactCoalitionSHAP. The rename "
+            "tracks the paper's terminology: coalition enumeration is exact, the "
+            "characteristic function is estimated.",
+            DeprecationWarning, stacklevel=2,
+        )
+        super().__init__(*args, **kwargs)

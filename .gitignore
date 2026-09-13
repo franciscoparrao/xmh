@@ -33,3 +33,7 @@ experiments/*.log
 venv/
 .venv/
 env/
+
+# Backups de trabajo (no forman parte del artefacto archivable)
+*.bak-*
+*.bak*/

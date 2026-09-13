@@ -3,7 +3,7 @@
 First public release of the XMH framework, accompanying the manuscript:
 
 > "XMH: Explainable Metaheuristics via Exact Operator-Level Shapley Value Attribution"
-> F. Parra Orellana. Submitted to *Information Sciences* (Elsevier).
+> F. Parra Ortiz, Universidad de Santiago de Chile.
 
 ## What is in this release
 

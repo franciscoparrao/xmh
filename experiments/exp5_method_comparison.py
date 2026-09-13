@@ -32,7 +32,7 @@ from xmh.algorithms.instrumented_de import InstrumentedDE
 from xmh.algorithms.instrumented_ga import InstrumentedGA
 from xmh.algorithms.instrumented_pso import InstrumentedPSO
 from xmh.benchmarks.functions import get_benchmark, list_benchmarks
-from xmh.explanation.operator_shap import ExactOperatorSHAP, QuickSHAP, KernelSHAP
+from xmh.explanation.operator_shap import ExactCoalitionSHAP, QuickSHAP, KernelSHAP
 from xmh.explanation.tracking_attribution import TrackingAttribution
 
 HAS_PANDAS = False
@@ -87,8 +87,19 @@ def _compare_dicts(
     exact: Dict[str, float],
     approx: Dict[str, float],
 ) -> Dict[str, float]:
-    """Compare two attribution dictionaries on shared keys."""
-    shared = sorted(set(exact) & set(approx))
+    """Compare two attribution dictionaries over the exact method's operator set.
+
+    Operators the approximate method does not report are treated as an attribution
+    of zero, which is what such a method effectively predicts for them. Comparing
+    only the intersection would silently drop exactly the operators where a
+    trace-based method fails: DE's greedy selection and PSO's position update
+    never appear in an execution trace, so on the intersection QuickSHAP's
+    ``[50, 50]`` and the exact ``[33.3, 33.3]`` are parallel and score a perfect
+    cosine, hiding the third of the attribution the method missed.
+    """
+    keys = sorted(exact)
+    approx = {k: float(approx.get(k, 0.0)) for k in keys}
+    shared = keys
     if len(shared) < 2:
         return {
             "spearman": float("nan"),
@@ -185,7 +196,7 @@ def run_experiment(
 
                 # 1) Exact Shapley (ground truth)
                 t0 = time.time()
-                exact_shap = ExactOperatorSHAP(
+                exact_shap = ExactCoalitionSHAP(
                     n_runs_per_coalition=n_exact_runs,
                     base_seed=BASE_SEED,
                     compute_interactions=False,

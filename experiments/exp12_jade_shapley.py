@@ -19,7 +19,7 @@ import time
 
 from xmh.algorithms.instrumented_jade import InstrumentedJADE
 from xmh.benchmarks.functions import get_benchmark
-from xmh.explanation.operator_shap import ExactOperatorSHAP
+from xmh.explanation.operator_shap import ExactCoalitionSHAP
 
 
 FUNCTIONS = [
@@ -54,7 +54,7 @@ def main(outdir: str | None = None):
             alg_kwargs = dict(dim=dim, bounds=bounds,
                               pop_size=POP_SIZE,
                               max_generations=MAX_GENERATIONS)
-            exact = ExactOperatorSHAP(n_runs_per_coalition=N_RUNS,
+            exact = ExactCoalitionSHAP(n_runs_per_coalition=N_RUNS,
                                       base_seed=BASE_SEED,
                                       compute_interactions=False)
             t0 = time.time()

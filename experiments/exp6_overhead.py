@@ -26,7 +26,7 @@ from xmh.algorithms.instrumented_ga import InstrumentedGA
 from xmh.algorithms.instrumented_pso import InstrumentedPSO
 from xmh.benchmarks.functions import get_benchmark
 from xmh.core.trace_logger import InstrumentationLevel
-from xmh.explanation.operator_shap import ExactOperatorSHAP, QuickSHAP, KernelSHAP
+from xmh.explanation.operator_shap import ExactCoalitionSHAP, QuickSHAP, KernelSHAP
 from xmh.explanation.tracking_attribution import TrackingAttribution
 
 HAS_PANDAS = False
@@ -64,6 +64,14 @@ POP_SIZE = 50
 MAX_GENERATIONS = 100
 N_TIMING_RUNS = 10
 SEED = 42
+
+# Corridas por coalicion con las que se mide el costo del Shapley exacto.
+# El protocolo del manuscrito (Seccion 5.2) usa R = 30; aqui se mide con un R
+# reducido y el multiplicador se reporta junto al R empleado, porque el costo es
+# lineal en R (las corridas son independientes). NUNCA reportar el multiplicador
+# sin decir con que R se midio.
+SHAP_RUNS_PER_COALITION = 5
+PROTOCOL_RUNS_PER_COALITION = 30
 
 
 def _time_run(alg_class, alg_kwargs, func, level, seed):
@@ -165,8 +173,8 @@ def run_experiment(
                 kernel_time = time.perf_counter() - t0
 
                 # ── 6. Exact Shapley cost ──
-                exact_shap = ExactOperatorSHAP(
-                    n_runs_per_coalition=5,
+                exact_shap = ExactCoalitionSHAP(
+                    n_runs_per_coalition=SHAP_RUNS_PER_COALITION,
                     base_seed=SEED,
                     compute_interactions=False,
                 )
@@ -174,11 +182,20 @@ def run_experiment(
                 exact_shap.explain(alg_class, base_kwargs, benchmark.function)
                 exact_time = time.perf_counter() - t0
 
-                # Count FES
-                n_operators = len(trace_result["trace"].get_operator_contributions())
+                # Count FES.
+                # n_operators viene del ALGORITMO, no de la traza: un operador que
+                # no registra mejoras (la seleccion greedy de DE, el position update
+                # de PSO) no aparece en get_operator_contributions() y se contaba de
+                # menos, dejando a DE con 2 operadores y 4 coaliciones en vez de 3 y 8.
+                # Es el mismo criterio que usa ExactCoalitionSHAP.explain().
+                ref_alg = alg_class(**base_kwargs)
+                ref_alg._initialize_operators()
+                n_operators = len(ref_alg.get_operators())
                 n_coalitions = 2 ** n_operators
-                exact_fes = n_coalitions * 5 * POP_SIZE * MAX_GENERATIONS
+                exact_fes = (n_coalitions * SHAP_RUNS_PER_COALITION
+                             * POP_SIZE * MAX_GENERATIONS)
                 single_fes = POP_SIZE * MAX_GENERATIONS
+                n_ops_traced = len(trace_result["trace"].get_operator_contributions())
 
                 row = {
                     "algorithm": alg_name,
@@ -186,6 +203,11 @@ def run_experiment(
                     "dimension": dim,
                     "n_operators": n_operators,
                     "n_coalitions": n_coalitions,
+                    "n_operators_traced": n_ops_traced,
+                    "shap_runs_per_coalition": SHAP_RUNS_PER_COALITION,
+                    "protocol_runs_per_coalition": PROTOCOL_RUNS_PER_COALITION,
+                    "exact_runs_measured": n_coalitions * SHAP_RUNS_PER_COALITION,
+                    "exact_runs_protocol": n_coalitions * PROTOCOL_RUNS_PER_COALITION,
                     # Times
                     "baseline_time_s": baseline_mean,
                     "baseline_std_s": baseline_std,

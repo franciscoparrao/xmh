@@ -159,26 +159,40 @@ class NeutralSelectionOperator(Operator):
 
     def apply(self, population: np.ndarray = None, fitness: np.ndarray = None,
               n_parents: int = None, original: np.ndarray = None, candidate: np.ndarray = None,
-              original_fitness: float = None, candidate_fitness: float = None, **kwargs):
-        """Flexible neutral selection supporting multiple interfaces."""
+              original_fitness: float = None, candidate_fitness: float = None,
+              rng=None, **kwargs):
+        """Flexible neutral selection supporting multiple interfaces.
+
+        Uses the caller's seeded generator when one is supplied. The fallback
+        ``self._rng`` is unseeded, so relying on it would make every coalition
+        that neutralizes selection irreproducible; callers that care about
+        reproducibility must pass ``rng``.
+        """
+        r = rng if rng is not None else self._rng
 
         # GA-style tournament selection: returns random INDEX (no fitness pressure)
         # When called with just fitness (no population), return random index
         if fitness is not None and population is None and original is None:
-            return int(self._rng.integers(0, len(fitness)))
+            return int(r.integers(0, len(fitness)))
 
         # GA-style selection: select n_parents from population randomly
         if population is not None and fitness is not None and n_parents is not None:
-            indices = self._rng.choice(len(population), size=n_parents, replace=True)
+            indices = r.choice(len(population), size=n_parents, replace=True)
             return population[indices].copy()
 
-        # DE-style selection: always keep original
+        # DE-style selection: always keep original (no trial is ever accepted)
         if original is not None and candidate is not None:
             return original.copy(), original_fitness if original_fitness is not None else 0.0
 
+        # DE/SHADE target-trial signature: reject every trial
+        target = kwargs.get("target")
+        if target is not None and kwargs.get("trial") is not None:
+            tf = kwargs.get("target_fitness")
+            return target.copy(), tf if tf is not None else 0.0
+
         # Default: return random index if fitness available
         if fitness is not None:
-            return int(self._rng.integers(0, len(fitness)))
+            return int(r.integers(0, len(fitness)))
 
         # Default: return first input unchanged
         if population is not None:
@@ -263,14 +277,29 @@ def get_neutral_operator(operator_type: str) -> Operator:
         'crossover': NeutralCrossoverOperator,
         'selection': NeutralSelectionOperator,
         'velocity': NeutralVelocityOperator,
+        'velocity_update': NeutralVelocityOperator,
         'position': NeutralPositionOperator,
+        'position_update': NeutralPositionOperator,
         'topology': NeutralTopologyOperator,
     }
 
     if operator_type in neutral_operators:
         return neutral_operators[operator_type]()
 
-    return NeutralOperator(operator_type)
+    # Deliberately loud. The generic NeutralOperator only understands the
+    # ``population=`` signature, so handing it back for an unknown type used to
+    # return None silently; assigning that into a float array yields NaN, the
+    # coalition never improves, and the resulting Shapley value looks like a
+    # legitimate zero. PSO registered its operators as 'velocity_update' and
+    # 'position_update' while this map only knew 'velocity' and 'position',
+    # which is exactly how that happened. A missing entry is a bug in the
+    # registration, not a case to paper over.
+    raise KeyError(
+        f"No neutral operator registered for type {operator_type!r}. "
+        f"Known types: {sorted(neutral_operators)}. Add an explicit entry "
+        f"rather than relying on a fallback: a neutral that does not match the "
+        f"caller's signature fails silently and corrupts the coalition values."
+    )
 
 
 @dataclass

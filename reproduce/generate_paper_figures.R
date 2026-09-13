@@ -108,7 +108,15 @@ read_json_safe <- function(path) {
 }
 
 exact_data    <- read_json_safe(file.path(DATA_DIR, "exact_shapley_results.json"))
-method_data   <- read_json_safe(file.path(DATA_DIR, "method_comparison.json"))
+# Fuente de la comparacion de metodos: QuickSHAP/Tracking del fullset (3 dimensiones,
+# conjunto COMPLETO de operadores) + KernelSHAP canonico (_v2, 3 dimensiones).
+# NO usar method_comparison.json: es el corte de 2 dimensiones calculado sobre la
+# interseccion de operadores, metrica que el manuscrito abandono. Graficarlo produce
+# DE=1.00 y PSO=0.37, contradiciendo el texto (que reporta 0.816 y 0.024).
+method_data   <- c(
+  read_json_safe(file.path(DATA_DIR, "method_comparison_fullset.json")),
+  read_json_safe(file.path(DATA_DIR, "method_comparison_v2.json"))
+)
 overhead_data <- read_json_safe(file.path(DATA_DIR, "overhead_results.json"))
 exp8a         <- read_json_safe(file.path(DATA_DIR, "exp8_part_a.json"))
 exp8b         <- read_json_safe(file.path(DATA_DIR, "exp8_part_b.json"))
@@ -199,7 +207,7 @@ fig1_ga_heatmap <- function() {
     scale_y_discrete(limits = rev) +
     labs(
       x = NULL, y = NULL,
-      title = "GA: Exact Shapley values by function and dimension"
+      title = "GA: Exact-coalition Shapley values by function and dimension"
     ) +
     theme_pub() +
     theme(
@@ -240,7 +248,7 @@ fig2_pso_heatmap <- function() {
     scale_y_discrete(limits = rev) +
     labs(
       x = NULL, y = NULL,
-      title = "PSO: Exact Shapley values by function and dimension"
+      title = "PSO: Exact-coalition Shapley values by function and dimension"
     ) +
     theme_pub() +
     theme(
@@ -375,8 +383,12 @@ fig5_overhead <- function() {
   df <- do.call(rbind, rows)
 
   # Median for robustness against single-config outliers
-  instr_pos <- df$instr[df$instr > 0 & !is.na(df$instr)]
-  med_instr <- if (length(instr_pos) > 0) median(instr_pos) else 15
+  # Mediana sobre TODAS las configuraciones, incluidas las de overhead negativo.
+  # Filtrar los negativos (como hacia la version previa) sesga la estimacion hacia
+  # arriba: un overhead negativo no es un dato invalido, es la senal de que en esa
+  # configuracion el costo de instrumentar es indistinguible del ruido de scheduling.
+  instr_all <- df$instr[!is.na(df$instr)]
+  med_instr <- if (length(instr_all) > 0) median(instr_all) else 15
   med_quick <- median(df$quick,  na.rm = TRUE)
   med_track <- median(df$track,  na.rm = TRUE)
   med_kern  <- median(df$kernel, na.rm = TRUE)
@@ -384,8 +396,8 @@ fig5_overhead <- function() {
 
   df_plot <- data.frame(
     component = factor(
-      c("Instrumentation", "QuickSHAP", "Tracking", "KernelSHAP", "Exact Shapley"),
-      levels = rev(c("Instrumentation", "QuickSHAP", "Tracking", "KernelSHAP", "Exact Shapley"))
+      c("Instrumentation", "QuickSHAP", "Tracking", "KernelSHAP", "Exact-coalition"),
+      levels = rev(c("Instrumentation", "QuickSHAP", "Tracking", "KernelSHAP", "Exact-coalition"))
     ),
     cost  = c(1 + med_instr/100, 1 + med_quick/100, 1 + med_track/100, med_kern, med_exact),
     label = c(sprintf("%.0f%%", med_instr),
@@ -401,7 +413,7 @@ fig5_overhead <- function() {
     QuickSHAP       = unname(OI["green"]),
     Tracking        = unname(OI["skyblue"]),
     KernelSHAP      = unname(OI["orange"]),
-    `Exact Shapley` = unname(OI["vermill"])
+    `Exact-coalition` = unname(OI["vermill"])
   )
 
   p <- ggplot(df_plot, aes(x = cost, y = component, fill = component)) +

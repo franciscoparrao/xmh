@@ -1,0 +1,2162 @@
+[
+ {
+  "algorithm": "DE",
+  "function": "sphere",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "sphere",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "sphere",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "sphere",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "sphere",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277259,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "sphere",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277259,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "rosenbrock",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9999999999999999
+ },
+ {
+  "algorithm": "DE",
+  "function": "rosenbrock",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9999999999999999
+ },
+ {
+  "algorithm": "DE",
+  "function": "rosenbrock",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "rosenbrock",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "rosenbrock",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277259,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "rosenbrock",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277259,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "rastrigin",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9999999999999999
+ },
+ {
+  "algorithm": "DE",
+  "function": "rastrigin",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9999999999999999
+ },
+ {
+  "algorithm": "DE",
+  "function": "rastrigin",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "rastrigin",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "rastrigin",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277259,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "rastrigin",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277259,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "schwefel",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "schwefel",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "schwefel",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0000000000000002
+ },
+ {
+  "algorithm": "DE",
+  "function": "schwefel",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0000000000000002
+ },
+ {
+  "algorithm": "DE",
+  "function": "schwefel",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "schwefel",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "ackley",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "ackley",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "ackley",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9999999999999998
+ },
+ {
+  "algorithm": "DE",
+  "function": "ackley",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9999999999999998
+ },
+ {
+  "algorithm": "DE",
+  "function": "ackley",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0000000000000002
+ },
+ {
+  "algorithm": "DE",
+  "function": "ackley",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0000000000000002
+ },
+ {
+  "algorithm": "DE",
+  "function": "griewank",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0000000000000002
+ },
+ {
+  "algorithm": "DE",
+  "function": "griewank",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0000000000000002
+ },
+ {
+  "algorithm": "DE",
+  "function": "griewank",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0000000000000002
+ },
+ {
+  "algorithm": "DE",
+  "function": "griewank",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0000000000000002
+ },
+ {
+  "algorithm": "DE",
+  "function": "griewank",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "griewank",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "levy",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "levy",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "levy",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277259,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "levy",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277259,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "levy",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9999999999999999
+ },
+ {
+  "algorithm": "DE",
+  "function": "levy",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9999999999999999
+ },
+ {
+  "algorithm": "DE",
+  "function": "zakharov",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "zakharov",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "zakharov",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0000000000000002
+ },
+ {
+  "algorithm": "DE",
+  "function": "zakharov",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0000000000000002
+ },
+ {
+  "algorithm": "DE",
+  "function": "zakharov",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0000000000000002
+ },
+ {
+  "algorithm": "DE",
+  "function": "zakharov",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0000000000000002
+ },
+ {
+  "algorithm": "DE",
+  "function": "dixon_price",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "dixon_price",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.8164965809277261,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "dixon_price",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "dixon_price",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 1.0
+ },
+ {
+  "algorithm": "DE",
+  "function": "dixon_price",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9999999999999999
+ },
+ {
+  "algorithm": "DE",
+  "function": "dixon_price",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "selection_greedy"
+  ],
+  "cosine": 0.816496580927726,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9999999999999999
+ },
+ {
+  "algorithm": "GA",
+  "function": "sphere",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8367408418062082,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8367408418062082
+ },
+ {
+  "algorithm": "GA",
+  "function": "sphere",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8367408418062082,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8367408418062082
+ },
+ {
+  "algorithm": "GA",
+  "function": "sphere",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9638048756517735,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9638048756517735
+ },
+ {
+  "algorithm": "GA",
+  "function": "sphere",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9638048756517735,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9638048756517735
+ },
+ {
+  "algorithm": "GA",
+  "function": "sphere",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9835238709402956,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9835238709402956
+ },
+ {
+  "algorithm": "GA",
+  "function": "sphere",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9835238709402956,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9835238709402956
+ },
+ {
+  "algorithm": "GA",
+  "function": "rosenbrock",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8206651361958616,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8206651361958616
+ },
+ {
+  "algorithm": "GA",
+  "function": "rosenbrock",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8206651361958616,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8206651361958616
+ },
+ {
+  "algorithm": "GA",
+  "function": "rosenbrock",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8697004780154373,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.8697004780154373
+ },
+ {
+  "algorithm": "GA",
+  "function": "rosenbrock",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8697004780154374,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.8697004780154374
+ },
+ {
+  "algorithm": "GA",
+  "function": "rosenbrock",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8861602019828905,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.8861602019828905
+ },
+ {
+  "algorithm": "GA",
+  "function": "rosenbrock",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8861602019828905,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.8861602019828905
+ },
+ {
+  "algorithm": "GA",
+  "function": "rastrigin",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9580726629932355,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9580726629932355
+ },
+ {
+  "algorithm": "GA",
+  "function": "rastrigin",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9580726629932355,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9580726629932355
+ },
+ {
+  "algorithm": "GA",
+  "function": "rastrigin",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9966499568529694,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9966499568529694
+ },
+ {
+  "algorithm": "GA",
+  "function": "rastrigin",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9966499568529694,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9966499568529694
+ },
+ {
+  "algorithm": "GA",
+  "function": "rastrigin",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9967150693880471,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9967150693880471
+ },
+ {
+  "algorithm": "GA",
+  "function": "rastrigin",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9967150693880471,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9967150693880471
+ },
+ {
+  "algorithm": "GA",
+  "function": "schwefel",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9516347629986591,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9516347629986591
+ },
+ {
+  "algorithm": "GA",
+  "function": "schwefel",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9516347629986591,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9516347629986591
+ },
+ {
+  "algorithm": "GA",
+  "function": "schwefel",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9787286889406721,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9787286889406721
+ },
+ {
+  "algorithm": "GA",
+  "function": "schwefel",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9787286889406721,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9787286889406721
+ },
+ {
+  "algorithm": "GA",
+  "function": "schwefel",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9867836646530355,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9867836646530355
+ },
+ {
+  "algorithm": "GA",
+  "function": "schwefel",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9867836646530355,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9867836646530355
+ },
+ {
+  "algorithm": "GA",
+  "function": "ackley",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8833621056353924,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8833621056353924
+ },
+ {
+  "algorithm": "GA",
+  "function": "ackley",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8833621056353924,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8833621056353924
+ },
+ {
+  "algorithm": "GA",
+  "function": "ackley",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9983403345702583,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9983403345702583
+ },
+ {
+  "algorithm": "GA",
+  "function": "ackley",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9983403345702583,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9983403345702583
+ },
+ {
+  "algorithm": "GA",
+  "function": "ackley",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9949817946401475,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9949817946401475
+ },
+ {
+  "algorithm": "GA",
+  "function": "ackley",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9949817946401475,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9949817946401475
+ },
+ {
+  "algorithm": "GA",
+  "function": "griewank",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8377594723559972,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8377594723559972
+ },
+ {
+  "algorithm": "GA",
+  "function": "griewank",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8377594723559972,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8377594723559972
+ },
+ {
+  "algorithm": "GA",
+  "function": "griewank",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9638049850688933,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9638049850688933
+ },
+ {
+  "algorithm": "GA",
+  "function": "griewank",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9638049850688933,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9638049850688933
+ },
+ {
+  "algorithm": "GA",
+  "function": "griewank",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.983514630424204,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.983514630424204
+ },
+ {
+  "algorithm": "GA",
+  "function": "griewank",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9835146304242036,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9835146304242036
+ },
+ {
+  "algorithm": "GA",
+  "function": "levy",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8780639717845581,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8780639717845581
+ },
+ {
+  "algorithm": "GA",
+  "function": "levy",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.878063971784558,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.878063971784558
+ },
+ {
+  "algorithm": "GA",
+  "function": "levy",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9196637657133095,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9196637657133095
+ },
+ {
+  "algorithm": "GA",
+  "function": "levy",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9196637657133097,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9196637657133097
+ },
+ {
+  "algorithm": "GA",
+  "function": "levy",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9571026573349898,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9571026573349898
+ },
+ {
+  "algorithm": "GA",
+  "function": "levy",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9571026573349898,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9571026573349898
+ },
+ {
+  "algorithm": "GA",
+  "function": "zakharov",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8186015911011941,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8186015911011941
+ },
+ {
+  "algorithm": "GA",
+  "function": "zakharov",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8186015911011941,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8186015911011941
+ },
+ {
+  "algorithm": "GA",
+  "function": "zakharov",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8164966056728009,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.8164966056728009
+ },
+ {
+  "algorithm": "GA",
+  "function": "zakharov",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8164966056728008,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.8164966056728008
+ },
+ {
+  "algorithm": "GA",
+  "function": "zakharov",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8168873660534941,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.8168873660534941
+ },
+ {
+  "algorithm": "GA",
+  "function": "zakharov",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8168873660534941,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.8168873660534941
+ },
+ {
+  "algorithm": "GA",
+  "function": "dixon_price",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8171841311264879,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8171841311264879
+ },
+ {
+  "algorithm": "GA",
+  "function": "dixon_price",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8171841311264877,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8171841311264877
+ },
+ {
+  "algorithm": "GA",
+  "function": "dixon_price",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8960644598218371,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8960644598218371
+ },
+ {
+  "algorithm": "GA",
+  "function": "dixon_price",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.8960644598218371,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8960644598218371
+ },
+ {
+  "algorithm": "GA",
+  "function": "dixon_price",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.932752863459921,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.932752863459921
+ },
+ {
+  "algorithm": "GA",
+  "function": "dixon_price",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 3,
+  "missing": [],
+  "cosine": 0.9327528634599209,
+  "rank_agreement": 1.0,
+  "cosine_intersection_only": 0.9327528634599209
+ },
+ {
+  "algorithm": "PSO",
+  "function": "sphere",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.5785327545989406,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8127358196292441
+ },
+ {
+  "algorithm": "PSO",
+  "function": "sphere",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.5785327545989406,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8127358196292441
+ },
+ {
+  "algorithm": "PSO",
+  "function": "sphere",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.7501208949290538,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9785260267783256
+ },
+ {
+  "algorithm": "PSO",
+  "function": "sphere",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.7501208949290538,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9785260267783256
+ },
+ {
+  "algorithm": "PSO",
+  "function": "sphere",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7867342099608385,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9949887894274909
+ },
+ {
+  "algorithm": "PSO",
+  "function": "sphere",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7867342099608385,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9949887894274909
+ },
+ {
+  "algorithm": "PSO",
+  "function": "rosenbrock",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.5369251152277598,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.758253624389064
+ },
+ {
+  "algorithm": "PSO",
+  "function": "rosenbrock",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.5369251152277598,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.758253624389064
+ },
+ {
+  "algorithm": "PSO",
+  "function": "rosenbrock",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.6512315601733554,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.896874713483832
+ },
+ {
+  "algorithm": "PSO",
+  "function": "rosenbrock",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.6512315601733554,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.896874713483832
+ },
+ {
+  "algorithm": "PSO",
+  "function": "rosenbrock",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7274559980366249,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9640385054642556
+ },
+ {
+  "algorithm": "PSO",
+  "function": "rosenbrock",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7274559980366249,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9640385054642556
+ },
+ {
+  "algorithm": "PSO",
+  "function": "rastrigin",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.5949025015337509,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8330432457326137
+ },
+ {
+  "algorithm": "PSO",
+  "function": "rastrigin",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.5949025015337509,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8330432457326137
+ },
+ {
+  "algorithm": "PSO",
+  "function": "rastrigin",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7121292457224792,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9526654828956976
+ },
+ {
+  "algorithm": "PSO",
+  "function": "rastrigin",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7121292457224792,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9526654828956976
+ },
+ {
+  "algorithm": "PSO",
+  "function": "rastrigin",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7308215665271748,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9663719169764176
+ },
+ {
+  "algorithm": "PSO",
+  "function": "rastrigin",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7308215665271748,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9663719169764176
+ },
+ {
+  "algorithm": "PSO",
+  "function": "schwefel",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.5794358845963123,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8138742402166148
+ },
+ {
+  "algorithm": "PSO",
+  "function": "schwefel",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.5794358845963123,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8138742402166148
+ },
+ {
+  "algorithm": "PSO",
+  "function": "schwefel",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.6283089845270775,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8721304881555426
+ },
+ {
+  "algorithm": "PSO",
+  "function": "schwefel",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.6283089845270775,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8721304881555426
+ },
+ {
+  "algorithm": "PSO",
+  "function": "schwefel",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.6267198148350287,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8703490325730681
+ },
+ {
+  "algorithm": "PSO",
+  "function": "schwefel",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.6267198148350287,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8703490325730681
+ },
+ {
+  "algorithm": "PSO",
+  "function": "ackley",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.6841876749365294,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9290242149594873
+ },
+ {
+  "algorithm": "PSO",
+  "function": "ackley",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.6841876749365294,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9290242149594873
+ },
+ {
+  "algorithm": "PSO",
+  "function": "ackley",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.7903155348595643,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.99605269024229
+ },
+ {
+  "algorithm": "PSO",
+  "function": "ackley",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.7903155348595643,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.99605269024229
+ },
+ {
+  "algorithm": "PSO",
+  "function": "ackley",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7994589624217184,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9982443328988918
+ },
+ {
+  "algorithm": "PSO",
+  "function": "ackley",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7994589624217184,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9982443328988918
+ },
+ {
+  "algorithm": "PSO",
+  "function": "griewank",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.5773657368001078,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8112617452409114
+ },
+ {
+  "algorithm": "PSO",
+  "function": "griewank",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.5773657368001078,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.8112617452409114
+ },
+ {
+  "algorithm": "PSO",
+  "function": "griewank",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.7501208950492511,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9785260268472068
+ },
+ {
+  "algorithm": "PSO",
+  "function": "griewank",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.7501208950492511,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9785260268472068
+ },
+ {
+  "algorithm": "PSO",
+  "function": "griewank",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.786734209960848,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9949887894274939
+ },
+ {
+  "algorithm": "PSO",
+  "function": "griewank",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.786734209960848,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9949887894274939
+ },
+ {
+  "algorithm": "PSO",
+  "function": "levy",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.59828427983945,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.8371490441900614
+ },
+ {
+  "algorithm": "PSO",
+  "function": "levy",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.59828427983945,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.8371490441900614
+ },
+ {
+  "algorithm": "PSO",
+  "function": "levy",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7225912656673735,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9605593504525217
+ },
+ {
+  "algorithm": "PSO",
+  "function": "levy",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7225912656673735,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9605593504525217
+ },
+ {
+  "algorithm": "PSO",
+  "function": "levy",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7919714198222835,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9965067357619075
+ },
+ {
+  "algorithm": "PSO",
+  "function": "levy",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7919714198222835,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9965067357619075
+ },
+ {
+  "algorithm": "PSO",
+  "function": "zakharov",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.5058256112187893,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.7153210211493235
+ },
+ {
+  "algorithm": "PSO",
+  "function": "zakharov",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.5058256112187893,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.7153210211493235
+ },
+ {
+  "algorithm": "PSO",
+  "function": "zakharov",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.49999994876043835,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.7071067087228627
+ },
+ {
+  "algorithm": "PSO",
+  "function": "zakharov",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.49999994876043835,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.7071067087228627
+ },
+ {
+  "algorithm": "PSO",
+  "function": "zakharov",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.4999999996344809,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.7071067806696254
+ },
+ {
+  "algorithm": "PSO",
+  "function": "zakharov",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.4999999996344809,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.7071067806696254
+ },
+ {
+  "algorithm": "PSO",
+  "function": "dixon_price",
+  "dimension": 10,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.5194593456437097,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.7343428881900567
+ },
+ {
+  "algorithm": "PSO",
+  "function": "dixon_price",
+  "dimension": 10,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.5194593456437097,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.7343428881900567
+ },
+ {
+  "algorithm": "PSO",
+  "function": "dixon_price",
+  "dimension": 30,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.7066323391410071,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9483008418692688
+ },
+ {
+  "algorithm": "PSO",
+  "function": "dixon_price",
+  "dimension": 30,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": 0.7066323391410071,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": 0.9483008418692688
+ },
+ {
+  "algorithm": "PSO",
+  "function": "dixon_price",
+  "dimension": 50,
+  "method": "QuickSHAP",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7708403618014358,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9890163442031065
+ },
+ {
+  "algorithm": "PSO",
+  "function": "dixon_price",
+  "dimension": 50,
+  "method": "Tracking",
+  "n_ops_exact": 3,
+  "n_ops_reported": 2,
+  "missing": [
+   "position_update"
+  ],
+  "cosine": -0.7708403618014358,
+  "rank_agreement": 0.0,
+  "cosine_intersection_only": -0.9890163442031065
+ }
+]

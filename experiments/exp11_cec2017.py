@@ -24,7 +24,7 @@ import numpy as np
 
 from xmh.algorithms.instrumented_de import InstrumentedDE
 from xmh.algorithms.instrumented_ga import InstrumentedGA
-from xmh.explanation.operator_shap import ExactOperatorSHAP
+from xmh.explanation.operator_shap import ExactCoalitionSHAP
 
 
 # Representative CEC2017 subset:
@@ -110,7 +110,7 @@ def main(outdir: str | None = None):
                                   pop_size=POP_SIZE,
                                   max_generations=MAX_GENERATIONS,
                                   **alg_extra)
-                exact = ExactOperatorSHAP(
+                exact = ExactCoalitionSHAP(
                     n_runs_per_coalition=N_RUNS,
                     base_seed=BASE_SEED,
                     compute_interactions=False,

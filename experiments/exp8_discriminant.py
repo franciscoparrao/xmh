@@ -25,7 +25,7 @@ from scipy import stats
 
 from xmh.algorithms.instrumented_ga import InstrumentedGA
 from xmh.benchmarks.functions import get_benchmark
-from xmh.explanation.operator_shap import ExactOperatorSHAP
+from xmh.explanation.operator_shap import ExactCoalitionSHAP
 
 
 # --- Shared experimental setup -------------------------------------------
@@ -73,7 +73,7 @@ def _ga_kwargs(cx_type: str, cx_rate: float, dim: int, bounds) -> dict:
 def _shapley_for_config(cx_type: str, cx_rate: float, bounds) -> dict[str, Any]:
     alg_kwargs = _ga_kwargs(cx_type, cx_rate, DIMENSION, bounds)
     benchmark = get_benchmark(FUNCTION)
-    exact = ExactOperatorSHAP(
+    exact = ExactCoalitionSHAP(
         n_runs_per_coalition=N_RUNS_PER_COALITION,
         base_seed=BASE_SEED,
         compute_interactions=False,

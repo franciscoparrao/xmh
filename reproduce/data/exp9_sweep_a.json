@@ -32,24 +32,24 @@
           "mutation_polynomial"
         ],
         "shapley_values": {
-          "selection_tournament": 48.719799368823416,
-          "crossover_sbx": 68.11597091646424,
-          "mutation_polynomial": 37.025024151839816
+          "selection_tournament": 46.90679259593964,
+          "crossover_sbx": 69.27038385129732,
+          "mutation_polynomial": 37.6836179898905
         },
         "total_contribution": 153.86079443712742,
         "base_value": 166.13452124287824,
         "confidence_intervals": {
           "selection_tournament": [
-            45.144450045746034,
-            50.02470748899204
+            44.423936731126716,
+            49.38964846075257
           ],
           "crossover_sbx": [
-            65.1307984354543,
-            74.74091347143863
+            63.664585213876485,
+            74.87618248871817
           ],
           "mutation_polynomial": [
-            33.943833400841505,
-            38.7368860317824
+            35.319258464241166,
+            40.047977515539834
           ]
         },
         "final_fitness_per_run": [
@@ -84,7 +84,7 @@
           10.860291933232928,
           12.302857480773286
         ],
-        "elapsed_seconds": 143.53477549552917,
+        "elapsed_seconds": 71.16925382614136,
         "n_runs_per_coalition": 30,
         "convergence_traces": [
           [
@@ -938,24 +938,24 @@
           "mutation_polynomial"
         ],
         "shapley_values": {
-          "selection_tournament": 43.52924710970642,
-          "crossover_sbx": 59.85998722825335,
-          "mutation_polynomial": 60.83492641200287
+          "selection_tournament": 42.1623673010914,
+          "crossover_sbx": 60.391063917542255,
+          "mutation_polynomial": 61.670729531328995
         },
         "total_contribution": 164.2241607499626,
         "base_value": 166.13452124287824,
         "confidence_intervals": {
           "selection_tournament": [
-            40.113847347436156,
-            45.900600191778715
+            39.51463046473172,
+            44.810104137451084
           ],
           "crossover_sbx": [
-            56.23519945937096,
-            64.92698313330241
+            55.70557048132531,
+            65.0765573537592
           ],
           "mutation_polynomial": [
-            57.917577683996775,
-            63.35411368404025
+            58.74535521994558,
+            64.59610384271241
           ]
         },
         "final_fitness_per_run": [
@@ -990,7 +990,7 @@
           1.6491238649585316,
           1.902724095280428
         ],
-        "elapsed_seconds": 285.3309848308563,
+        "elapsed_seconds": 143.00621891021729,
         "n_runs_per_coalition": 30,
         "convergence_traces": [
           [
@@ -2594,24 +2594,24 @@
           "mutation_polynomial"
         ],
         "shapley_values": {
-          "selection_tournament": 29.306284359503852,
-          "crossover_sbx": 55.24451065698991,
-          "mutation_polynomial": 80.99589829236992
+          "selection_tournament": 28.508649739825778,
+          "crossover_sbx": 55.452092154300914,
+          "mutation_polynomial": 81.58595141473695
         },
         "total_contribution": 165.5466933088636,
         "base_value": 166.13452124287824,
         "confidence_intervals": {
           "selection_tournament": [
-            26.445760198332636,
-            31.323276102966148
+            26.05968009916357,
+            30.957619380487984
           ],
           "crossover_sbx": [
-            50.15400257954914,
-            58.17158339094536
+            51.869866699722856,
+            59.03431760887897
           ],
           "mutation_polynomial": [
-            79.67169167580484,
-            85.32707267012914
+            78.59164342224317,
+            84.58025940723074
           ]
         },
         "final_fitness_per_run": [
@@ -2646,7 +2646,7 @@
           0.7532128973227971,
           0.5903274522855776
         ],
-        "elapsed_seconds": 569.466686964035,
+        "elapsed_seconds": 289.41129899024963,
         "n_runs_per_coalition": 30,
         "convergence_traces": [
           [
@@ -5750,24 +5750,24 @@
           "mutation_polynomial"
         ],
         "shapley_values": {
-          "selection_tournament": 15.111559555007382,
-          "crossover_sbx": 54.64712485192364,
-          "mutation_polynomial": 96.07979261900324
+          "selection_tournament": 14.44263850525873,
+          "crossover_sbx": 56.04184957203697,
+          "mutation_polynomial": 95.35398894863854
         },
         "total_contribution": 165.83847702593422,
         "base_value": 166.13452124287824,
         "confidence_intervals": {
           "selection_tournament": [
-            13.35239924877968,
-            15.675372750016933
+            12.657097756998184,
+            16.228179253519276
           ],
           "crossover_sbx": [
-            51.8935827760949,
-            59.08165719959773
+            52.83034052571964,
+            59.253358618354305
           ],
           "mutation_polynomial": [
-            92.66131939891814,
-            99.01262267846111
+            92.24711751923819,
+            98.4608603780389
           ]
         },
         "final_fitness_per_run": [
@@ -5802,7 +5802,7 @@
           0.3310483018992809,
           0.2841578284825234
         ],
-        "elapsed_seconds": 1138.5719573497772,
+        "elapsed_seconds": 573.3692510128021,
         "n_runs_per_coalition": 30,
         "convergence_traces": [
           [
@@ -11906,24 +11906,24 @@
           "mutation_polynomial"
         ],
         "shapley_values": {
-          "selection_tournament": 6.910261658348417,
-          "crossover_sbx": 57.10814941350471,
-          "mutation_polynomial": 101.98486299965124
+          "selection_tournament": 6.353980957941918,
+          "crossover_sbx": 58.51922963599418,
+          "mutation_polynomial": 101.13006347756827
         },
         "total_contribution": 166.00327407150434,
         "base_value": 166.13452124287824,
         "confidence_intervals": {
           "selection_tournament": [
-            5.498888114512564,
-            7.8981816088194154
+            5.455377161094771,
+            7.252584754789065
           ],
           "crossover_sbx": [
-            54.77362756673478,
-            60.395897370769895
+            55.5416809558372,
+            61.49677831615116
           ],
           "mutation_polynomial": [
-            98.35204742010393,
-            105.08790606206824
+            97.99015844978935,
+            104.2699685053472
           ]
         },
         "final_fitness_per_run": [
@@ -11958,7 +11958,7 @@
           0.13951937776460013,
           0.1447408089276459
         ],
-        "elapsed_seconds": 2782.403557777405,
+        "elapsed_seconds": 1694.8706629276276,
         "n_runs_per_coalition": 30,
         "convergence_traces": [
           [
@@ -27064,24 +27064,24 @@
           "mutation_polynomial"
         ],
         "shapley_values": {
-          "selection_tournament": 106.52256453436483,
-          "crossover_sbx": 118.77583003088195,
-          "mutation_polynomial": 55.06382771964088
+          "selection_tournament": 105.95955948116185,
+          "crossover_sbx": 115.98151474537417,
+          "mutation_polynomial": 58.421148058351655
         },
         "total_contribution": 280.3622222848877,
         "base_value": 427.939688523195,
         "confidence_intervals": {
           "selection_tournament": [
-            103.99533952841529,
-            113.04708360271096
+            100.62124668940044,
+            111.29787227292326
           ],
           "crossover_sbx": [
-            111.82030416226499,
-            127.43180586337928
+            106.26136537629777,
+            125.70166411445057
           ],
           "mutation_polynomial": [
-            45.134489483745995,
-            59.29542192925885
+            52.3377310946432,
+            64.5045650220601
           ]
         },
         "final_fitness_per_run": [
@@ -27116,7 +27116,7 @@
           108.23129794552452,
           151.42953867855556
         ],
-        "elapsed_seconds": 150.25363445281982,
+        "elapsed_seconds": 71.34807443618774,
         "n_runs_per_coalition": 30,
         "convergence_traces": [
           [
@@ -27970,24 +27970,24 @@
           "mutation_polynomial"
         ],
         "shapley_values": {
-          "selection_tournament": 109.70534089776051,
-          "crossover_sbx": 123.0447685789918,
-          "mutation_polynomial": 92.38572696498201
+          "selection_tournament": 108.54437208495014,
+          "crossover_sbx": 126.07308414046811,
+          "mutation_polynomial": 90.51838021631605
         },
         "total_contribution": 325.13583644173434,
         "base_value": 427.939688523195,
         "confidence_intervals": {
           "selection_tournament": [
-            101.80945553768436,
-            109.96377995052663
+            103.78884707868876,
+            113.29989709121152
           ],
           "crossover_sbx": [
-            119.50348450488802,
-            135.74537924747978
+            115.91959500388785,
+            136.22657327704837
           ],
           "mutation_polynomial": [
-            84.96153613124315,
-            98.28803751164673
+            84.40286855440745,
+            96.63389187822465
           ]
         },
         "final_fitness_per_run": [
@@ -28022,7 +28022,7 @@
           83.25050070808473,
           74.54473377325715
         ],
-        "elapsed_seconds": 295.2573368549347,
+        "elapsed_seconds": 140.65815043449402,
         "n_runs_per_coalition": 30,
         "convergence_traces": [
           [
@@ -29626,24 +29626,24 @@
           "mutation_polynomial"
         ],
         "shapley_values": {
-          "selection_tournament": 101.54871936031643,
-          "crossover_sbx": 130.24860602371373,
-          "mutation_polynomial": 116.90010487281901
+          "selection_tournament": 97.718564322159,
+          "crossover_sbx": 133.0867155847322,
+          "mutation_polynomial": 117.89215034995803
         },
         "total_contribution": 348.69743025684926,
         "base_value": 427.939688523195,
         "confidence_intervals": {
           "selection_tournament": [
-            95.31281468518306,
-            105.68371176017511
+            92.7967045307284,
+            102.64042411358959
           ],
           "crossover_sbx": [
-            122.97455759306344,
-            140.4642229755386
+            124.83535601140765,
+            141.3380751580567
           ],
           "mutation_polynomial": [
-            109.8249810516417,
-            123.13457244809659
+            112.4352595789372,
+            123.34904112097885
           ]
         },
         "final_fitness_per_run": [
@@ -29678,7 +29678,7 @@
           69.3163455018632,
           56.7269427012952
         ],
-        "elapsed_seconds": 591.7243649959564,
+        "elapsed_seconds": 358.7748830318451,
         "n_runs_per_coalition": 30,
         "convergence_traces": [
           [
@@ -32782,24 +32782,24 @@
           "mutation_polynomial"
         ],
         "shapley_values": {
-          "selection_tournament": 82.5442098074798,
-          "crossover_sbx": 137.38290354333483,
-          "mutation_polynomial": 146.3454113318447
+          "selection_tournament": 83.0168343760529,
+          "crossover_sbx": 138.1834197032068,
+          "mutation_polynomial": 145.07227060339963
         },
         "total_contribution": 366.27252468265937,
         "base_value": 427.939688523195,
         "confidence_intervals": {
           "selection_tournament": [
-            79.19240967046048,
-            88.75581876144966
+            77.81338678934709,
+            88.2202819627587
           ],
           "crossover_sbx": [
-            127.56313764375608,
-            139.482576012016
+            130.17485624676962,
+            146.19198315964397
           ],
           "mutation_polynomial": [
-            141.70410534480018,
-            155.84700193283615
+            139.77234231935867,
+            150.3721988874406
           ]
         },
         "final_fitness_per_run": [
@@ -32834,7 +32834,7 @@
           52.26907839677722,
           37.025420716002714
         ],
-        "elapsed_seconds": 1169.0146827697754,
+        "elapsed_seconds": 770.0942792892456,
         "n_runs_per_coalition": 30,
         "convergence_traces": [
           [
@@ -38938,24 +38938,24 @@
           "mutation_polynomial"
         ],
         "shapley_values": {
-          "selection_tournament": 76.436738310764,
-          "crossover_sbx": 125.54943510926245,
-          "mutation_polynomial": 188.1732143698058
+          "selection_tournament": 72.5582182283158,
+          "crossover_sbx": 128.92037140294426,
+          "mutation_polynomial": 188.68079815857217
         },
         "total_contribution": 390.1593877898323,
         "base_value": 427.939688523195,
         "confidence_intervals": {
           "selection_tournament": [
-            73.15803629588632,
-            80.22202773950949
+            68.06753395912293,
+            77.04890249750866
           ],
           "crossover_sbx": [
-            122.05694560457873,
-            133.18221037714702
+            122.32453609343227,
+            135.51620671245624
           ],
           "mutation_polynomial": [
-            181.48919137056936,
-            190.21036419197344
+            184.71946459312488,
+            192.64213172401946
           ]
         },
         "final_fitness_per_run": [
@@ -38990,7 +38990,7 @@
           35.00898560881865,
           31.74070160587644
         ],
-        "elapsed_seconds": 2882.656035900116,
+        "elapsed_seconds": 1592.5918238162994,
         "n_runs_per_coalition": 30,
         "convergence_traces": [
           [

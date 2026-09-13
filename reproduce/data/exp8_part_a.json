@@ -20,24 +20,24 @@
         "mutation_polynomial"
       ],
       "shapley_values": {
-        "selection_tournament": 81.95311005449771,
-        "crossover_sbx": 136.07248258124162,
-        "mutation_polynomial": 148.24693204691997
+        "selection_tournament": 83.0168343760529,
+        "crossover_sbx": 138.1834197032068,
+        "mutation_polynomial": 145.07227060339963
       },
       "total_contribution": 366.27252468265937,
       "base_value": 427.939688523195,
       "confidence_intervals": {
         "selection_tournament": [
-          78.77602103923219,
-          87.77345668680563
+          77.81338678934709,
+          88.2202819627587
         ],
         "crossover_sbx": [
-          132.10678972005505,
-          145.9545414883256
+          130.17485624676962,
+          146.19198315964397
         ],
         "mutation_polynomial": [
-          138.71363898868046,
-          149.2206014422197
+          139.77234231935867,
+          150.3721988874406
         ]
       },
       "final_fitness_per_run": [
@@ -72,7 +72,7 @@
         52.26907839677722,
         37.025420716002714
       ],
-      "elapsed_seconds": 1198.2574434280396,
+      "elapsed_seconds": 605.4463801383972,
       "n_runs_per_coalition": 30
     },
     "blx_alpha": {
@@ -82,24 +82,24 @@
         "mutation_polynomial"
       ],
       "shapley_values": {
-        "selection_tournament": 79.69488402551188,
-        "crossover_blx_alpha": 134.27481030797892,
-        "mutation_polynomial": 113.96436403880584
+        "selection_tournament": 82.32248304400512,
+        "crossover_blx_alpha": 134.56659888288354,
+        "mutation_polynomial": 111.04497644540797
       },
       "total_contribution": 327.9340583722967,
       "base_value": 427.939688523195,
       "confidence_intervals": {
         "selection_tournament": [
-          78.10895166508611,
-          88.22301962239759
+          78.1476191062372,
+          86.49734698177305
         ],
         "crossover_blx_alpha": [
-          128.23202068060647,
-          139.32001969250894
+          128.48988960490703,
+          140.64330816086004
         ],
         "mutation_polynomial": [
-          104.1121466123022,
-          117.87195847169203
+          105.00271586941692,
+          117.08723702139902
         ]
       },
       "final_fitness_per_run": [
@@ -134,7 +134,7 @@
         87.52355303702222,
         109.74073708685495
       ],
-      "elapsed_seconds": 1208.566819190979,
+      "elapsed_seconds": 599.5840260982513,
       "n_runs_per_coalition": 30
     },
     "arithmetic": {
@@ -144,24 +144,24 @@
         "mutation_polynomial"
       ],
       "shapley_values": {
-        "selection_tournament": 43.13237332669656,
-        "crossover_arithmetic": 136.41024314589947,
-        "mutation_polynomial": 193.15415894455631
+        "selection_tournament": 44.46847016464583,
+        "crossover_arithmetic": 134.83346095540674,
+        "mutation_polynomial": 193.39484429709984
       },
       "total_contribution": 372.6967754171524,
       "base_value": 427.939688523195,
       "confidence_intervals": {
         "selection_tournament": [
-          41.57834293464843,
-          49.749951791333515
+          41.39623983338882,
+          47.54070049590284
         ],
         "crossover_arithmetic": [
-          127.72767642132585,
-          139.41963159470248
+          128.22578103701366,
+          141.4411408737998
         ],
         "mutation_polynomial": [
-          186.42965151054636,
-          200.488296581748
+          186.95696377865664,
+          199.83272481554303
         ]
       },
       "final_fitness_per_run": [
@@ -196,7 +196,7 @@
         53.64685890850697,
         57.13581306883188
       ],
-      "elapsed_seconds": 954.9897863864899,
+      "elapsed_seconds": 520.7069518566132,
       "n_runs_per_coalition": 30
     },
     "uniform": {
@@ -206,24 +206,24 @@
         "mutation_polynomial"
       ],
       "shapley_values": {
-        "selection_tournament": 106.13009517779322,
-        "crossover_uniform": 108.39607394242174,
-        "mutation_polynomial": 163.77646149044853
+        "selection_tournament": 106.19608480667851,
+        "crossover_uniform": 106.80836223847119,
+        "mutation_polynomial": 165.2981835655137
       },
       "total_contribution": 378.30263061066347,
       "base_value": 427.939688523195,
       "confidence_intervals": {
         "selection_tournament": [
-          102.31219843750833,
-          113.49867851069811
+          101.05995713569607,
+          111.33221247766096
         ],
         "crossover_uniform": [
-          100.7082373643496,
-          115.17893824925406
+          99.21313485317066,
+          114.40358962377172
         ],
         "mutation_polynomial": [
-          155.74471805183165,
-          169.16249060768516
+          158.94893546556574,
+          171.64743166546168
         ]
       },
       "final_fitness_per_run": [
@@ -258,7 +258,7 @@
         62.57767783668956,
         67.74281358337839
       ],
-      "elapsed_seconds": 963.7475306987762,
+      "elapsed_seconds": 514.2531177997589,
       "n_runs_per_coalition": 30
     },
     "two_point": {
@@ -268,24 +268,24 @@
         "mutation_polynomial"
       ],
       "shapley_values": {
-        "selection_tournament": 83.90912217045869,
-        "crossover_two_point": 96.9179055155673,
-        "mutation_polynomial": 185.7059620092419
+        "selection_tournament": 87.82018893848804,
+        "crossover_two_point": 94.87197085207795,
+        "mutation_polynomial": 183.8408299047019
       },
       "total_contribution": 366.53298969526793,
       "base_value": 427.939688523195,
       "confidence_intervals": {
         "selection_tournament": [
-          79.4066517013389,
-          87.46876115715752
+          83.40699159158247,
+          92.23338628539362
         ],
         "crossover_two_point": [
-          87.54844550466771,
-          104.0059667386866
+          87.82295156279142,
+          101.92099014136448
         ],
         "mutation_polynomial": [
-          179.86393523616204,
-          194.7722190525231
+          177.44325648697844,
+          190.23840332242537
         ]
       },
       "final_fitness_per_run": [
@@ -320,7 +320,7 @@
         54.13169577597509,
         70.90826117812077
       ],
-      "elapsed_seconds": 979.1324193477631,
+      "elapsed_seconds": 466.8517282009125,
       "n_runs_per_coalition": 30
     },
     "single_point": {
@@ -330,24 +330,24 @@
         "mutation_polynomial"
       ],
       "shapley_values": {
-        "selection_tournament": 78.39199226997036,
-        "crossover_single_point": 87.78505791393465,
-        "mutation_polynomial": 197.93312320242424
+        "selection_tournament": 80.80642623198791,
+        "crossover_single_point": 86.9430762395231,
+        "mutation_polynomial": 196.36067091481826
       },
       "total_contribution": 364.1101733863293,
       "base_value": 427.939688523195,
       "confidence_intervals": {
         "selection_tournament": [
-          75.5592638993334,
-          85.9193538305647
+          76.17792399777149,
+          85.43492846620434
         ],
         "crossover_single_point": [
-          76.38430121472946,
-          90.65734823135857
+          80.22376012970349,
+          93.6623923493427
         ],
         "mutation_polynomial": [
-          193.05549959712525,
-          206.64457999954718
+          189.61402814556322,
+          203.1073136840733
         ]
       },
       "final_fitness_per_run": [
@@ -382,18 +382,18 @@
         76.63782632535899,
         61.03138917322681
       ],
-      "elapsed_seconds": 967.9554851055145,
+      "elapsed_seconds": 464.83122658729553,
       "n_runs_per_coalition": 30
     }
   },
   "anova": {
     "f_statistic": 79.1743758874859,
-    "p_value": 5.445190795737704e-43,
+    "p_value": 5.445190795737703e-43,
     "eta_squared": 0.6946682117886386,
-    "interpretation": "\u03b7\u00b2 = fraction of final-fitness variance explained by crossover_type. Compare against XMH's per-cx_type Shapley (within-run attribution)."
+    "interpretation": "\u03b7\u00b2 = fraction of final-fitness variance explained by crossover_type. Compare against XMH's per-cx_type Shapley (within-run attribution): different question, different answer."
   },
   "fanova_on_hyperparams": {
     "variance_explained": 0.0,
-    "reason": "No hyperparameter variation; fANOVA-on-hyperparameters has no variance to decompose."
+    "reason": "No hyperparameter variation across runs (all hyperparams are fixed); fANOVA-on-hyperparameters has no variance to decompose. This is the central discriminating evidence: a tool that requires varying knobs is silent on the question 'which operator type works here'."
   }
 }

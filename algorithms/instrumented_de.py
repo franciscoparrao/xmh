@@ -194,15 +194,21 @@ class InstrumentedDE(InstrumentedAlgorithm):
             trial_fitness = self._current_objective(trial)
             self.evaluations += 1
 
-            # Selection
-            if trial_fitness <= self.fitness[i]:
-                new_population[i] = trial
-                new_fitness[i] = trial_fitness
-                success = True
-            else:
-                new_population[i] = self.population[i]
-                new_fitness[i] = self.fitness[i]
-                success = False
+            # Selection --- routed through the registered operator so that
+            # neutralizing it actually removes greedy acceptance. Before this,
+            # the comparison was inlined here and `selection_op` was fetched but
+            # never used, which made phi_selection identically zero by
+            # construction rather than as a property of DE.
+            chosen, chosen_fitness = selection_op.apply(
+                target=self.population[i],
+                target_fitness=self.fitness[i],
+                trial=trial,
+                trial_fitness=trial_fitness,
+                rng=self.rng,
+            )
+            new_population[i] = chosen
+            new_fitness[i] = chosen_fitness
+            success = bool(chosen_fitness < self.fitness[i])
 
             # Log operator application results (both mutation and crossover contribute to trial success)
             self.logger.log_operator_application(
@@ -479,18 +485,22 @@ class AdaptiveDE(InstrumentedDE):
             trial_fitness = self._current_objective(trial)
             self.evaluations += 1
 
-            if trial_fitness <= self.fitness[i]:
-                new_population[i] = trial
-                new_fitness[i] = trial_fitness
-                new_F[i] = F_i
-                new_CR[i] = CR_i
-                success = True
-            else:
-                new_population[i] = self.population[i]
-                new_fitness[i] = self.fitness[i]
-                new_F[i] = self.F_values[i]
-                new_CR[i] = self.CR_values[i]
-                success = False
+            # Routed through the registered operator for the same reason as in
+            # InstrumentedDE.run: an inlined comparison makes the selection
+            # operator un-neutralizable and its Shapley value zero by construction.
+            chosen, chosen_fitness = self.get_operator("selection_greedy").apply(
+                target=self.population[i],
+                target_fitness=self.fitness[i],
+                trial=trial,
+                trial_fitness=trial_fitness,
+                rng=self.rng,
+            )
+            accepted = bool(chosen_fitness < self.fitness[i])
+            new_population[i] = chosen
+            new_fitness[i] = chosen_fitness
+            new_F[i] = F_i if accepted else self.F_values[i]
+            new_CR[i] = CR_i if accepted else self.CR_values[i]
+            success = accepted
 
             self.logger.log_operator_application(
                 operator_name=mutation_op.name,
