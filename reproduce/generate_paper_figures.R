@@ -60,7 +60,8 @@ OP_COL <- c(
   Mutation  = unname(OI["green"]),
   Velocity  = unname(OI["purple"]),
   Topology  = unname(OI["orange"]),
-  Position  = unname(OI["yellow"])
+  Position  = unname(OI["yellow"]),
+  Adaptation = unname(OI["purple"])
 )
 
 # Algorithm colors
@@ -122,6 +123,7 @@ exp8a         <- read_json_safe(file.path(DATA_DIR, "exp8_part_a.json"))
 exp8b         <- read_json_safe(file.path(DATA_DIR, "exp8_part_b.json"))
 exp9a         <- read_json_safe(file.path(DATA_DIR, "exp9_sweep_a.json"))
 exp9b         <- read_json_safe(file.path(DATA_DIR, "exp9_sweep_b.json"))
+exp17         <- read_json_safe(file.path(DATA_DIR, "exp17_shade_budget.json"))
 
 FUNCTIONS  <- c("sphere", "rosenbrock", "zakharov", "dixon_price",
                 "rastrigin", "schwefel", "ackley", "griewank", "levy")
@@ -673,6 +675,111 @@ fig8_discriminant <- function() {
 # ========================================================================
 # FIGURE 9: Budget sensitivity (2x2)
 # ========================================================================
+# --------------------------------------------------------------------------
+# Fig 10 — Sweep C: SHADE's parameter adaptation across evaluation budgets
+# --------------------------------------------------------------------------
+fig10_shade_budget <- function() {
+  if (is.null(exp17)) {
+    cat("  (skip fig10: exp17 data not found)\n")
+    return(invisible(NULL))
+  }
+
+  OP_LAB <- c(mutation_current_to_pbest_archive = "Mutation",
+              crossover_binomial                = "Crossover",
+              selection_greedy                  = "Selection",
+              parameter_adaptation              = "Adaptation")
+
+  funcs <- unlist(exp17$functions)
+  gens  <- unlist(exp17$generations)
+  flabs <- c(ackley = "Ackley", griewank = "Griewank",
+             rastrigin = "Rastrigin", schwefel = "Schwefel")
+
+  rows <- list()
+  for (f in funcs) {
+    for (g in gens) {
+      cell <- exp17$per_cell[[f]][[as.character(g)]]
+      # El consolidado ya trae la convencion del manuscrito: media de los shares por
+      # corrida, con su intervalo calculado sobre esa misma distribucion. No se
+      # renormaliza aca, para que la figura y la Tabla S15 salgan del mismo numero.
+      sh_all <- unlist(cell$share_pct_per_run)
+      hw_all <- unlist(cell$share_ci95_halfwidth)
+      for (op in names(sh_all)) {
+        rows[[length(rows) + 1L]] <- data.frame(
+          func = flabs[[f]],
+          fes  = cell$fes_budget,
+          op   = OP_LAB[[op]],
+          share = sh_all[[op]],
+          lo   = sh_all[[op]] - hw_all[[op]],
+          hi   = sh_all[[op]] + hw_all[[op]],
+          stringsAsFactors = FALSE
+        )
+      }
+    }
+  }
+  df <- do.call(rbind, rows)
+  df$op <- factor(df$op, levels = c("Mutation", "Selection", "Crossover", "Adaptation"))
+  fes_breaks <- sort(unique(df$fes))
+  fes_labs   <- paste0(fes_breaks / 1000, "k")
+
+  # ---- (a) la afirmacion: el share de la adaptacion no cruza a positivo ----
+  da <- df[df$op == "Adaptation", ]
+  pA <- ggplot(da, aes(x = fes, y = share, color = func, group = func)) +
+    geom_hline(yintercept = 0, linewidth = 0.45, color = "grey25") +
+    geom_errorbar(aes(ymin = lo, ymax = hi), width = 0.045, linewidth = 0.35,
+                  show.legend = FALSE) +
+    geom_line(linewidth = 0.65) +
+    geom_point(aes(shape = func), size = 1.6) +
+    scale_x_continuous(trans = "log10", breaks = fes_breaks, labels = fes_labs) +
+    # Paleta deliberadamente disjunta de la de operadores del panel (b): ahi el verde
+    # es Mutation, el bermellon Selection, el azul Crossover y el morado Adaptation.
+    # Reusar cualquiera de esos aqui, donde las series son FUNCIONES, se lee mal.
+    scale_color_manual(name = NULL,
+                       values = c(Ackley    = "#000000",
+                                  Griewank  = unname(OI["skyblue"]),
+                                  Rastrigin = unname(OI["orange"]),
+                                  Schwefel  = "#666666")) +
+    scale_shape_manual(name = NULL,
+                       values = c(Ackley = 16, Griewank = 17,
+                                  Rastrigin = 15, Schwefel = 18)) +
+    annotate("text", x = 26000, y = 6.4,
+             label = "Rastrigin crosses zero", hjust = 0, vjust = 0.5,
+             size = 2.1, family = "serif", color = "grey30") +
+    annotate("segment", x = 34000, xend = 42000, y = 5.6, yend = 0.4,
+             linewidth = 0.25, color = "grey45",
+             arrow = arrow(length = unit(0.05, "cm"), type = "closed")) +
+    labs(x = "Evaluation budget (FES)", y = "Signed Shapley share (%)",
+         title = "(a) Parameter adaptation vs budget")
+
+  # ---- (b) a donde se va lo que la adaptacion cede ----
+  pB <- ggplot(df, aes(x = fes, y = share, color = op, group = op)) +
+    geom_hline(yintercept = 0, linewidth = 0.35, color = "grey60") +
+    geom_line(linewidth = 0.6) +
+    geom_point(size = 1.0) +
+    facet_wrap(~ func, nrow = 2) +
+    scale_x_continuous(trans = "log10", breaks = fes_breaks, labels = fes_labs) +
+    scale_color_manual(name = NULL, values = OP_COL) +
+    labs(x = "Evaluation budget (FES)", y = "Signed Shapley share (%)",
+         title = "(b) All four operators, by function")
+
+  p <- (pA | pB) +
+    plot_layout(widths = c(1, 1.25)) +
+    plot_annotation(
+      title = "Sweep C: over a tenfold budget increase, the only sign change runs positive to negative",
+      theme = theme(plot.title = element_text(family = "serif", face = "bold",
+                                              size = 11, hjust = 0.5))
+    ) &
+    theme(legend.position = "bottom",
+          legend.margin = margin(t = 0, b = 0),
+          legend.box.margin = margin(t = -4, b = -3),
+          legend.key.height = unit(0.20, "cm"),
+          legend.key.width = unit(0.55, "cm"),
+          legend.text = element_text(size = rel(0.82)))
+
+  ggsave(file.path(OUT_DIR, "fig10_shade_budget.pdf"),
+         p, width = W_FULL, height = 3.6, device = cairo_pdf)
+  cat("  ok fig10_shade_budget.pdf\n")
+}
+
 fig9_budget <- function() {
   if (is.null(exp9a) || is.null(exp9b)) {
     cat("  (skip fig9: exp9 data not found)\n")
@@ -864,6 +971,7 @@ main <- function() {
   fig7_summary()
   fig8_discriminant()
   fig9_budget()
+  fig10_shade_budget()
   cat(sprintf("\nAll figures saved to %s/\n", OUT_DIR))
 }
 

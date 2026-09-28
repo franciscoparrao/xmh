@@ -23,11 +23,19 @@ intervals. They are the raw coalition values the Data availability statement ref
 | `neutral_sensitivity.json` | Section 5.8 — sensitivity to the neutral-operator construction. Table S13 |
 | `exp8_part_a.json`, `exp8_part_b.json` | Section 5.7 — complementarity with fANOVA-style analyses. Table S8, Figure 8 |
 | `exp9_sweep_a.json`, `exp9_sweep_b.json` | Section 5.9 — budget sensitivity. Figure 9 |
+| `exp17_shade_budget.json` | Section 5.10, Sweep C — SHADE's parameter adaptation across four evaluation budgets at D = 30. Table S15, Figure 6 |
 | `algorithm_friedman.json`, `operator_friedman.json` | Section 5.11 — Friedman tests with Holm correction over the six algorithms |
 | `overhead_results.json`, `overhead_results.csv` | Section 5.4 — wall-clock overhead by component. Table 4, Figure S5 |
 | `hpo_results.json` | Section 6.2 — accuracy of DE/GA/PSO on the four UCI datasets, 10 runs each. Table S14 |
 | `hpo_convergence.json` | Section 6.2 — convergence traces of the same runs |
 | `hpo_pso_exact.json` | Section 6.3 — exact-coalition attribution for PSO on the case study. Table 7 |
+
+## Note on architecture
+
+All result sets in this directory were produced on aarch64 (Hetzner CAX/CCX ARM instances, Ubuntu,
+NumPy 1.26.x). With the same seeds the values are bit-reproducible there. On x86-64 the same code
+diverges at ~5e-5 relative, from floating-point association order; no reported conclusion depends on
+that difference, but exact-digit reproduction requires ARM.
 
 ## Note on the overhead multipliers
 
