@@ -10,7 +10,6 @@ from math import factorial
 from typing import Any, Callable, Dict, List, Optional, Tuple
 from itertools import combinations
 import numpy as np
-from concurrent.futures import ProcessPoolExecutor, as_completed
 import warnings
 
 
@@ -117,9 +116,7 @@ class OperatorSHAP:
         n_samples: int = 1000,
         n_runs_per_coalition: int = 5,
         compute_interactions: bool = False,
-        confidence_level: float = 0.95,
-        parallel: bool = False,
-        n_jobs: int = -1
+        confidence_level: float = 0.95
     ):
         """
         Initialize Operator-SHAP calculator.
@@ -129,15 +126,19 @@ class OperatorSHAP:
             n_runs_per_coalition: Runs per coalition to reduce variance
             compute_interactions: Whether to compute pairwise interactions
             confidence_level: Confidence level for intervals
-            parallel: Whether to use parallel computation
-            n_jobs: Number of parallel jobs (-1 for all cores)
+
+        Note: the coalition loop is embarrassingly parallel (2^n coalitions x R
+        independent seeded runs) but is executed serially here. Earlier versions
+        accepted `parallel` and `n_jobs` arguments that were never read, so a
+        caller asking for all cores silently got one. They have been removed
+        rather than left as a false promise. To parallelise, distribute whole
+        (coalition, run) pairs across processes: each is independent and its
+        seed is `base_seed + r`.
         """
         self.n_samples = n_samples
         self.n_runs_per_coalition = n_runs_per_coalition
         self.compute_interactions = compute_interactions
         self.confidence_level = confidence_level
-        self.parallel = parallel
-        self.n_jobs = n_jobs
 
     def explain(
         self,

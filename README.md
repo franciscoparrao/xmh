@@ -12,7 +12,7 @@ Metaheuristics use few operators (n = 2-4), making **exact Shapley value** compu
 - **QuickSHAP**: Lightweight normalized heuristic computable from a single run (validated against exact ground truth)
 - **KernelSHAP**: Sampling-based Shapley approximation adapted for operator games
 - **Tracking Attribution**: EvoMapX-style direct tracking of operator improvements
-- **Instrumented Algorithms**: DE, GA, and PSO with configurable operator-level logging
+- **Instrumented Algorithms**: DE, GA, PSO, CMA-ES, SHADE and JADE with configurable operator-level logging
 - **Neutral Operators**: Identity replacements for coalition evaluation
 
 ## Installation
@@ -20,7 +20,8 @@ Metaheuristics use few operators (n = 2-4), making **exact Shapley value** compu
 ```bash
 git clone https://github.com/franciscoparrao/xmh.git
 cd xmh
-pip install -r requirements.txt
+pip install -e .                      # core framework
+pip install -e '.[experiments,casestudy,figures,dev]'   # everything the paper uses
 ```
 
 ## Quick Start
@@ -51,7 +52,7 @@ print(trace.summary())
 from xmh.explanation.operator_shap import ExactCoalitionSHAP
 
 exact = ExactCoalitionSHAP(n_runs_per_coalition=30, base_seed=42)
-result = exact.compute(algorithm_factory, objective_func, operator_names)
+result = exact.explain(AlgorithmClass, algorithm_kwargs, objective_func)
 print(result['shapley_values'])       # {operator: value}
 print(result['confidence_intervals']) # {operator: (low, high)}
 print(result['interaction_indices'])  # {(op_i, op_j): value}
@@ -87,13 +88,23 @@ xmh/
 ├── benchmarks/                  # Test functions (9 standard benchmarks)
 │   └── functions.py
 ├── experiments/                 # Experiment scripts
-│   ├── exp4_exact_shapley.py    # Exact Shapley (3 alg x 9 func x 3 dim x 30 runs)
-│   ├── exp5_method_comparison.py # QuickSHAP vs KernelSHAP vs Tracking vs Exact
-│   └── exp6_overhead.py         # Computational overhead analysis
-├── results/                     # Experimental results (JSON/CSV)
-│   ├── exact_shapley/           # All coalition values v(S) and Shapley values
-│   ├── method_comparison/       # Cosine similarity, rank agreement
-│   └── overhead/                # Wall-clock overhead measurements
+│   ├── exp4_exact_shapley.py    # Experiment 1: DE/GA/PSO, 19,440 runs
+│   ├── exp5_method_comparison.py # Experiment 2: attribution methods vs exact
+│   ├── exp6_overhead.py         # Experiment 3: wall-clock overhead
+│   ├── exp7_cmaes_shapley.py    # Experiment 4: CMA-ES
+│   ├── exp10_shade_shapley.py   # Experiment 5: SHADE at n = 4
+│   ├── exp12_jade_shapley.py    # Experiment 5: JADE corroboration
+│   ├── exp11_cec2017.py         # Experiment 6: CEC2017
+│   ├── exp8_discriminant.py     # Experiment 7: complementarity with fANOVA
+│   ├── exp13_neutral_sensitivity.py # Experiment 8: neutral-operator sensitivity
+│   ├── exp9_budget.py           # Experiment 9: budget sweeps A and B
+│   └── exp17_shade_budget.py    # Experiment 9: Sweep C, SHADE budget
+├── reproduce/
+│   ├── data/                    # Raw per-run coalition values v(S) behind every
+│   │                            # number in the manuscript (see its README for the
+│   │                            # file-to-table mapping)
+│   ├── generate_paper_figures.R # The pipeline that produced the manuscript figures
+│   └── figures_R/               # Its output
 ├── tests/
 │   └── test_core.py             # 43 unit tests
 └── visualization/
@@ -131,21 +142,35 @@ python -m xmh.experiments.exp4_exact_shapley --quick
 
 | Algorithm | Operator 1 | Operator 2 | Operator 3 | Pattern |
 |-----------|-----------|-----------|-----------|---------|
-| **DE** | Mutation: 50% | Crossover: 50% | Selection: 0% | Invariant (coupling) |
+| **DE** | Mutation: 33.3% | Crossover: 33.3% | Selection: 33.3% | Invariant (total interdependence) |
 | **GA** | Crossover: 41% | Mutation: 43% | Selection: 16% | Landscape-dependent |
 | **PSO** | Velocity: 42% | Position: 42% | Topology: 16% | Dimension-dependent |
 
-- **DE**: Perfect 50/50 coupling between mutation and crossover (selection is null player)
+- **DE**: The three operators are totally interdependent. No proper subcoalition improves fitness at all, so the symmetry axiom forces an exact one-third split with zero variance across all 27 configurations. This is a sanity check, not a discovery about DE: the framework recovers a mathematically inevitable answer.
 - **GA**: Selection importance ranges from 0% (Zakharov) to 34% (Ackley D=50)
-- **PSO**: Topology contribution grows from 7% (D=10) to 23% (D=50)
+- **PSO**: Topology contribution grows from 8% (D=10) to 22% (D=50)
 
 ## Method Comparison
 
-| Method | Cosine Similarity | Rank Agreement | Cost |
-|--------|------------------|----------------|------|
-| KernelSHAP | 0.88 | 87% | ~30x single run |
-| QuickSHAP | 0.76 | 41% | O(1) |
-| Tracking | 0.76 | 43% | O(1) |
+Cosine similarity / rank agreement against the exact-coalition values, averaged over the
+27 (function, dimension) instances per algorithm.
+
+| Method | DE | GA | PSO | Cost |
+|--------|------|------|------|------|
+| KernelSHAP | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | ~30x single run |
+| QuickSHAP | 0.82 / 1.00 | 0.92 / 0.48 | 0.02 / 0.00 | O(1) |
+| Tracking | 0.82 / 1.00 | 0.92 / 0.52 | 0.02 / 0.00 | O(1) |
+
+At n <= 4, KernelSHAP with all 2^n coalitions is algebraically equivalent to exact-coalition
+Shapley, so its row is an upper bound rather than a separate method. QuickSHAP and Tracking
+recover DE's operator ordering but not its magnitudes, and both collapse on PSO, where the
+execution trace never credits the position update.
+
+**Cost of the exact method**: R * 2^n complete runs, i.e. ~215x a single run at the protocol's
+R = 30. Attaching the instrumentation costs 7.1% mean wall-clock overhead (median 7.9%, std
+20.9% on sub-second runs); computing a trace-based attribution from an existing trace adds
+< 0.5%. The coalition loop is embarrassingly parallel but **is executed serially** in this
+release.
 
 ## Benchmark Functions
 
@@ -153,10 +178,15 @@ Sphere, Rosenbrock, Zakharov, Dixon-Price (unimodal); Rastrigin, Schwefel, Ackle
 
 ## Requirements
 
+Runtime (core framework):
 - Python >= 3.10
 - NumPy >= 1.20
-- matplotlib >= 3.5 (for visualization)
-- pytest >= 7.0 (for testing)
+
+Experiments and the case study additionally need `scipy`, `pandas`, `scikit-learn`,
+`xgboost` and `opfunu`; figure generation needs either `matplotlib` (legacy Python
+pipeline) or R >= 4.2 with `ggplot2`, `patchwork`, `dplyr`, `tidyr`, `jsonlite`,
+`scales`, `viridis`, `stringr`, `forcats` and `rlang` (the pipeline that produced the
+manuscript figures). Tests need `pytest`. See `pyproject.toml` for the pinned sets.
 
 ## Citation
 
@@ -166,9 +196,10 @@ If you use XMH in your research, please cite:
 @article{xmh2026,
   title = {XMH: Explainable Metaheuristics via Exact Operator-Level
            Shapley Value Attribution},
-  author = {Anonymous},
+  author = {Parra Ortiz, Francisco and Mar\'in, Mauricio},
   year = {2026},
-  note = {Under review}
+  note = {Under review},
+  doi = {10.5281/zenodo.22731834}
 }
 ```
 

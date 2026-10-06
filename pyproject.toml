@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xmh"
+version = "1.2.1"
+description = "Explainable Metaheuristics via Exact-Coalition Operator-Level Shapley Value Attribution"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Francisco Parra Ortiz", email = "francisco.parra.o@usach.cl"}]
+dependencies = ["numpy>=1.20,<3"]
+
+[project.optional-dependencies]
+experiments = ["scipy>=1.9", "opfunu>=1.0"]
+casestudy = ["pandas>=1.5", "scikit-learn>=1.2", "xgboost>=1.7"]
+figures = ["matplotlib>=3.5", "seaborn>=0.12"]
+crosscheck = ["shap>=0.41"]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Repository = "https://github.com/franciscoparrao/xmh"
+Archive = "https://doi.org/10.5281/zenodo.22731834"
+
+[tool.setuptools]
+packages = ["xmh"]
+package-dir = {xmh = "."}

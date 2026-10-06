@@ -1,17 +1,22 @@
-# XMH Framework Requirements
+# Core framework (the coalition game and the attribution methods)
+numpy>=1.20,<3
 
-# Core dependencies
-numpy>=1.20.0
+# Experiments: statistical tests, CEC2017 benchmarks
+scipy>=1.9
+opfunu>=1.0
 
-# Visualization (optional)
-matplotlib>=3.5.0
+# Case study (Section 6): XGBoost hyperparameter optimization
+pandas>=1.5
+scikit-learn>=1.2
+xgboost>=1.7
 
-# Testing
-pytest>=7.0.0
+# Legacy Python figure pipeline (the manuscript figures come from the R one,
+# see reproduce/README.md)
+matplotlib>=3.5
+seaborn>=0.12
 
-# For advanced analysis (optional)
-# scipy>=1.9.0
-# pandas>=1.5.0
+# Cross-check of the canonical KernelSHAP reformulation
+shap>=0.41
 
-# For parallel computation (optional)
-# joblib>=1.2.0
+# Tests
+pytest>=7.0
