@@ -1,6 +1,6 @@
 {
   "title": "XMH: Explainable Metaheuristics via Exact-Coalition Operator-Level Shapley Value Attribution",
-  "description": "Python framework for exact Shapley value attribution at the operator level in metaheuristic algorithms. Includes instrumented implementations of DE, GA, PSO, CMA-ES, SHADE, and JADE, four attribution methods (Exact Shapley, QuickSHAP, canonical KernelSHAP, tracking), and the raw result sets behind every quantitative claim of the manuscript. This version (1.2.1) corrects the released documentation, which advertised superseded results, removes a results directory that shipped retracted values, makes the package installable with its real dependencies, and removes a parallelism API that was never implemented. No reported result changes.",
+  "description": "Python framework for exact Shapley value attribution at the operator level in metaheuristic algorithms. Includes instrumented implementations of DE, GA, PSO, CMA-ES, SHADE and JADE, four attribution methods, and the raw per-run coalition values behind every quantitative claim of the manuscript. Version 1.3.0 adds two experiments that test the two design choices most likely to have produced the paper's headline findings: SHADE's parameter-adaptation result at the memory size its specification uses, and the dimensional trends at constant evaluation budget per dimension.",
   "creators": [
     {
       "name": "Parra Ortiz, Francisco",
@@ -29,6 +29,5 @@
       "resource_type": "software"
     }
   ],
-  "version": "1.2.1",
-  "doi": "10.5281/zenodo.23175745"
+  "version": "1.3.0"
 }
