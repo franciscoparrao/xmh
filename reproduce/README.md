@@ -32,6 +32,23 @@ numbering. This table is the mapping.
 `fig3_dimensionality_effect.pdf` and `fig6_de_invariance.pdf` are outputs of the pipeline
 that the current manuscript does not use.
 
+## Experiment 7b needs its own container
+
+`exp20_iohxplainer.py` compares XMH against IOHxplainer. That package pins six 2023-era
+dependency versions with no Python 3.12 wheels, so it will not install alongside a modern
+environment. The Dockerfile beside the experiment pins Python 3.10, where the versions resolve:
+
+```bash
+docker build -f ../experiments/Dockerfile.iohxplainer -t xmh-iohx ..
+docker run --rm -v "$PWD/../..":/work xmh-iohx \
+    python /work/xmh/experiments/exp20_iohxplainer.py /work/results_iohxplainer
+```
+
+`iohxplainer`'s own `explain()` writes a plot and returns nothing, so the numbers reported in
+the manuscript come from re-running its pipeline (CatBoost surrogate, `shap.TreeExplainer`) on
+the results it saves. `data/exp20_iohxplainer.json` carries the extracted values together with
+XMH's shares and the rank correlation.
+
 ## Data
 
 `data/` holds the raw result sets: for the Shapley experiments, the value of every coalition

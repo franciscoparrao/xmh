@@ -26,6 +26,7 @@ intervals. They are the raw coalition values the Data availability statement ref
 | `exp17_shade_budget.json` | Section 5.10, Sweep C — SHADE's parameter adaptation across four evaluation budgets at D = 30. Table S15, Figure 6 |
 | `exp18_shade_memory.json` | Section 5.6b, Experiment 5b — SHADE's parameter adaptation at the specified memory size H = \|P\|, the full 27-configuration grid with the H = 5 values alongside. Table S16 |
 | `exp19_fes_per_dim.json` | Section 5.10b, Experiment 9b — GA selection and PSO topology with the budget scaled to the dimension (FES = 1000*D), with the main-grid values alongside. Table S17 |
+| `exp20_iohxplainer.json` | Section 5.8b, Experiment 7b — IOHxplainer's SHAP attribution over the GA's hyperparameters on BBOB f3, with XMH's crossover-Shapley shares and the rank correlation alongside |
 | `algorithm_friedman.json`, `operator_friedman.json` | Section 5.11 — Friedman tests with Holm correction over the six algorithms |
 | `overhead_results.json`, `overhead_results.csv` | Section 5.4 — wall-clock overhead by component. Table 4, Figure S5 |
 | `hpo_results.json` | Section 6.2 — accuracy of DE/GA/PSO on the four UCI datasets, 10 runs each. Table S14 |

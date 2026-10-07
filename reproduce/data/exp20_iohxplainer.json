@@ -1,0 +1,57 @@
+{
+  "experiment": "exp20_iohxplainer",
+  "purpose": "Runs IOHxplainer (van Stein et al., ACM TELO 2025) on the Experiment 7 setup, so the complementarity claim of Section 5.8 rests on the published tool rather than on a one-way ANOVA stand-in built by us.",
+  "tool": {
+    "package": "iohxplainer",
+    "version": "0.9.1",
+    "environment": "python:3.10-slim container; the package pins numpy==1.24.4 and five other 2023-era versions with no Python 3.12 wheels"
+  },
+  "setup": {
+    "problem": "BBOB f3 (Rastrigin)",
+    "dim": 30,
+    "instances": [
+      1,
+      2
+    ],
+    "reps": 5,
+    "budget_fes": 10000,
+    "n_configurations": 48,
+    "n_runs": 480,
+    "config_space": [
+      "crossover_type (6 levels)",
+      "crossover_prob",
+      "mutation_prob",
+      "tournament_size"
+    ]
+  },
+  "iohxplainer_global_importance_mean_abs_shap": {
+    "crossover_type": 0.0035198276142580772,
+    "mutation_prob": 0.0031018675148179625,
+    "tournament_size": 0.002572285512214101,
+    "crossover_prob": 0.0011023667904532727,
+    "Stochastic variance": 0.0004988761596452835,
+    "Instance variance": 0.00030339921487544777
+  },
+  "iohxplainer_per_crossover_shap_on_auc": {
+    "arithmetic": -0.005186408831024057,
+    "blx_alpha": -0.004611714426751314,
+    "sbx": 0.0024007704224919503,
+    "single_point": 0.00039608275718171925,
+    "two_point": 0.0017493017211711267,
+    "uniform": 0.006594506788601624
+  },
+  "xmh_crossover_shapley_share_pct": {
+    "sbx": 37.72694111384132,
+    "blx_alpha": 41.03465176834817,
+    "arithmetic": 36.177791129126405,
+    "uniform": 28.23357640047574,
+    "two_point": 25.88361034867656,
+    "single_point": 23.878233181711867
+  },
+  "rank_correlation": {
+    "spearman_rho": -0.2,
+    "p_value": 0.704,
+    "n": 6,
+    "reading": "no detectable agreement; with n=6 the correlation is not distinguishable from zero"
+  }
+}

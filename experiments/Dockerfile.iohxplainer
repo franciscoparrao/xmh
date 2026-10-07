@@ -1,0 +1,15 @@
+# Entorno para el Experimento 7b (exp20_iohxplainer.py).
+#
+# IOHxplainer 0.9.1 fija numpy==1.24.4, pandas==2.0.3, scikit-learn==1.3.0,
+# xgboost==1.7.6 y modcma==1.0.4. Ninguna tiene wheel para Python 3.12, asi que
+# el experimento no corre en un entorno moderno: intentar instalarlo falla al
+# compilar numpy desde fuente. Python 3.10 resuelve los pines nativamente y el
+# paquete XMH funciona sin cambios con numpy 1.24.
+#
+#   docker build -f experiments/Dockerfile.iohxplainer -t xmh-iohx .
+#   docker run --rm -v "$PWD/..":/work xmh-iohx \
+#       python /work/xmh/experiments/exp20_iohxplainer.py /work/results_iohxplainer
+FROM python:3.10-slim
+RUN pip install --no-cache-dir iohxplainer==0.9.1
+WORKDIR /work
+ENV PYTHONPATH=/work
