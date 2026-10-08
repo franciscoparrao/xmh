@@ -29,5 +29,6 @@
       "resource_type": "software"
     }
   ],
-  "version": "1.5.0"
+  "version": "1.5.0",
+  "doi": "10.5281/zenodo.23234522"
 }
