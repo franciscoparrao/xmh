@@ -726,3 +726,49 @@ class TestBenchmarks:
 
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
+
+
+# --- Validacion de la instrumentacion (modo de falla silencioso) -----------
+
+def test_validate_instrumentation_passes_on_all_algorithms():
+    """Neutralizar cualquier operador tiene que cambiar el resultado.
+
+    Si no lo cambia, el Shapley de ese operador es cero por construccion y no
+    por medicion, que es el defecto que produjo el reparto 50/50/0 de DE en una
+    version anterior.
+    """
+    from xmh.core.validation import validate_instrumentation
+    from xmh.benchmarks.functions import get_benchmark
+    from xmh.algorithms.instrumented_de import InstrumentedDE
+    from xmh.algorithms.instrumented_ga import InstrumentedGA
+    from xmh.algorithms.instrumented_pso import InstrumentedPSO
+
+    b = get_benchmark("sphere")
+    lo, hi = b.get_bounds(10)
+    kw = dict(dim=10, bounds=(lo, hi), pop_size=20, max_generations=15)
+    for cls in (InstrumentedDE, InstrumentedGA, InstrumentedPSO):
+        rep = validate_instrumentation(cls, kw, b.function, n_runs=3,
+                                       raise_on_failure=False)
+        for nombre, r in rep.items():
+            assert r["ok"], f"{cls.__name__}: neutralizar {nombre} no cambio nada"
+
+
+def test_validate_instrumentation_catches_unrouted_operator():
+    """El defecto inyectado tiene que ser detectado, y el chequeo v(vacio)=0 no."""
+    from xmh.core.validation import validate_instrumentation
+    from xmh.benchmarks.functions import get_benchmark
+    from xmh.algorithms.instrumented_de import InstrumentedDE
+    import pytest
+
+    class DEConDefecto(InstrumentedDE):
+        """Seleccion registrada pero que no se puede neutralizar: el bug de v1.0.0."""
+        def disable_operator(self, name):
+            if name.startswith("selection"):
+                return
+            super().disable_operator(name)
+
+    b = get_benchmark("sphere")
+    lo, hi = b.get_bounds(10)
+    kw = dict(dim=10, bounds=(lo, hi), pop_size=20, max_generations=15)
+    with pytest.raises(RuntimeError, match="selection"):
+        validate_instrumentation(DEConDefecto, kw, b.function, n_runs=3)

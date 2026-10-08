@@ -138,6 +138,31 @@ python -m xmh.experiments.exp6_overhead
 python -m xmh.experiments.exp4_exact_shapley --quick
 ```
 
+## Validating the instrumentation first
+
+The framework fails quietly. If an operator is registered but the evolution loop never applies it
+through its registered handle, or no neutral exists for its type, neutralizing it changes nothing
+and its Shapley value comes out as exactly zero — indistinguishable from a legitimate null player.
+This happened twice during development (DE's greedy acceptance inlined rather than routed; PSO
+registering `velocity_update` against a factory that knew only `velocity`).
+
+The empty-coalition check the method performs does **not** catch it: with every operator neutralized
+the trial equals its target, nothing is accepted, and v(0) = 0 holds either way.
+
+```python
+from xmh.core.validation import validate_instrumentation
+report = validate_instrumentation(InstrumentedDE, kwargs, objective_func)
+```
+
+It neutralizes each operator in turn against the full coalition over shared seeds and flags any
+whose neutralization leaves every run identical. A flag is not proof of a bug — a real null player
+behaves the same way — but it means that operator's attribution is not interpretable until its
+registration has been checked by hand.
+
+Note that `disable_operator()` on its own does **not** survive `run()`, which re-initializes the
+operator registry. Coalition evaluation patches the initializer to reapply it; calling the public
+method directly and then running gives you the full algorithm back, silently.
+
 ## Key Results
 
 | Algorithm | Operator 1 | Operator 2 | Operator 3 | Pattern |
