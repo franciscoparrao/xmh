@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "xmh"
-version = "1.2.1"
+version = "1.6.0"
 description = "Explainable Metaheuristics via Exact-Coalition Operator-Level Shapley Value Attribution"
 readme = "README.md"
 requires-python = ">=3.10"

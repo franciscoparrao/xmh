@@ -1,9 +1,9 @@
 {
   "title": "XMH: Explainable Metaheuristics via Exact-Coalition Operator-Level Shapley Value Attribution",
-  "description": "Python framework for exact Shapley value attribution at the operator level in metaheuristic algorithms. Includes instrumented implementations of DE, GA, PSO, CMA-ES, SHADE and JADE, four attribution methods, and the raw per-run coalition values behind every quantitative claim of the manuscript. Version 1.5.0 adds validate_instrumentation(), the check for the framework's silent failure mode: an operator that is registered but never applied through its registered handle receives a Shapley value of exactly zero, indistinguishable from a legitimate null player. The empty-coalition check the method already performs is necessary but not sufficient for this, as the release notes show by injecting the defect. Earlier versions remain included.",
+  "description": "Python framework for exact Shapley value attribution at the operator level in metaheuristic algorithms. Includes instrumented implementations of DE, GA, PSO, CMA-ES, SHADE and JADE, four attribution methods, and the raw per-run coalition values behind every quantitative claim of the manuscript. Version 1.6.0 changes the two neutral operators DE used: the acceptance neutral now chooses uniformly between target and trial (p = 0.5) and the crossover neutral lets the mutant through, the constructions Definition 2 and Table S1 of the manuscript prescribe and the ones SHADE and JADE already used. With the earlier, inert neutrals every proper coalition of DE had zero value and the symmetry axiom forced an exact one-third split; under the adopted construction mutation dominates (median 80%) and binomial crossover at CR = 0.9 receives a negative share in 25 of 27 configurations. All DE-dependent results (exact coalition values, interaction indices, method comparison, CEC2017 block) are recomputed; GA, PSO, CMA-ES, SHADE and JADE reproduce bit for bit. The same audit applied to SHADE's and JADE's parameter-adaptation neutral: it now freezes the success-history memory at 0.5 and keeps SHADE's per-individual sampling of (F, CR), instead of fixing (F, CR) = (0.5, 0.5), and the SHADE and JADE grids, Experiment 5b and Sweep C are recomputed under it (exp23). SHADE's adaptation share goes from a median of -2.6% to -0.7%, within 1 pp of zero in 12 of 27 configurations; the negative shares reported since v1.2 were largely the cost of removing the sampling. The release also records DE under all three constructions (exp21) and SHADE's adaptation share under three neutrals (exp22). Earlier versions remain included.",
   "creators": [
     {
-      "name": "Parra Ortiz, Francisco",
+      "name": "Parra, Francisco",
       "affiliation": "Department of Informatics Engineering, Universidad de Santiago de Chile (USACH)",
       "orcid": "0009-0006-0435-1854"
     }
@@ -29,6 +29,6 @@
       "resource_type": "software"
     }
   ],
-  "version": "1.5.0",
+  "version": "1.6.0",
   "doi": "10.5281/zenodo.23234522"
 }

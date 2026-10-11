@@ -10,7 +10,7 @@ tooling is IOHxplainer (van Stein et al., ACM TELO 2025), which was never run.
 This experiment runs it. The paper's GA is wrapped as an IOH-compatible
 optimizer, the six crossover variants of Experiment 7 become a categorical
 hyperparameter, and IOHxplainer is given a configuration space with three more
-knobs so its CatBoost-plus-SHAP surrogate has something to decompose rather
+knobs so its XGBoost-plus-TreeSHAP surrogate has something to decompose rather
 than a single degenerate factor. The output is its SHAP attribution over
 hyperparameters, which we then rank against XMH's crossover-Shapley ranking.
 

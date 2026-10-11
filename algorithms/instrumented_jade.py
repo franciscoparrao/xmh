@@ -119,8 +119,7 @@ class InstrumentedJADE(InstrumentedSHADE):
                     F_i = float(self.rng.standard_cauchy() * 0.1 + self.mu_F)
                 F_i = float(min(F_i, 1.0))
             else:
-                CR_i = 0.5
-                F_i = 0.5
+                F_i, CR_i = self._neutral_parameters()  # frozen mu = 0.5, sampling kept
 
             self.logger.log_operator_selection(
                 operator_name=mutation_op.name,

@@ -3,7 +3,7 @@ title: "XMH: Explainable Metaheuristics via Exact-Coalition Operator-Level Shapl
 message: "If you use this software, please cite it as below."
 type: software
 authors:
-  - family-names: "Parra Ortiz"
+  - family-names: "Parra"
     given-names: "Francisco"
     email: francisco.parra.o@usach.cl
     affiliation: "Department of Informatics Engineering, Universidad de Santiago de Chile (USACH)"
@@ -29,5 +29,5 @@ keywords:
   - operator attribution
 license: MIT
 doi: "10.5281/zenodo.22731834"
-version: 1.5.0
-date-released: "2026-10-08"
+version: 1.6.0
+date-released: "2026-10-11"

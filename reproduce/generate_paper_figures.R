@@ -131,14 +131,47 @@ FUNC_LABS  <- c("Sphere", "Rosenbrock", "Zakharov", "Dixon-P.",
                 "Rastrigin", "Schwefel", "Ackley", "Griewank", "Levy")
 DIMS       <- c("10", "30", "50")
 
-# Helper: extract Shapley as % for one (alg, func, dim) cell
+# Helper: operator shares (%) for one (alg, func, dim) cell, as the mean over
+# runs of the per-run share 100 * phi_i^(r) / sum_j phi_j^(r), where phi^(r) is
+# the exact Shapley value computed on that run's coalition values v_r(S). This
+# is the convention the manuscript declares (Section 4) and the one its tables
+# use; the earlier version of this helper normalised the run-averaged phi by
+# sum |phi|, which differs by a few points (e.g. DE mutation 83 vs 80, GA
+# mutation 50 vs 52 at D = 10) and does not match the text.
+coalition_key <- function(idx) {
+  idx <- sort(idx)
+  if (length(idx) == 0) return("()")
+  if (length(idx) == 1) return(sprintf("(%d,)", idx))
+  sprintf("(%s)", paste(idx, collapse = ", "))
+}
+
+per_run_shares <- function(cfg) {
+  ops  <- unlist(cfg$operators); n <- length(ops)
+  coal <- lapply(cfg$coalitions, unlist)
+  R    <- length(coal[["()"]])
+  v    <- function(idx, r) coal[[coalition_key(idx)]][r]
+  shares <- matrix(0, R, n)
+  for (r in seq_len(R)) {
+    phi <- numeric(n)
+    for (i in seq_len(n)) {
+      others <- setdiff(seq_len(n), i)
+      for (k in 0:(n - 1)) {
+        subs <- if (k == 0) list(integer(0)) else combn(others, k, simplify = FALSE)
+        w <- factorial(k) * factorial(n - k - 1) / factorial(n)
+        for (S in subs)
+          phi[i] <- phi[i] + w * (v(S - 1, r) - v(c(S, i) - 1, r))  # improvement: minimisation
+      }
+    }
+    tot <- sum(phi)
+    shares[r, ] <- if (abs(tot) > 0) 100 * phi / tot else 0
+  }
+  setNames(colMeans(shares), ops)
+}
+
 get_shapley_pct <- function(alg, func, dim) {
   cfg <- exact_data[[alg]][[func]][[as.character(dim)]]
   if (is.null(cfg)) return(NULL)
-  sv  <- cfg$shapley_values
-  tot <- sum(abs(unlist(sv)))
-  if (tot < 1e-15) return(setNames(rep(0, length(sv)), names(sv)))
-  setNames(100 * unlist(sv) / tot, names(sv))
+  per_run_shares(cfg)
 }
 
 # Classify operator key -> short label
@@ -437,7 +470,7 @@ fig5_overhead <- function() {
 }
 
 # ========================================================================
-# FIGURE 6: DE invariance — all configs ~50/50/0
+# FIGURE 6: DE attribution by function (mutation-dominated, crossover negative)
 # ========================================================================
 fig6_de_invariance <- function() {
   df <- build_shap_table("DE") |>
@@ -450,12 +483,12 @@ fig6_de_invariance <- function() {
 
   p <- ggplot(df, aes(x = dim_lab, y = shapley_pct, fill = op_label)) +
     geom_col(position = position_dodge(0.85), width = 0.75, alpha = 0.9) +
-    geom_hline(yintercept = 50, linetype = "dashed", color = "grey60", linewidth = 0.4) +
+    geom_hline(yintercept = 0, color = "grey40", linewidth = 0.3) +
     scale_fill_manual(values = OP_COL, name = NULL) +
     facet_wrap(~ function_name, nrow = 1) +
-    coord_cartesian(ylim = c(0, 65)) +
+    coord_cartesian(ylim = c(-25, 100)) +
     labs(x = NULL, y = "Shapley value (%)",
-         title = "DE: invariant 50/50/0 attribution across all configurations") +
+         title = "DE: mutation-dominated attribution, crossover negative at CR = 0.9") +
     theme(
       axis.text.x = element_text(size = rel(0.75)),
       legend.position = "top",
@@ -474,7 +507,7 @@ fig6_de_invariance <- function() {
 fig7_summary <- function() {
   algos <- c("DE", "GA", "PSO")
   titles <- c(
-    DE  = "DE\n(Coupled)",
+    DE  = "DE\n(Mutation-dominated)",
     GA  = "GA\n(Landscape-dependent)",
     PSO = "PSO\n(Dimension-dependent)"
   )
@@ -509,7 +542,8 @@ fig7_summary <- function() {
     scale_color_manual(values = c(`TRUE` = "white", `FALSE` = "black")) +
     scale_fill_manual(values = OP_COL, name = NULL) +
     facet_wrap(~ algorithm, nrow = 1, scales = "free_x") +
-    coord_cartesian(ylim = c(0, 105)) +
+    geom_hline(yintercept = 0, linewidth = 0.3, colour = "grey40") +
+    coord_cartesian(ylim = c(-25, 112)) +
     labs(x = NULL, y = "Shapley value (%)") +
     theme(
       legend.position = "bottom",
@@ -721,7 +755,7 @@ fig10_shade_budget <- function() {
   fes_breaks <- sort(unique(df$fes))
   fes_labs   <- paste0(fes_breaks / 1000, "k")
 
-  # ---- (a) la afirmacion: el share de la adaptacion no cruza a positivo ----
+  # ---- (a) la afirmacion: el presupuesto acerca el share de la adaptacion a cero ----
   da <- df[df$op == "Adaptation", ]
   pA <- ggplot(da, aes(x = fes, y = share, color = func, group = func)) +
     geom_hline(yintercept = 0, linewidth = 0.45, color = "grey25") +
@@ -741,10 +775,12 @@ fig10_shade_budget <- function() {
     scale_shape_manual(name = NULL,
                        values = c(Ackley = 16, Griewank = 17,
                                   Rastrigin = 15, Schwefel = 18)) +
-    annotate("text", x = 26000, y = 6.4,
-             label = "Rastrigin crosses zero", hjust = 0, vjust = 0.5,
+    # v1.6.0 (neutral de la Def. 2): la unica serie que cruza cero es Ackley, de
+    # negativo a positivo, con intervalos que cubren cero desde G = 500.
+    annotate("text", x = 10500, y = -2.6,
+             label = "Ackley crosses zero", hjust = 0, vjust = 0.5,
              size = 2.1, family = "serif", color = "grey30") +
-    annotate("segment", x = 34000, xend = 42000, y = 5.6, yend = 0.4,
+    annotate("segment", x = 30000, xend = 46000, y = -2.3, yend = -0.25,
              linewidth = 0.25, color = "grey45",
              arrow = arrow(length = unit(0.05, "cm"), type = "closed")) +
     labs(x = "Evaluation budget (FES)", y = "Signed Shapley share (%)",
@@ -764,7 +800,7 @@ fig10_shade_budget <- function() {
   p <- (pA | pB) +
     plot_layout(widths = c(1, 1.25)) +
     plot_annotation(
-      title = "Sweep C: over a tenfold budget increase, the only sign change runs positive to negative",
+      title = "Sweep C: a tenfold budget increase pulls every adaptation share towards zero",
       theme = theme(plot.title = element_text(family = "serif", face = "bold",
                                               size = 11, hjust = 0.5))
     ) &

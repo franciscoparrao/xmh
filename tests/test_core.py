@@ -218,12 +218,44 @@ class TestNeutralOperators:
         np.testing.assert_array_equal(c2, p2)
 
     def test_neutral_crossover_de_style(self):
-        """Neutral crossover returns target unchanged (DE interface)."""
+        """Neutral crossover lets the mutant pass through unchanged (DE interface).
+
+        Pass-through construction of Definition 2 and the one Table S1 declares
+        for DE and SHADE alike. Until v1.5 this returned the target, which made
+        every DE coalition without crossover inert (exp21).
+        """
         neutral = NeutralCrossoverOperator()
         target = np.array([1.0, 2.0])
         mutant = np.array([3.0, 4.0])
         result = neutral.apply(target=target, mutant=mutant)
-        np.testing.assert_array_equal(result, target)
+        np.testing.assert_array_equal(result, mutant)
+        assert result is not mutant
+
+    def test_neutral_selection_de_style_uniform(self):
+        """DE-style neutral selection chooses uniformly between target and trial.
+
+        Definition 2's uninformed construction, identical to SHADE's neutral
+        (random replacement, p = 0.5). Until v1.5 it retained the target
+        unconditionally, forcing DE's one-third split by symmetry (exp21).
+        """
+        neutral = NeutralSelectionOperator()
+        target = np.array([1.0, 2.0]); trial = np.array([3.0, 4.0])
+        rng = np.random.default_rng(0)
+        accepted = 0
+        for _ in range(2000):
+            chosen, fit = neutral.apply(target=target, target_fitness=10.0,
+                                        trial=trial, trial_fitness=99.0, rng=rng)
+            if fit == 99.0:
+                accepted += 1
+                np.testing.assert_array_equal(chosen, trial)
+            else:
+                assert fit == 10.0
+                np.testing.assert_array_equal(chosen, target)
+        assert 900 < accepted < 1100  # no fitness signal: the worse trial is accepted half the time
+        # reproducible with the caller's generator
+        r1 = [neutral.apply(target=target, target_fitness=1.0, trial=trial, trial_fitness=2.0,
+                            rng=np.random.default_rng(7))[1] for _ in range(5)]
+        assert len(set(r1)) == 1
 
     def test_neutral_selection_random_index(self):
         """Neutral selection returns a random index (no fitness pressure)."""

@@ -78,7 +78,16 @@ def compare(exact, approx, full_set=True):
     tie_e = (ae.max() - ae.min()) <= 1e-12 * max(1.0, ae.max())
     if tie_e:
         return dict(cosine=cos, rank_agreement=1.0)
-    top_e = int(np.argmax(ae)); top_a = int(np.argmax(aa))
+    top_e = int(np.argmax(ae))
+    # Empate en el aproximado (DE: la traza acredita por igual a mutacion y
+    # cruce, asi que QuickSHAP y Tracking devuelven [x, x, 0]). El metodo no ha
+    # identificado un operador dominante; se le acredita la esperanza de un
+    # desempate al azar, 1/k si el top exacto esta entre los k empatados, en
+    # vez de dejar que el orden alfabetico de las claves decida 0 o 1.
+    tied_a = np.flatnonzero(aa.max() - aa <= 1e-12 * max(1.0, aa.max()))
+    if len(tied_a) > 1:
+        return dict(cosine=cos, rank_agreement=1.0 / len(tied_a) if top_e in tied_a else 0.0)
+    top_a = int(np.argmax(aa))
     return dict(cosine=cos, rank_agreement=1.0 if top_e == top_a else 0.0)
 
 

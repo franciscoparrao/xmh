@@ -19,7 +19,7 @@ Neutral counterparts (used when an operator is removed from a coalition):
     mutation:               trial vector = target (no perturbation)
     crossover:              trial vector = mutant (no recombination)
     selection:              random replacement with prob 0.5
-    parameter_adaptation:   fixed F = 0.5, CR = 0.5 (no memory update)
+    parameter_adaptation:   memory frozen at 0.5, SHADE's own sampling kept (no update)
 
 This design makes SHADE's adaptation explicit as a player whose
 contribution can be measured against the same axiomatic baseline as the
@@ -155,6 +155,24 @@ class InstrumentedSHADE(InstrumentedAlgorithm):
     # Operator implementations
     # ============================================================
 
+    def _neutral_parameters(self):
+        """(F, CR) used for an individual when parameter adaptation is neutralized.
+
+        Definition 2 construction (v1.6.0, exp22): SHADE's own per-individual
+        sampling is kept, Cauchy for F and normal for CR, around a memory
+        frozen at its initial value M_F = M_CR = 0.5 that is never updated.
+        The neutral thus removes the success-history signal and nothing else.
+        Until v1.5 both values were fixed at 0.5 without sampling, which also
+        removed the per-individual diversity of (F, CR); exp22 shows that the
+        negative adaptation shares reported under that construction were
+        largely the cost of removing the sampling, not of removing the memory.
+        """
+        cr = float(np.clip(self.rng.normal(0.5, 0.1), 0.0, 1.0))
+        f = -1.0
+        while f <= 0:
+            f = float(self.rng.standard_cauchy() * 0.1 + 0.5)
+        return float(min(f, 1.0)), cr
+
     def _mutation_apply(self, population, target_idx, F, fitness, rng, **kwargs):
         """current-to-pbest/1 with archive."""
         n = len(population)
@@ -253,8 +271,7 @@ class InstrumentedSHADE(InstrumentedAlgorithm):
                     F_i = float(self.rng.standard_cauchy() * 0.1 + self.M_F[r_i])
                 F_i = float(min(F_i, 1.0))
             else:
-                CR_i = 0.5
-                F_i = 0.5
+                F_i, CR_i = self._neutral_parameters()
 
             self.logger.log_operator_selection(
                 operator_name=mutation_op.name,

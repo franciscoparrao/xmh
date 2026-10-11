@@ -167,13 +167,14 @@ method directly and then running gives you the full algorithm back, silently.
 
 | Algorithm | Operator 1 | Operator 2 | Operator 3 | Pattern |
 |-----------|-----------|-----------|-----------|---------|
-| **DE** | Mutation: 33.3% | Crossover: 33.3% | Selection: 33.3% | Invariant (total interdependence) |
+| **DE** | Mutation: 80% | Crossover: -7% | Selection: 27% | Mutation-dominated, crossover redundant at CR=0.9 |
 | **GA** | Crossover: 41% | Mutation: 43% | Selection: 16% | Landscape-dependent |
 | **PSO** | Velocity: 42% | Position: 42% | Topology: 16% | Dimension-dependent |
 
-- **DE**: The three operators are totally interdependent. No proper subcoalition improves fitness at all, so the symmetry axiom forces an exact one-third split with zero variance across all 27 configurations. This is a sanity check, not a discovery about DE: the framework recovers a mathematically inevitable answer.
+- **DE**: Mutation dominates (57-97%, median 80%); binomial crossover at CR=0.9 receives a negative share in 25 of 27 configurations because the {mutation, selection} coalition already matches the full algorithm. Earlier versions (<= v1.5) reported an exact one-third split: that was an artefact of inert neutral operators (acceptance retained the target, crossover discarded the mutant), fixed in v1.6 to follow Definition 2 / Table S1, the same neutrals SHADE and JADE use. See `experiments/exp21_de_neutral_selection.py`.
 - **GA**: Selection importance ranges from 0% (Zakharov) to 34% (Ackley D=50)
 - **PSO**: Topology contribution grows from 8% (D=10) to 22% (D=50)
+- **SHADE / JADE** (n = 4): mutation current-to-pbest dominates (55-100%); the parameter-adaptation share is small, median -0.7% (SHADE) and -1.1% (JADE), within 1 pp of zero in 12 of 27 configurations and substantially positive only on Rastrigin and Schwefel. Under the fixed (F, CR) = (0.5, 0.5) neutral used up to v1.5 the share was 3-5 pp more negative; v1.6.0 freezes the memory and keeps SHADE's sampling (Definition 2)
 
 ## Method Comparison
 

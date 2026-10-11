@@ -121,6 +121,8 @@ class NeutralCrossoverOperator(Operator):
         """Return parents/target unchanged - no mixing."""
         if parent1 is not None:
             return parent1.copy(), parent2.copy() if parent2 is not None else parent1.copy()
+        if mutant is not None:
+            return mutant.copy()
         if target is not None:
             return target.copy()
         return None
@@ -134,7 +136,14 @@ class NeutralCrossoverOperator(Operator):
             child2 = parent2.copy() if parent2 is not None else parent1.copy()
             return child1, child2
 
-        # DE-style: return target unchanged
+        # DE-style: the mutant passes through unchanged (trial <- mutant), the
+        # pass-through construction of Definition 2 and the one Table S1
+        # declares for DE and SHADE alike. Until v1.5 this branch returned the
+        # target instead, discarding the mutant: every DE coalition without
+        # crossover was then inert, which the paper read as operator coupling
+        # when it was a property of the neutral (exp21).
+        if mutant is not None:
+            return mutant.copy()
         if target is not None:
             return target.copy()
 
@@ -149,12 +158,16 @@ class NeutralSelectionOperator(Operator):
             name="neutral_selection",
             operator_type="selection",
             function=self._neutral_selection,
-            description="Neutral selection (random selection, no fitness pressure)"
+            description="Neutral selection (uniform over admissible outputs, no fitness pressure)"
         )
         self._rng = np.random.default_rng()
 
-    def _neutral_selection(self, original, candidate, original_fitness, candidate_fitness, **kwargs):
-        """Always return original - never accept new solutions."""
+    def _neutral_selection(self, original, candidate, original_fitness, candidate_fitness,
+                           rng=None, **kwargs):
+        """Choose uniformly between original and candidate (no fitness signal)."""
+        r = rng if rng is not None else self._rng
+        if r.random() < 0.5:
+            return candidate.copy(), candidate_fitness
         return original.copy(), original_fitness
 
     def apply(self, population: np.ndarray = None, fitness: np.ndarray = None,
@@ -180,15 +193,25 @@ class NeutralSelectionOperator(Operator):
             indices = r.choice(len(population), size=n_parents, replace=True)
             return population[indices].copy()
 
-        # DE-style selection: always keep original (no trial is ever accepted)
+        # DE-style acceptance (original/candidate or target/trial signature):
+        # choose uniformly between the two, Definition 2's "uninformed"
+        # construction for operators that choose among candidates. This is
+        # the same neutral SHADE and JADE use for their greedy selection
+        # (random replacement, p = 0.5). Until v1.5 this branch retained the
+        # target unconditionally, which made every DE coalition without
+        # selection inert and forced the one-third split by the symmetry
+        # axiom; that construction contradicted Definition 2 and differed
+        # from SHADE's for an identical operator (exp21).
+        if original is None and kwargs.get("target") is not None:
+            original, candidate = kwargs["target"], kwargs.get("trial")
+            original_fitness = kwargs.get("target_fitness")
+            candidate_fitness = kwargs.get("trial_fitness")
         if original is not None and candidate is not None:
-            return original.copy(), original_fitness if original_fitness is not None else 0.0
-
-        # DE/SHADE target-trial signature: reject every trial
-        target = kwargs.get("target")
-        if target is not None and kwargs.get("trial") is not None:
-            tf = kwargs.get("target_fitness")
-            return target.copy(), tf if tf is not None else 0.0
+            of = original_fitness if original_fitness is not None else 0.0
+            cf = candidate_fitness if candidate_fitness is not None else 0.0
+            if r.random() < 0.5:
+                return candidate.copy(), cf
+            return original.copy(), of
 
         # Default: return random index if fitness available
         if fitness is not None:
