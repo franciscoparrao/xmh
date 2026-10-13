@@ -1,0 +1,2889 @@
+{
+ "cells": {
+  "DE": {
+   "mutation_rand/1": [
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 99.99999999999999
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 100.0
+    }
+   ],
+   "crossover_binomial": [
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": 0.1254182184907017
+    },
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 3.284992055855301
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": -0.6034708203598171
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 0.0059123017944384985
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 1.6331147025026975
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 2.4632388135110523
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 5.982180275966016
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": -16.063295113712925
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": -25.05770508459772
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": -4.78108476803682
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": -27.428170483700885
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": -6.057495292324984
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 4.099927585326783
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 18.753501949170168
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": -0.29737772691502207
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 0.15751121857557027
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 3.284992066440747
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": -0.6034708199472993
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 0.19322491173021036
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": -1.436654025488802
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": -6.55960979717672
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": -0.004198175636292496
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": -3.118787710611008e-05
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": -2.5314303033358965e-08
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 0.0003310555707784525
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 0.18764960881398932
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": -0.5279946317387914
+    }
+   ],
+   "selection_greedy": [
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": 57.7556004212924
+    },
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 77.99585176926787
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 80.76653990863473
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 33.14833330791191
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 75.95469534442222
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 84.66778216469396
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 65.72641585300752
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 77.58791483781596
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 74.81832105390409
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 43.5577235356008
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 36.64794854190764
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 37.15530431134588
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 91.973307977073
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 96.21707782481964
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 95.5728021484114
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 57.84548868662195
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 77.9958518262966
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 80.76653990873471
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 59.33053952467391
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 80.72574471552468
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 91.48320904406212
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 5.508676716455424
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 0.00023887247385197716
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 0.050356752179407334
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 31.475347855017553
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 71.30317149972623
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 83.53717225739726
+    }
+   ]
+  },
+  "GA": {
+   "selection_tournament": [
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": 5.936182477527924
+    },
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 33.21928374885573
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 43.90232258088739
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 0.6717247591233084
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 7.176431766996059
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 10.706003910872228
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 35.02658635623436
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 55.220161497153654
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 58.78275675176176
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 33.736461626184536
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 49.889196600753074
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 57.569390996726874
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 53.534273343132604
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 85.50139418671725
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 89.98328527205166
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 6.307257972853092
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 33.219199421637995
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 43.8872170960314
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 10.782871189989777
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 24.331343231011182
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 34.22178596101962
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 1.0183776098495743
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 7.439201190205736e-06
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 3.3758631867873896e-09
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 0.8486916507254836
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 12.566574047580366
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 21.456872298837975
+    }
+   ],
+   "crossover_sbx": [
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": 0.0191049149719817
+    },
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 3.748779925767262
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 21.078484986639992
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 0.05890238910558569
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 0.6923783528148941
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 6.78577408464694
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 4.182953541343587
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 21.171413498540357
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 30.129280700303514
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 16.819283827597786
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 37.7248733790392
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 42.04531279494985
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 5.8482949711755765
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 66.0903545794729
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 85.49377815774689
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 0.2929467582913608
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 3.748658286534394
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 21.057233701344423
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 0.37482390511711833
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 13.370173892851815
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 15.762654991576403
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 0.171828420901268
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 1.4755184310534301e-05
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 1.1282836440882328e-07
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 0.00045283906812051435
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 0.617019180025314
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 6.9012509723998035
+    }
+   ],
+   "mutation_polynomial": [
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": 13.420072585141263
+    },
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 20.55052133742648
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 24.29451177889993
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 3.4506841851919483
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 6.020139255132853
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 6.099901150754689
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 18.273466686844266
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 21.008693994855275
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 26.290578963298852
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 18.885205446084832
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 24.3064761858289
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 29.872906663604745
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 63.15522137453267
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 74.97172525107756
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 73.41519424998035
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 13.890228694980937
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 20.550269556509523
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 24.279799392996072
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 11.192121727235193
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 14.641703103955397
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 15.505163990994369
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 3.6992196698706343
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 3.152502444946669e-05
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 6.705106498498419e-08
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 5.7228964866541565
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 9.25520113157369
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 12.041184532621301
+    }
+   ]
+  },
+  "PSO": {
+   "velocity_constriction": [
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 100.00000000000001
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 100.00000000000001
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 99.99999999999999
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 99.99999999999999
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 100.0
+    }
+   ],
+   "position_update": [
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 100.00000000000001
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 100.00000000000001
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 99.99999999999999
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 99.99999999999999
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 100.0
+    }
+   ],
+   "topology_gbest": [
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": 22.851602973883896
+    },
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 73.75647455868364
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 87.03558251724891
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 10.895532642245405
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 43.530474047892035
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 66.33656006543255
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 27.503711103987886
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 61.54093736085249
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 67.41103777542357
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 23.10874016804974
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 36.98310928526436
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 36.53125510754979
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 53.11901215652943
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 88.46068293615402
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 92.24214728391091
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 22.51922873332531
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 73.7564745993115
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 87.03558251725258
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 28.46312947382673
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 64.79787598156524
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 89.12963998443826
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 1.7426815496172812
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": -1.5371868861695078e-05
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": -1.0965572238564706e-07
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 5.784306365938333
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 59.855130317900084
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 81.01918927578186
+    }
+   ]
+  },
+  "SHADE": {
+   "mutation_current_to_pbest_archive": [
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 99.99999999999999
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 100.00000000000001
+    }
+   ],
+   "crossover_binomial": [
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 2.4002923438551313
+    },
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": -4.523420029431411e-11
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 4.177974039889777
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 0.0005189377016790519
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 0.5244384277771045
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 1.908791926672827
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 11.141914374295771
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 10.62144277034195
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 16.96743863530415
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 37.241187543390055
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 48.57218242622058
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 45.56896578870653
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": -8.833899208214295e-05
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 40.269367635293996
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 48.426595022677375
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": -0.01929078114395868
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 2.567929175759451
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 4.231525962793701
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 0.04464431075362187
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 1.791533613025514
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 3.1612158303882385
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": -4.076962654981165e-09
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 7.38815211559871e-06
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 4.190547311748965e-08
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 0.06905388679053437
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": -5.224852748321755e-10
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 0.18785069465310023
+    }
+   ],
+   "selection_greedy": [
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 22.69535452397799
+    },
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": 21.44125051995529
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 23.386391366380717
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 9.293171712434066
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 8.046278603846444
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 7.711733212140164
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 60.79048144724756
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 56.07203030731669
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 64.76809368088355
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 69.41218868072694
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 75.64202847120585
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 75.0270916101713
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 71.23219601840617
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 73.44075768334866
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 75.07036937706212
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 24.242189440936617
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 22.83010336245715
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 23.42931447276077
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 26.65600116581293
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 23.988135669967093
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 25.04478518776464
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 1.2650667772183288
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 6.443420436922623e-05
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 3.4633013756195096e-07
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 10.820622617212372
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 7.806732762165976
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 9.43092940569536
+    }
+   ],
+   "parameter_adaptation": [
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 3.3068061087599166e-07
+    },
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": -4.491620943108519e-11
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": -0.00020768700833994472
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 0.0036766895041673202
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": -0.0002329698464486661
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 0.0004014818652483534
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 9.90872500359565
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 21.6725950775793
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 21.18996788009945
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 33.28674829413165
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 54.3169011180522
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 55.415014704713016
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": -6.852793828467676e-05
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": -0.9510235332690827
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": -7.132815036947123
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 0.052496785926419376
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 0.0019656306521902813
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": -0.008157117126539012
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": -1.90083394516758e-09
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": -0.03615383989783592
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": -0.12096044825340817
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 1.9285240436946668e-05
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 1.14047431741668e-05
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 6.709553847100204e-08
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": -6.73513888979664e-06
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 1.7332501329362616e-09
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": -5.881412034775904e-06
+    }
+   ]
+  },
+  "JADE": {
+   "mutation_current_to_pbest_archive": [
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 99.99999999999999
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 99.99999999999999
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 100.00000000000001
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 100.0
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 100.0
+    }
+   ],
+   "crossover_binomial": [
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": -1.0281042096775993e-10
+    },
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 3.863371499621596
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 5.744241702343948
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": -0.0021073599438453214
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 0.6911989327381829
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 2.6610966426882268
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 20.687194568759242
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 21.4309153057326
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 11.75147975640645
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 33.834989943067356
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 43.03683623535864
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 42.64711384505564
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 0.2799911460090742
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 48.47000295368943
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 56.311769794278504
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 4.02785503458339
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": -0.0738516467467868
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 5.802414558459734
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 0.25841166334443116
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 2.584507996184193
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 4.146358868575361
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": -3.3659076567689556e-06
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 2.5523750118948242e-06
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 3.1190951977022654e-09
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": -6.723540187515261e-05
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 0.14699509769015373
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 0.2608477332020575
+    }
+   ],
+   "selection_greedy": [
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": 21.90462965032618
+    },
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": 32.497459523096865
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 31.91090347390174
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 5.3568316578970565
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 12.634990171140373
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 14.720666414686756
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 59.2940287402473
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 71.7835624676375
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 69.11159527234794
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 70.71615285752969
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 75.798831777888
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 72.7078265028207
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": 79.0895502258951
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 90.96468309183952
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 92.26637932029905
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": 32.61230924212109
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 22.60208734979171
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 31.952926765494478
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": 24.957451761315134
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 38.22798375799916
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 38.05423201090302
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 1.0401969441376064
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 5.054395995895784e-05
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 2.5203575395427317e-07
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": 5.005732057392693
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": 19.56271333829065
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 18.650865607628067
+    }
+   ],
+   "parameter_adaptation": [
+    {
+     "function": "sphere",
+     "dimension": 10,
+     "loss_pct": -1.0265142553614539e-10
+    },
+    {
+     "function": "sphere",
+     "dimension": 30,
+     "loss_pct": -1.231320522223256e-06
+    },
+    {
+     "function": "sphere",
+     "dimension": 50,
+     "loss_pct": 5.185568979682747e-05
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 10,
+     "loss_pct": 0.0005802674209300596
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 30,
+     "loss_pct": 0.0001362834794744101
+    },
+    {
+     "function": "rosenbrock",
+     "dimension": 50,
+     "loss_pct": 0.000326201573297545
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 10,
+     "loss_pct": 8.689938493244092
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 30,
+     "loss_pct": 19.58321970776838
+    },
+    {
+     "function": "rastrigin",
+     "dimension": 50,
+     "loss_pct": 18.631776862199665
+    },
+    {
+     "function": "schwefel",
+     "dimension": 10,
+     "loss_pct": 27.1411184146867
+    },
+    {
+     "function": "schwefel",
+     "dimension": 30,
+     "loss_pct": 43.80634480977514
+    },
+    {
+     "function": "schwefel",
+     "dimension": 50,
+     "loss_pct": 49.555249876569896
+    },
+    {
+     "function": "ackley",
+     "dimension": 10,
+     "loss_pct": -0.0003746719248053749
+    },
+    {
+     "function": "ackley",
+     "dimension": 30,
+     "loss_pct": 0.12338263899996643
+    },
+    {
+     "function": "ackley",
+     "dimension": 50,
+     "loss_pct": 1.9632699390622947
+    },
+    {
+     "function": "griewank",
+     "dimension": 30,
+     "loss_pct": -0.003914829493923059
+    },
+    {
+     "function": "griewank",
+     "dimension": 10,
+     "loss_pct": 0.03792964516171016
+    },
+    {
+     "function": "griewank",
+     "dimension": 50,
+     "loss_pct": 0.004263221485206484
+    },
+    {
+     "function": "levy",
+     "dimension": 10,
+     "loss_pct": -2.525982865737428e-09
+    },
+    {
+     "function": "levy",
+     "dimension": 30,
+     "loss_pct": 0.025399820105023303
+    },
+    {
+     "function": "levy",
+     "dimension": 50,
+     "loss_pct": 0.09692694141465752
+    },
+    {
+     "function": "zakharov",
+     "dimension": 10,
+     "loss_pct": 1.496201055954906e-05
+    },
+    {
+     "function": "zakharov",
+     "dimension": 30,
+     "loss_pct": 5.39874325931554e-06
+    },
+    {
+     "function": "zakharov",
+     "dimension": 50,
+     "loss_pct": 1.1409190408303334e-08
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 10,
+     "loss_pct": -3.64690497925634e-08
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 30,
+     "loss_pct": -7.900841672511929e-07
+    },
+    {
+     "function": "dixon_price",
+     "dimension": 50,
+     "loss_pct": 1.791201969201277e-05
+    }
+   ]
+  }
+ },
+ "summary": [
+  {
+   "algorithm": "DE",
+   "operator": "mutation_rand/1",
+   "n": 27,
+   "median_loss_pct": 100.0,
+   "n_loss_le_1pct": 0,
+   "n_loss_gt_5pct": 27,
+   "n_gain": 0,
+   "max_loss_pct": 100.0,
+   "max_loss_at": "sphere D=10",
+   "cells_gt_5pct": [
+    "sphere D=10 (100.0)",
+    "sphere D=30 (100.0)",
+    "sphere D=50 (100.0)",
+    "rosenbrock D=10 (100.0)",
+    "rosenbrock D=30 (100.0)",
+    "rosenbrock D=50 (100.0)",
+    "rastrigin D=10 (100.0)",
+    "rastrigin D=30 (100.0)",
+    "rastrigin D=50 (100.0)",
+    "schwefel D=10 (100.0)",
+    "schwefel D=30 (100.0)",
+    "schwefel D=50 (100.0)",
+    "ackley D=10 (100.0)",
+    "ackley D=30 (100.0)",
+    "ackley D=50 (100.0)",
+    "griewank D=10 (100.0)",
+    "griewank D=30 (100.0)",
+    "griewank D=50 (100.0)",
+    "levy D=10 (100.0)",
+    "levy D=30 (100.0)",
+    "zakharov D=10 (100.0)",
+    "zakharov D=30 (100.0)",
+    "zakharov D=50 (100.0)",
+    "dixon_price D=10 (100.0)",
+    "dixon_price D=30 (100.0)",
+    "dixon_price D=50 (100.0)",
+    "levy D=50 (100.0)"
+   ]
+  },
+  {
+   "algorithm": "DE",
+   "operator": "crossover_binomial",
+   "n": 27,
+   "median_loss_pct": -2.5314303033358965e-08,
+   "n_loss_le_1pct": 20,
+   "n_loss_gt_5pct": 2,
+   "n_gain": 14,
+   "max_loss_pct": 18.753501949170168,
+   "max_loss_at": "ackley D=30",
+   "cells_gt_5pct": [
+    "ackley D=30 (18.8)",
+    "rastrigin D=10 (6.0)"
+   ]
+  },
+  {
+   "algorithm": "DE",
+   "operator": "selection_greedy",
+   "n": 27,
+   "median_loss_pct": 74.81832105390409,
+   "n_loss_le_1pct": 2,
+   "n_loss_gt_5pct": 25,
+   "n_gain": 0,
+   "max_loss_pct": 96.21707782481964,
+   "max_loss_at": "ackley D=30",
+   "cells_gt_5pct": [
+    "ackley D=30 (96.2)",
+    "ackley D=50 (95.6)",
+    "ackley D=10 (92.0)",
+    "levy D=50 (91.5)",
+    "rosenbrock D=50 (84.7)",
+    "dixon_price D=50 (83.5)",
+    "griewank D=50 (80.8)",
+    "sphere D=50 (80.8)",
+    "levy D=30 (80.7)",
+    "griewank D=30 (78.0)",
+    "sphere D=30 (78.0)",
+    "rastrigin D=30 (77.6)",
+    "rosenbrock D=30 (76.0)",
+    "rastrigin D=50 (74.8)",
+    "dixon_price D=30 (71.3)",
+    "rastrigin D=10 (65.7)",
+    "levy D=10 (59.3)",
+    "griewank D=10 (57.8)",
+    "sphere D=10 (57.8)",
+    "schwefel D=10 (43.6)",
+    "schwefel D=50 (37.2)",
+    "schwefel D=30 (36.6)",
+    "rosenbrock D=10 (33.1)",
+    "dixon_price D=10 (31.5)",
+    "zakharov D=10 (5.5)"
+   ]
+  },
+  {
+   "algorithm": "GA",
+   "operator": "selection_tournament",
+   "n": 27,
+   "median_loss_pct": 33.219199421637995,
+   "n_loss_le_1pct": 4,
+   "n_loss_gt_5pct": 22,
+   "n_gain": 0,
+   "max_loss_pct": 89.98328527205166,
+   "max_loss_at": "ackley D=50",
+   "cells_gt_5pct": [
+    "ackley D=50 (90.0)",
+    "ackley D=30 (85.5)",
+    "rastrigin D=50 (58.8)",
+    "schwefel D=50 (57.6)",
+    "rastrigin D=30 (55.2)",
+    "ackley D=10 (53.5)",
+    "schwefel D=30 (49.9)",
+    "sphere D=50 (43.9)",
+    "griewank D=50 (43.9)",
+    "rastrigin D=10 (35.0)",
+    "levy D=50 (34.2)",
+    "schwefel D=10 (33.7)",
+    "sphere D=30 (33.2)",
+    "griewank D=30 (33.2)",
+    "levy D=30 (24.3)",
+    "dixon_price D=50 (21.5)",
+    "dixon_price D=30 (12.6)",
+    "levy D=10 (10.8)",
+    "rosenbrock D=50 (10.7)",
+    "rosenbrock D=30 (7.2)",
+    "griewank D=10 (6.3)",
+    "sphere D=10 (5.9)"
+   ]
+  },
+  {
+   "algorithm": "GA",
+   "operator": "crossover_sbx",
+   "n": 27,
+   "median_loss_pct": 5.8482949711755765,
+   "n_loss_le_1pct": 10,
+   "n_loss_gt_5pct": 14,
+   "n_gain": 0,
+   "max_loss_pct": 85.49377815774689,
+   "max_loss_at": "ackley D=50",
+   "cells_gt_5pct": [
+    "ackley D=50 (85.5)",
+    "ackley D=30 (66.1)",
+    "schwefel D=50 (42.0)",
+    "schwefel D=30 (37.7)",
+    "rastrigin D=50 (30.1)",
+    "rastrigin D=30 (21.2)",
+    "sphere D=50 (21.1)",
+    "griewank D=50 (21.1)",
+    "schwefel D=10 (16.8)",
+    "levy D=50 (15.8)",
+    "levy D=30 (13.4)",
+    "dixon_price D=50 (6.9)",
+    "rosenbrock D=50 (6.8)",
+    "ackley D=10 (5.8)"
+   ]
+  },
+  {
+   "algorithm": "GA",
+   "operator": "mutation_polynomial",
+   "n": 27,
+   "median_loss_pct": 15.505163990994369,
+   "n_loss_le_1pct": 2,
+   "n_loss_gt_5pct": 23,
+   "n_gain": 0,
+   "max_loss_pct": 74.97172525107756,
+   "max_loss_at": "ackley D=30",
+   "cells_gt_5pct": [
+    "ackley D=30 (75.0)",
+    "ackley D=50 (73.4)",
+    "ackley D=10 (63.2)",
+    "schwefel D=50 (29.9)",
+    "rastrigin D=50 (26.3)",
+    "schwefel D=30 (24.3)",
+    "sphere D=50 (24.3)",
+    "griewank D=50 (24.3)",
+    "rastrigin D=30 (21.0)",
+    "sphere D=30 (20.6)",
+    "griewank D=30 (20.6)",
+    "schwefel D=10 (18.9)",
+    "rastrigin D=10 (18.3)",
+    "levy D=50 (15.5)",
+    "levy D=30 (14.6)",
+    "griewank D=10 (13.9)",
+    "sphere D=10 (13.4)",
+    "dixon_price D=50 (12.0)",
+    "levy D=10 (11.2)",
+    "dixon_price D=30 (9.3)",
+    "rosenbrock D=50 (6.1)",
+    "rosenbrock D=30 (6.0)",
+    "dixon_price D=10 (5.7)"
+   ]
+  },
+  {
+   "algorithm": "PSO",
+   "operator": "velocity_constriction",
+   "n": 27,
+   "median_loss_pct": 100.0,
+   "n_loss_le_1pct": 0,
+   "n_loss_gt_5pct": 27,
+   "n_gain": 0,
+   "max_loss_pct": 100.00000000000001,
+   "max_loss_at": "sphere D=50",
+   "cells_gt_5pct": [
+    "sphere D=50 (100.0)",
+    "griewank D=30 (100.0)",
+    "sphere D=10 (100.0)",
+    "sphere D=30 (100.0)",
+    "rosenbrock D=10 (100.0)",
+    "rosenbrock D=30 (100.0)",
+    "rosenbrock D=50 (100.0)",
+    "rastrigin D=10 (100.0)",
+    "rastrigin D=30 (100.0)",
+    "rastrigin D=50 (100.0)",
+    "schwefel D=10 (100.0)",
+    "schwefel D=30 (100.0)",
+    "schwefel D=50 (100.0)",
+    "ackley D=10 (100.0)",
+    "ackley D=30 (100.0)",
+    "ackley D=50 (100.0)",
+    "griewank D=10 (100.0)",
+    "griewank D=50 (100.0)",
+    "levy D=10 (100.0)",
+    "levy D=30 (100.0)",
+    "levy D=50 (100.0)",
+    "zakharov D=10 (100.0)",
+    "zakharov D=50 (100.0)",
+    "dixon_price D=10 (100.0)",
+    "dixon_price D=50 (100.0)",
+    "zakharov D=30 (100.0)",
+    "dixon_price D=30 (100.0)"
+   ]
+  },
+  {
+   "algorithm": "PSO",
+   "operator": "position_update",
+   "n": 27,
+   "median_loss_pct": 100.0,
+   "n_loss_le_1pct": 0,
+   "n_loss_gt_5pct": 27,
+   "n_gain": 0,
+   "max_loss_pct": 100.00000000000001,
+   "max_loss_at": "sphere D=50",
+   "cells_gt_5pct": [
+    "sphere D=50 (100.0)",
+    "griewank D=30 (100.0)",
+    "sphere D=10 (100.0)",
+    "sphere D=30 (100.0)",
+    "rosenbrock D=10 (100.0)",
+    "rosenbrock D=30 (100.0)",
+    "rosenbrock D=50 (100.0)",
+    "rastrigin D=10 (100.0)",
+    "rastrigin D=30 (100.0)",
+    "rastrigin D=50 (100.0)",
+    "schwefel D=10 (100.0)",
+    "schwefel D=30 (100.0)",
+    "schwefel D=50 (100.0)",
+    "ackley D=10 (100.0)",
+    "ackley D=30 (100.0)",
+    "ackley D=50 (100.0)",
+    "griewank D=10 (100.0)",
+    "griewank D=50 (100.0)",
+    "levy D=10 (100.0)",
+    "levy D=30 (100.0)",
+    "levy D=50 (100.0)",
+    "zakharov D=10 (100.0)",
+    "zakharov D=50 (100.0)",
+    "dixon_price D=10 (100.0)",
+    "dixon_price D=50 (100.0)",
+    "zakharov D=30 (100.0)",
+    "dixon_price D=30 (100.0)"
+   ]
+  },
+  {
+   "algorithm": "PSO",
+   "operator": "topology_gbest",
+   "n": 27,
+   "median_loss_pct": 53.11901215652943,
+   "n_loss_le_1pct": 2,
+   "n_loss_gt_5pct": 24,
+   "n_gain": 2,
+   "max_loss_pct": 92.24214728391091,
+   "max_loss_at": "ackley D=50",
+   "cells_gt_5pct": [
+    "ackley D=50 (92.2)",
+    "levy D=50 (89.1)",
+    "ackley D=30 (88.5)",
+    "griewank D=50 (87.0)",
+    "sphere D=50 (87.0)",
+    "dixon_price D=50 (81.0)",
+    "griewank D=30 (73.8)",
+    "sphere D=30 (73.8)",
+    "rastrigin D=50 (67.4)",
+    "rosenbrock D=50 (66.3)",
+    "levy D=30 (64.8)",
+    "rastrigin D=30 (61.5)",
+    "dixon_price D=30 (59.9)",
+    "ackley D=10 (53.1)",
+    "rosenbrock D=30 (43.5)",
+    "schwefel D=30 (37.0)",
+    "schwefel D=50 (36.5)",
+    "levy D=10 (28.5)",
+    "rastrigin D=10 (27.5)",
+    "schwefel D=10 (23.1)",
+    "sphere D=10 (22.9)",
+    "griewank D=10 (22.5)",
+    "rosenbrock D=10 (10.9)",
+    "dixon_price D=10 (5.8)"
+   ]
+  },
+  {
+   "algorithm": "SHADE",
+   "operator": "mutation_current_to_pbest_archive",
+   "n": 27,
+   "median_loss_pct": 100.0,
+   "n_loss_le_1pct": 0,
+   "n_loss_gt_5pct": 27,
+   "n_gain": 0,
+   "max_loss_pct": 100.00000000000001,
+   "max_loss_at": "dixon_price D=50",
+   "cells_gt_5pct": [
+    "dixon_price D=50 (100.0)",
+    "sphere D=30 (100.0)",
+    "sphere D=10 (100.0)",
+    "sphere D=50 (100.0)",
+    "rosenbrock D=10 (100.0)",
+    "rosenbrock D=50 (100.0)",
+    "rastrigin D=10 (100.0)",
+    "rastrigin D=50 (100.0)",
+    "rastrigin D=30 (100.0)",
+    "schwefel D=10 (100.0)",
+    "schwefel D=30 (100.0)",
+    "schwefel D=50 (100.0)",
+    "ackley D=10 (100.0)",
+    "ackley D=30 (100.0)",
+    "ackley D=50 (100.0)",
+    "griewank D=10 (100.0)",
+    "griewank D=30 (100.0)",
+    "griewank D=50 (100.0)",
+    "levy D=10 (100.0)",
+    "levy D=30 (100.0)",
+    "levy D=50 (100.0)",
+    "zakharov D=10 (100.0)",
+    "zakharov D=30 (100.0)",
+    "zakharov D=50 (100.0)",
+    "dixon_price D=30 (100.0)",
+    "dixon_price D=10 (100.0)",
+    "rosenbrock D=30 (100.0)"
+   ]
+  },
+  {
+   "algorithm": "SHADE",
+   "operator": "crossover_binomial",
+   "n": 27,
+   "median_loss_pct": 1.908791926672827,
+   "n_loss_le_1pct": 12,
+   "n_loss_gt_5pct": 8,
+   "n_gain": 5,
+   "max_loss_pct": 48.57218242622058,
+   "max_loss_at": "schwefel D=30",
+   "cells_gt_5pct": [
+    "schwefel D=30 (48.6)",
+    "ackley D=50 (48.4)",
+    "schwefel D=50 (45.6)",
+    "ackley D=30 (40.3)",
+    "schwefel D=10 (37.2)",
+    "rastrigin D=30 (17.0)",
+    "rastrigin D=10 (11.1)",
+    "rastrigin D=50 (10.6)"
+   ]
+  },
+  {
+   "algorithm": "SHADE",
+   "operator": "selection_greedy",
+   "n": 27,
+   "median_loss_pct": 23.42931447276077,
+   "n_loss_le_1pct": 2,
+   "n_loss_gt_5pct": 24,
+   "n_gain": 0,
+   "max_loss_pct": 75.64202847120585,
+   "max_loss_at": "schwefel D=30",
+   "cells_gt_5pct": [
+    "schwefel D=30 (75.6)",
+    "ackley D=50 (75.1)",
+    "schwefel D=50 (75.0)",
+    "ackley D=30 (73.4)",
+    "ackley D=10 (71.2)",
+    "schwefel D=10 (69.4)",
+    "rastrigin D=30 (64.8)",
+    "rastrigin D=10 (60.8)",
+    "rastrigin D=50 (56.1)",
+    "levy D=10 (26.7)",
+    "levy D=50 (25.0)",
+    "griewank D=10 (24.2)",
+    "levy D=30 (24.0)",
+    "griewank D=50 (23.4)",
+    "sphere D=50 (23.4)",
+    "griewank D=30 (22.8)",
+    "sphere D=30 (22.7)",
+    "sphere D=10 (21.4)",
+    "dixon_price D=30 (10.8)",
+    "dixon_price D=50 (9.4)",
+    "rosenbrock D=10 (9.3)",
+    "rosenbrock D=30 (8.0)",
+    "dixon_price D=10 (7.8)",
+    "rosenbrock D=50 (7.7)"
+   ]
+  },
+  {
+   "algorithm": "SHADE",
+   "operator": "parameter_adaptation",
+   "n": 27,
+   "median_loss_pct": 6.709553847100204e-08,
+   "n_loss_le_1pct": 21,
+   "n_loss_gt_5pct": 6,
+   "n_gain": 12,
+   "max_loss_pct": 55.415014704713016,
+   "max_loss_at": "schwefel D=50",
+   "cells_gt_5pct": [
+    "schwefel D=50 (55.4)",
+    "schwefel D=30 (54.3)",
+    "schwefel D=10 (33.3)",
+    "rastrigin D=50 (21.7)",
+    "rastrigin D=30 (21.2)",
+    "rastrigin D=10 (9.9)"
+   ]
+  },
+  {
+   "algorithm": "JADE",
+   "operator": "mutation_current_to_pbest_archive",
+   "n": 27,
+   "median_loss_pct": 100.0,
+   "n_loss_le_1pct": 0,
+   "n_loss_gt_5pct": 27,
+   "n_gain": 0,
+   "max_loss_pct": 100.00000000000001,
+   "max_loss_at": "zakharov D=10",
+   "cells_gt_5pct": [
+    "zakharov D=10 (100.0)",
+    "sphere D=10 (100.0)",
+    "sphere D=50 (100.0)",
+    "rosenbrock D=10 (100.0)",
+    "rosenbrock D=30 (100.0)",
+    "rastrigin D=10 (100.0)",
+    "rastrigin D=30 (100.0)",
+    "rastrigin D=50 (100.0)",
+    "schwefel D=10 (100.0)",
+    "schwefel D=30 (100.0)",
+    "schwefel D=50 (100.0)",
+    "ackley D=10 (100.0)",
+    "ackley D=30 (100.0)",
+    "ackley D=50 (100.0)",
+    "griewank D=30 (100.0)",
+    "griewank D=10 (100.0)",
+    "griewank D=50 (100.0)",
+    "levy D=10 (100.0)",
+    "levy D=30 (100.0)",
+    "levy D=50 (100.0)",
+    "zakharov D=30 (100.0)",
+    "zakharov D=50 (100.0)",
+    "dixon_price D=10 (100.0)",
+    "dixon_price D=30 (100.0)",
+    "dixon_price D=50 (100.0)",
+    "sphere D=30 (100.0)",
+    "rosenbrock D=50 (100.0)"
+   ]
+  },
+  {
+   "algorithm": "JADE",
+   "operator": "crossover_binomial",
+   "n": 27,
+   "median_loss_pct": 2.6610966426882268,
+   "n_loss_le_1pct": 12,
+   "n_loss_gt_5pct": 10,
+   "n_gain": 5,
+   "max_loss_pct": 56.311769794278504,
+   "max_loss_at": "ackley D=50",
+   "cells_gt_5pct": [
+    "ackley D=50 (56.3)",
+    "ackley D=30 (48.5)",
+    "schwefel D=30 (43.0)",
+    "schwefel D=50 (42.6)",
+    "schwefel D=10 (33.8)",
+    "rastrigin D=30 (21.4)",
+    "rastrigin D=10 (20.7)",
+    "rastrigin D=50 (11.8)",
+    "griewank D=50 (5.8)",
+    "sphere D=50 (5.7)"
+   ]
+  },
+  {
+   "algorithm": "JADE",
+   "operator": "selection_greedy",
+   "n": 27,
+   "median_loss_pct": 31.952926765494478,
+   "n_loss_le_1pct": 2,
+   "n_loss_gt_5pct": 24,
+   "n_gain": 0,
+   "max_loss_pct": 92.26637932029905,
+   "max_loss_at": "ackley D=50",
+   "cells_gt_5pct": [
+    "ackley D=50 (92.3)",
+    "ackley D=30 (91.0)",
+    "ackley D=10 (79.1)",
+    "schwefel D=30 (75.8)",
+    "schwefel D=50 (72.7)",
+    "rastrigin D=30 (71.8)",
+    "schwefel D=10 (70.7)",
+    "rastrigin D=50 (69.1)",
+    "rastrigin D=10 (59.3)",
+    "levy D=30 (38.2)",
+    "levy D=50 (38.1)",
+    "griewank D=30 (32.6)",
+    "sphere D=30 (32.5)",
+    "griewank D=50 (32.0)",
+    "sphere D=50 (31.9)",
+    "levy D=10 (25.0)",
+    "griewank D=10 (22.6)",
+    "sphere D=10 (21.9)",
+    "dixon_price D=30 (19.6)",
+    "dixon_price D=50 (18.7)",
+    "rosenbrock D=50 (14.7)",
+    "rosenbrock D=30 (12.6)",
+    "rosenbrock D=10 (5.4)",
+    "dixon_price D=10 (5.0)"
+   ]
+  },
+  {
+   "algorithm": "JADE",
+   "operator": "parameter_adaptation",
+   "n": 27,
+   "median_loss_pct": 0.000326201573297545,
+   "n_loss_le_1pct": 20,
+   "n_loss_gt_5pct": 6,
+   "n_gain": 7,
+   "max_loss_pct": 49.555249876569896,
+   "max_loss_at": "schwefel D=50",
+   "cells_gt_5pct": [
+    "schwefel D=50 (49.6)",
+    "schwefel D=30 (43.8)",
+    "schwefel D=10 (27.1)",
+    "rastrigin D=30 (19.6)",
+    "rastrigin D=50 (18.6)",
+    "rastrigin D=10 (8.7)"
+   ]
+  }
+ ]
+}
