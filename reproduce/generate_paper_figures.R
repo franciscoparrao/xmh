@@ -229,12 +229,12 @@ fig1_ga_heatmap <- function() {
 
   p <- ggplot(df, aes(x = function_name, y = op_label, fill = shapley_pct)) +
     geom_tile(color = "white", linewidth = 0.5) +
-    geom_text(aes(label = sprintf("%.0f", shapley_pct),
+    geom_text(aes(label = sprintf("%.0f", ifelse(abs(shapley_pct) < 0.5, 0, shapley_pct)),
                   color = shapley_pct > 40),
               size = 3.0, fontface = "bold", show.legend = FALSE) +
     scale_color_manual(values = c(`TRUE` = "white", `FALSE` = "black")) +
     scale_fill_distiller(
-      palette = "YlOrRd", direction = 1, limits = c(0, 60),
+      palette = "YlOrRd", direction = 1, limits = c(0, 60), oob = scales::squish,
       name = "Shapley value (%)",
       guide = guide_colorbar(barwidth = 0.5, barheight = 6)
     ) +
@@ -270,12 +270,12 @@ fig2_pso_heatmap <- function() {
 
   p <- ggplot(df, aes(x = function_name, y = op_label, fill = shapley_pct)) +
     geom_tile(color = "white", linewidth = 0.5) +
-    geom_text(aes(label = sprintf("%.0f", shapley_pct),
+    geom_text(aes(label = sprintf("%.0f", ifelse(abs(shapley_pct) < 0.5, 0, shapley_pct)),
                   color = shapley_pct > 50),
               size = 3.0, fontface = "bold", show.legend = FALSE) +
     scale_color_manual(values = c(`TRUE` = "white", `FALSE` = "black")) +
     scale_fill_distiller(
-      palette = "YlGnBu", direction = 1, limits = c(0, 55),
+      palette = "YlGnBu", direction = 1, limits = c(0, 55), oob = scales::squish,
       name = "Shapley value (%)",
       guide = guide_colorbar(barwidth = 0.5, barheight = 6)
     ) +
@@ -509,7 +509,7 @@ fig7_summary <- function() {
   titles <- c(
     DE  = "DE\n(Mutation-dominated)",
     GA  = "GA\n(Landscape-dependent)",
-    PSO = "PSO\n(Dimension-dependent)"
+    PSO = "PSO, 2 op. renormalized\n(Dimension-dependent)"
   )
 
   all_rows <- lapply(algos, function(alg) {
@@ -860,10 +860,9 @@ fig9_budget <- function() {
     annotate("text",
              x = level_a, y = ylim_top * 0.85,
              label = paste0("g=", level_a),
-             size = 2.0, family = "serif", angle = 90,
+             size = 2.5, family = "serif", angle = 90,
              hjust = 1, vjust = -0.3, color = "grey40") +
-    scale_y_continuous(trans = scales::pseudo_log_trans(sigma = 0.1),
-                       breaks = c(0, 1, 10, 100, 1000)) +
+    scale_y_log10(breaks = c(30, 50, 100, 200, 500)) +
     labs(x = "Generation", y = "Best fitness (Rastrigin)",
          title = "(a) Convergence vs max gen (pop=50)")
 
@@ -880,16 +879,16 @@ fig9_budget <- function() {
     )
   }))
 
+  lab_b <- df_b |> group_by(pop) |> slice_tail(n = 1) |> ungroup()
   pB <- ggplot(df_b, aes(x = gen, y = median, color = pop)) +
     geom_line(linewidth = 0.7) +
-    scale_color_viridis_d(name = "pop", option = "viridis", begin = 0.1, end = 0.85) +
-    scale_y_continuous(trans = scales::pseudo_log_trans(sigma = 0.1),
-                       breaks = c(0, 1, 10, 100, 1000)) +
+    geom_text(data = lab_b, aes(label = paste0("pop=", pop)),
+              hjust = -0.08, size = 2.3, family = "serif", show.legend = FALSE) +
+    scale_color_viridis_d(name = "pop", option = "viridis", begin = 0.1, end = 0.85, guide = "none") +
+    scale_x_continuous(limits = c(0, 245), breaks = c(0, 50, 100, 150, 200)) +
+    scale_y_log10(breaks = c(30, 50, 100, 200, 500)) +
     labs(x = "Generation", y = "Best fitness (Rastrigin)",
-         title = "(b) Convergence vs pop size (max gen=200)") +
-    theme(legend.position = c(0.99, 0.99),
-          legend.justification = c(1, 1),
-          legend.key.height = unit(0.25, "cm"))
+         title = "(b) Convergence vs pop size (max gen=200)")
 
   # ---- (c) Shapley% vs max_gen ----
   rows_c <- list()
@@ -978,7 +977,7 @@ fig9_budget <- function() {
                                               size = 11, hjust = 0.5))
     ) &
     theme(legend.position = "bottom",
-          legend.box = "vertical",
+          legend.box = "horizontal",
           legend.margin = margin(t = 0, b = 0),
           legend.box.margin = margin(t = -3, b = -3),
           legend.spacing.x = unit(0.25, "cm"),
